@@ -1,7 +1,7 @@
 "use client";
 
 import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, ArrowUpRight } from "lucide-react"
-import whiteLogo from "@/public/images/bpl-logo.avif"
+import whiteLogo from "@/public/images/CPLT20_logo.png"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"

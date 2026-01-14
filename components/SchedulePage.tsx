@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react"
 import { matchesData } from "@/data/matches-data"
 import Image from "next/image"
 import { MapPin, ChevronDown } from "lucide-react"
-import whiteLogo from "@/public/images/bpl-logo.avif"
+import whiteLogo from "@/public/images/CPLT20_logo.png"
 
 export default function NPLSchedule() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -62,7 +62,7 @@ export default function NPLSchedule() {
         
         {/* Top Section: Logo & Countdown */}
         <div className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/10 rounded-lg p-2 md:p-6 backdrop-blur-sm gap-8">
-          <div className="relative w-48 h-12 md:w-64 md:h-16">
+          <div className="relative w-38 h-12 md:w-54 md:h-14">
             <Image
               src={whiteLogo}
               alt="CPL Logo"
