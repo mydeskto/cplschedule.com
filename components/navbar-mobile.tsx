@@ -3,7 +3,7 @@
 import { Search, Menu, X, ArrowRight } from "@/lib/icons"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "@/lib/motion"
-import whiteLogo from "@/public/images/bpl-logo.avif"
+import whiteLogo from "@/public/images/newlogo.png"
 import Image from "next/image"
 import { FaYoutube, FaFacebook, FaXTwitter, FaInstagram } from "@/lib/icons"
 import Link from "next/link"
@@ -25,11 +25,10 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
   const navLinks = [
     { to: "/", label: "HOME" },
     { to: "/points-table", label: "POINTS TABLE" },
-    { to: "/schedule", label: "SCHEDULE" },
+    // { to: "/schedule", label: "SCHEDULE" },
     { to: "/teams", label: "TEAMS" },
     { to: "/news", label: "NEWS" },
-    { to: "/CPL-venue", label: "VENUES" },
-    { to: "/blog", label: "BLOG" },
+    { to: "/NPL-venue", label: "VENUES" },
     { to: "/contact-us", label: "CONTACT" },
   ]
 
@@ -62,7 +61,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
 
         {/* Mobile Right Side - Buy Ticket Short Button */}
         <div className="flex items-center">
-          <Link href="/blog/CPL-tickets/">
+          <Link href="/blog/NPL-tickets/">
             <Button className="bg-[#f26522] hover:bg-white text-black font-black py-4 px-4 rounded-sm text-[9px] tracking-[0.1em] whitespace-nowrap shadow-xl shadow-[#f26522]/20">
               TICKETS
             </Button>
@@ -97,7 +96,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
                 <div className="relative h-8 w-32">
                   <Image
                     src={whiteLogo}
-                    alt="CPL Logo"
+                    alt="NPL Logo"
                     fill
                     className="object-contain"
                   />
@@ -140,7 +139,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
               {/* Bottom Section */}
               <div className="p-8 space-y-8 bg-black/20">
                 {/* Buy Ticket CTA in Sidebar */}
-                <Link href="/blog/CPL-tickets/" onClick={toggleMobileMenu}>
+                <Link href="/blog/NPL-tickets/" onClick={toggleMobileMenu}>
                   <Button className="w-full bg-[#f26522] hover:bg-white text-black font-black py-7 rounded-sm text-[11px] tracking-[0.2em] group transition-all duration-500 shadow-2xl shadow-[#f26522]/10">
                     BOOK TICKETS 2026
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />

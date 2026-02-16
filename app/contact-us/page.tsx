@@ -86,7 +86,7 @@ export default function Contact() {
               </div>
 
               <div className="space-y-8 pt-4">
-                <div className="flex items-start gap-6 group">
+                {/* <div className="flex items-start gap-6 group">
                   <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f26522]/50 transition-all duration-500 flex-shrink-0">
                     <MapPin className="w-5 h-5 text-[#f26522]" />
                   </div>
@@ -95,7 +95,7 @@ export default function Contact() {
                     <p className="font-bold text-white group-hover:text-[#f26522] transition-colors">Sher-e-Bangla National Cricket Stadium</p>
                     <p className="text-white/60 text-sm">Mirpur, Dhaka, Bangladesh</p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-6 group">
                   <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f26522]/50 transition-all duration-500 flex-shrink-0">
@@ -103,7 +103,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Email Inquiry</h4>
-                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">CPLt20league@gmail.com</p>
+                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">contactnplschedule@gmail.com</p>
                   </div>
                 </div>
 
@@ -113,7 +113,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Official Website</h4>
-                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">www.cplt20league.com</p>
+                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">www.nplschedule.com</p>
                   </div>
                 </div>
               </div>

@@ -32,18 +32,18 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'CPL 2026 – Live Scores, Schedule & Points Table | Today’s Match Updates',
-  description: 'Stay updated with CPL 2026! Get live scores, full match schedule, points table, and today’s match updates. Follow Coastal Premier League action.',
-  metadataBase: new URL('https://CPLt20league.com'),
+  title: 'NPL 2026 Schedule | Nepal Premier League Fixtures & Match Dates',
+  description: 'Check the complete NPL 2026 schedule for the Nepal Premier League. View match dates, fixtures, teams, squads, players, and captain details.',
+  metadataBase: new URL('https://nplschedule.com'),
   alternates: {
-    canonical: 'https://CPLt20league.com/',
+    canonical: 'https://nplschedule.com/',
   },
   keywords: [
-    "CPL 2026",
-    "Coastal Premier League",
-    "CPL live score",
-    "CPL schedule",
-    "CPL points table"
+    "NPL 2026",
+    "Nepal Premier League",
+    "NPL live score",
+    "NPL schedule",
+    "NPL points table"
   ],
   robots: {
     index: true,
@@ -61,20 +61,20 @@ export const metadata: Metadata = {
   verification: {
     google: 'x90NCjSnxugpZh7YX9GWlgUjF-OUMCxRlokDIvxHd0Y',
   },
-  publisher: 'CPLt20league.com',
+  publisher: 'nplschedule.com',
   authors: [
     {
       name: 'CPLteam',
-      url: 'https://CPLt20league.com',
+      url: 'https://nplschedule.com',
     },
   ],
   icons: [
-    { rel: 'icon', url: '/images/CPL-logo.avif', sizes: 'any' },
-    { rel: 'icon', url: '/images/CPL-logo.avif', sizes: '32x32', type: 'image/png' },
-    { rel: 'icon', url: '/images/CPL-logo.avif', sizes: '16x16', type: 'image/png' },
-    { rel: 'apple-touch-icon', url: '/images/CPL-logo.avif', sizes: '180x180' },
-    { rel: 'icon', url: '/images/CPL-logo.avif', sizes: '192x192', type: 'image/png' },
-    { rel: 'icon', url: '/images/CPL-logo.avif', sizes: '512x512', type: 'image/png' },
+    { rel: 'icon', url: '/images/favicon.png', sizes: 'any' },
+    { rel: 'icon', url: '/images/favicon.png', sizes: '32x32', type: 'image/png' },
+    { rel: 'icon', url: '/images/favicon.png', sizes: '16x16', type: 'image/png' },
+    { rel: 'apple-touch-icon', url: '/images/favicon.png', sizes: '180x180' },
+    { rel: 'icon', url: '/images/favicon.png', sizes: '192x192', type: 'image/png' },
+    { rel: 'icon', url: '/images/favicon.png', sizes: '512x512', type: 'image/png' },
   ],
 }
 
@@ -82,64 +82,118 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://CPLt20league.com/#organization",
-  "name": "CPL T20 League",
-  "alternateName": "Coastal Premier League",
-  "url": "https://CPLt20league.com/",
+  "@id": "https://nplschedule.com/#organization",
+  "name": "NPL T20 League",
+  "alternateName": "Nepal Premier League",
+  "url": "https://nplschedule.com/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://CPLt20league.com/images/CPL-logo-white.webp",
+    "url": "https://nplschedule.com/images/newlogo.png",
     "width": 400,
     "height": 200
   },
+  "description": "Official schedule website for Nepal Premier League (NPL) T20 2026 including match fixtures, teams, points table, venues and latest updates.",
   "sameAs": [
-    "https://www.youtube.com/channel/UCsin34Ns_3LDsvyQnBv73mw",
-    "https://www.facebook.com/profile.php?id=61582279622646",
-    "https://x.com/CPLt20league",
-    "https://www.instagram.com/CPLt20league/",
-  ],
-  "description": "Official website for Coastal Premier League (CPL) T20 2026 - Live scores, match schedules, points table, team information, player stats, and latest news."
+    "https://www.facebook.com/nplschedule.com",
+    "https://x.com/nplschedule.com",
+    "https://www.instagram.com/nplschedule.com",
+    "https://www.youtube.com/@nplschedule.com"
+  ]
 };
 
-const sportsOrganizationSchema = {
+const sportsLeagueSchema = {
   "@context": "https://schema.org",
   "@type": "SportsLeague",
-  "@id": "https://CPLt20league.com/#SportsLeague",
-  "name": "Coastal Premier League (CPL) T20 2026",
-  "alternateName": "CPL T20",
+  "@id": "https://nplschedule.com/#sportsleague",
+  "name": "Nepal Premier League (NPL) T20 2026",
+  "alternateName": "NPL T20 2026",
   "sport": "Cricket",
-  "url": "https://CPLt20league.com/",
-  "memberOf": {
-    "@type": "SportsLeague",
-    "name": "Bangladesh Cricket Board",
-    "alternateName": "BCB"
+  "url": "https://nplschedule.com/",
+  "organizer": {
+    "@id": "https://nplschedule.com/#organization"
+  },
+  "startDate": "2026-11-17",
+  "endDate": "2026-12-15",
+  "location": {
+    "@type": "Country",
+    "name": "Nepal"
   }
 };
+
+const sportsEventSchema = {
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "@id": "https://nplschedule.com/#event",
+  "name": "Nepal Premier League (NPL) T20 2026",
+  "description": "Nepal Premier League (NPL) T20 2026 featuring top domestic and international cricket players competing across multiple venues in Nepal.",
+  "startDate": "2026-11-17",
+  "endDate": "2026-12-15",
+  "foundingDate": "2024",
+  "areaServed": "Nepal",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "sport": "Cricket",
+  "image": "https://nplschedule.com/images/hero/hero1.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "Tribhuvan University International Cricket Ground",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kirtipur",
+      "addressRegion": "Bagmati",
+      "addressCountry": "NP"
+    }
+  },
+  "organizer": {
+    "@id": "https://nplschedule.com/#organization"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://nplschedule.com/tickets",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "NPR"
+  }
+};
+
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "CPL T20 League",
-  "url": "https://CPLt20league.com",
-  "description": "Latest news, match reports, points table, Live Score, teams and schedule for the Coastal Premier League (CPL) T20.",
+  "@id": "https://nplschedule.com/#website",
+  "url": "https://nplschedule.com/",
+  "name": "NPL Schedule 2026",
+  "about": {
+    "@id": "https://nplschedule.com/#sportsleague"
+  },
+  "description": "Complete match schedule, fixtures, teams, venues and live updates for Nepal Premier League (NPL) T20 2026.",
   "publisher": {
     "@type": "Organization",
-    "name": "CPL T20 League",
+    "name": "NPL T20 League",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://CPLt20league.com/logo.png"
+      "url": "https://nplschedule.com/images/newlogo.png"
     }
   },
+  "inLanguage": "en",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://CPLt20league.com/search?q={search_term_string}",
+    "target": "https://nplschedule.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "areaServed": "NP",
+    "availableLanguage": ["English", "Nepali"]
   }
 };
 
+
+
 // Pre-stringify JSON to avoid runtime JSON.stringify calls
 const organizationSchemaJson = JSON.stringify(organizationSchema);
-const sportsOrganizationSchemaJson = JSON.stringify(sportsOrganizationSchema);
+const sportsEventSchemaJson = JSON.stringify(sportsEventSchema);
+const sportsLeagueSchemaJson = JSON.stringify(sportsLeagueSchema);
 const webSiteSchemaJson = JSON.stringify(webSiteSchema);
 
 export default function RootLayout({
@@ -168,8 +222,8 @@ export default function RootLayout({
         {/* Preconnect only for critical resources to reduce DNS lookup time */}
 
         {/* Favicon - Fix 404 error */}
-        <link rel="icon" href="/images/CPL-logo.avif" type="image/png" />
-        <link rel="shortcut icon" href="/images/CPL-logo.avif" type="image/png" />
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
 
         {/* Preload critical resources - Only truly critical above-the-fold content */}
         {/* Preload LCP element - First hero image for optimal LCP */}
@@ -192,7 +246,7 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-9HXKDY7FZL"
           strategy="lazyOnload"
         />
-        
+
         <Script id="google-analytics-init" strategy="lazyOnload">
           {`
            window.dataLayer = window.dataLayer || [];
@@ -203,8 +257,8 @@ export default function RootLayout({
         `}
         </Script>
 
-         {/* Google Ads - Must use regular script tag (not Next.js Script) to avoid data-nscript attribute */}
-         <script
+        {/* Google Ads - Must use regular script tag (not Next.js Script) to avoid data-nscript attribute */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3169729065573671"
           crossOrigin="anonymous"
@@ -237,7 +291,11 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: sportsOrganizationSchemaJson }}
+          dangerouslySetInnerHTML={{ __html: sportsEventSchemaJson }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: sportsLeagueSchemaJson }}
         />
         <script
           type="application/ld+json"

@@ -5,9 +5,9 @@ import { Breadcrumb } from "@/components/breadcrumb"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "CPL 2026 News | Latest Updates, Match Reports & Headlines from Coastal Premier League",
-    description: "Stay updated with the latest CPL 2026 news, match reports, team updates, and player stories. Get real-time coverage from the Coastal Premier League T20 only on CPLT20.",
-    keywords: ["CPL News", "CPL 2026 News", "Coastal Premier League News", "CPL Updates", "CPL 2026"],
+    title: "Nepal Premier League 2026 News | Latest Updates & Match Reports",
+    description: "Read the latest Nepal Premier League 2026 news including match reports, squad updates, injuries, points table changes and official announcements.",
+    keywords: ["NPL News", "NPL 2026 News", "Nepal Premier League News", "NPL Updates", "NPL 2026"],
     robots: {
       index: true,
       follow: true,
@@ -19,13 +19,13 @@ export async function generateMetadata(): Promise<Metadata> {
       }
     },
     alternates: {
-      canonical: "https://CPLt20league.com/news"
+      canonical: "https://nplschedule.com/news"
     },
     openGraph: {
-      title: "CPL 2026 News | Latest Updates & Headlines",
-      description: "Stay updated with the latest CPL 2026 news, match reports, team updates, and player stories.",
+      title: "NPL 2026 News | Latest Updates & Headlines",
+      description: "Stay updated with the latest Nepal Premier League 2026 news, match reports, team updates, and player stories.",
       url: "/news",
-      siteName: "CPLt20league",
+      siteName: "NPL Schedule",
       locale: "en_US",
       type: "website",
     }
@@ -63,11 +63,11 @@ export default function NewsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "@id": "https://CPLt20league.com/#blog",
-            "name": "CPL T20 League Blog",
-            "description": "Latest CPL T20 news, match reports, fixtures updates, team analysis, player stats, and fantasy cricket tips.",
+            "@id": "https://nplschedule.com/#blog",
+            "name": "NPL Schedule Blog",
+            "description": "Latest Nepal Premier League news, match reports, fixtures updates, team analysis, player stats, and fantasy cricket tips.",
             "publisher": {
-              "@id": "https://CPLt20league.com/#organization"
+              "@id": "https://nplschedule.com/#organization"
             },
             "inLanguage": "en"
           })
@@ -85,9 +85,15 @@ export default function NewsPage() {
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Latest News Heading */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-3xl font-bold text-white mb-2 uppercase tracking-tighter">Latest News</h2>
           <div className="w-20 h-1 bg-[#f26522] rounded"></div>
+        </div> */}
+
+        <div className="mt-8">
+          <h1 className="text-2xl font-bold text-white mb-4">Nepal Premier League 2026 News & Updates</h1>
+          <p className="text-gray-400 text-sm">Stay updated with the latest Nepal Premier League 2026 news including match previews, results, squad announcements, injuries, transfers, and official tournament developments.</p>
+          <p className="text-gray-400 text-sm">We regularly publish updates to keep fans informed throughout the NPL 2026 season.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -13,7 +13,11 @@ import {
 import hero1 from '@/public/images/hero/hero1.avif'
 import hero2 from '@/public/images/hero/hero2.avif'
 import hero3 from '@/public/images/hero/hero3.avif'
-import hero4 from '@/public/images/hero/hero4.avif'
+import hero4 from '@/public/images/hero/hero5.png'
+import nplFixtures from '@/public/images/hero/npl fixtures.webp'
+import nplTickets from '@/public/images/hero/npl tickets.webp'
+import fantacyCricket from '@/public/images/hero/fanticy cricket.webp'
+import Cricket from '@/public/images/hero/hero5.webp'
 import Link from "next/link"
 import Image from "next/image"
 import { AnimatedScrollingText } from "./AnimatedScrollingText"
@@ -21,45 +25,45 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const carouselData = [
   {
-    id: "CPL-reg-198",
-    backgroundImage: hero1,
-    title: "CPL 2026 Schedule",
-    subtitle: "Coastal Premier League Match Fixtures",
-    description: "Experience the thrill of cricket at its finest. View the full schedule of matches for the upcoming season.",
+    id: "NPL-reg-198",
+    backgroundImage: nplFixtures,
+    title: "NPL 2026 Schedule",
+    subtitle: "Nepal Premier League 2026 Schedule ",
+    description: "NPL Fixtures & Match Details",
     buttonText: "View Schedule",
     link: "/schedule",
-    tag: "LIVE FIXTURES"
+    tag: "NPL FIXTURES"
   },
   {
-    id: "CPL-tickets-2765",
-    backgroundImage: hero2,
-    title: "CPL TICKETS",
+    id: "NPL-tickets-2765",
+    backgroundImage: nplTickets,
+    title: "NPL TICKETS",
     subtitle: "Get Your Tickets Now",
-    description: "Don't miss the action! Secure your seats for CPL 2026. Early bird discounts available for a limited time.",
-    buttonText: "CPL 2026 Tickets",
-    link: "/blog/CPL-tickets/",
+    description: "Don't miss the action! Secure your seats for NPL 2026. Early bird discounts available for a limited time.",
+    buttonText: "NPL 2026 Tickets",
+    link: "/blog/NPL-tickets/",
     tag: "BOOK NOW"
   },
   {
-    id: "CPL-fixtures-398765",
+    id: "NPL-fixtures-398765",
     backgroundImage: hero4,
-    title: "CPL Points Table",
-    subtitle: "Coastal Premier League Standings",
+    title: "NPL Points Table",
+    subtitle: "Nepal Premier League Standings",
     description: "Keep track of your favorite teams. Real-time updates on standings and performance statistics.",
     buttonText: "View Standings",
     link: "/points-table",
     tag: "RANKINGS"
   },
-  {
-    id: "CPL-fantasy-98756",
-    backgroundImage: hero3,
-    title: "CPL Live Score",
-    subtitle: "Coastal Premier League Live Match Score",
-    description: "Stay updated with ball-by-ball commentary and live scores. Never miss a single moment of the game.",
-    buttonText: "View Live Score",
-    link: "/matches",
-    tag: "MATCH CENTER"
-  },
+  // {
+  //   id: "NPL-fantasy-98756",
+  //   backgroundImage: fantacyCricket,
+  //   title: "NPL Live Score",
+  //   subtitle: "Nepal Premier League Live Match Score",
+  //   description: "Stay updated with ball-by-ball commentary and live scores. Never miss a single moment of the game.",
+  //   buttonText: "View Live Score",
+  //   link: "/matches",
+  //   tag: "MATCH CENTER"
+  // },
 ]
 
 export function HeroCarousel() {
@@ -136,7 +140,7 @@ export function HeroCarousel() {
                               </motion.div>
 
                               <div className="space-y-4">
-                                <motion.h1
+                                <motion.h2
                                   initial={{ opacity: 0, x: -30 }}
                                   animate={{ opacity: 1, x: 0 }}
                                   transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -147,7 +151,7 @@ export function HeroCarousel() {
                                       {word}{' '}
                                     </span>
                                   ))}
-                                </motion.h1>
+                                </motion.h2>
 
                                 <motion.h3
                                   initial={{ opacity: 0, y: 20 }}

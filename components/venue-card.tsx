@@ -13,7 +13,7 @@ interface VenueCardProps {
 
 export function VenueCard({ name, slug, capacity, image }: VenueCardProps) {
   return (
-    <Link href={`/CPL-venue/${slug}`} className="group block">
+    <Link href={`/NPL-venue/${slug}`} className="group block">
       <div className="relative h-[450px] rounded-sm overflow-hidden border border-white/10 group-hover:border-[#f26522]/50 transition-all duration-500 shadow-2xl">
         {/* Background Image */}
         <div className="absolute inset-0">

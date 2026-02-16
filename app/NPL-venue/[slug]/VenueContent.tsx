@@ -34,7 +34,7 @@ function VenueContent({ venue }: { venue: any }) {
       {/* Dynamic Header/Breadcrumb */}
       <div className="container mx-auto px-4 py-8">
         <Link 
-          href="/CPL-venue" 
+          href="/NPL-venue" 
           className="inline-flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase hover:translate-x-[-8px] transition-transform duration-300"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Search } from "@/lib/icons"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import whiteLogo from "@/public/images/CPLT20_logo.png"
+import whiteLogo from "@/public/images/newlogo.png"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
@@ -12,16 +12,17 @@ import { usePathname } from "next/navigation"
 
 const NAV_LINKS = [
   { href: "/", label: "HOME" },
-  { href: "/schedule", label: "SCHEDULE" },
+  // { href: "/schedule", label: "SCHEDULE" },
   { href: "/teams", label: "TEAMS" },
   { href: "/points-table", label: "POINTS TABLE" },
   { href: "/news", label: "NEWS" },
+  { href: "/NPL-venue", label: "VENUES", icon: "stadium" },
+  { href: "/contact-us", label: "CONTACT US", icon: "mail" },
 ]
 
 const DROPDOWN_LINKS = [
-  { href: "/CPL-venue", label: "VENUES", icon: "stadium" },
-  { href: "/blog", label: "BLOG", icon: "blog" },
   { href: "/contact-us", label: "CONTACT US", icon: "mail" },
+
 ]
 
 export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
@@ -41,21 +42,23 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
           : "bg-transparent"
       )}
     >
+      <Link href="/">
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          className="relative "
+        >
+          <Image
+            src={whiteLogo}
+            alt="NPL Logo"
+            height={120}
+            width={140}
+            className="object-contain"
+            priority
+          />
+        </motion.div>
+      </Link>
       <div className="flex items-center gap-12">
-        <Link href="/">
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative h-10 w-40"
-          >
-            <Image
-              src={whiteLogo}
-              alt="CPL Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </motion.div>
-        </Link>
+
 
         <div className="flex items-center space-x-8">
           {NAV_LINKS.map((link) => (
@@ -77,7 +80,7 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
             </Link>
           ))}
 
-          <div className="relative group py-2">
+          {/* <div className="relative group py-2">
             <button className="flex items-center gap-2 text-[11px] font-black tracking-[0.2em] text-white/70 hover:text-white transition-all">
               MORE
               <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,14 +101,14 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       <div className="flex items-center gap-6">
-        <Link href="/blog/CPL-tickets/">
+        <Link href="/news/NPL-tickets/">
           <Button className="bg-[#f26522] hover:bg-white text-black font-black px-8 py-4 rounded-sm text-[11px] tracking-[0.2em] transition-all duration-500 shadow-2xl shadow-[#f26522]/20 hover:scale-105 active:scale-95">
-            BOOK TICKETS 2026
+            NPL TICKETS 2026
           </Button>
         </Link>
       </div>

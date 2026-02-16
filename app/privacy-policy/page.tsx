@@ -1,59 +1,7 @@
 "use client"
-
-import { ChevronUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useEffect } from "react"
 
 export default function PrivacyPolicy() {
-  const showBackToTop = false
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
-  // JSON-LD Schema for SEO
-  useEffect(() => {
-    const webPageSchema = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Privacy Policy - CPL T20 | Coastal Premier League",
-      "description": "Privacy Policy for CPLT20League.com - Learn how we collect, use, and protect your information.",
-      "url": "https://CPLt20league.com/privacy-policy",
-      "inLanguage": "en-US",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "CPL T20 League",
-        "url": "https://CPLt20league.com"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://CPLt20league.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Privacy Policy",
-            "item": "https://CPLt20league.com/privacy-policy"
-          }
-        ]
-      }
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(webPageSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#122754] pt-20 font-font-inter  tracking-wider">
@@ -63,39 +11,37 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-xs text-white mb-6 leading-relaxed">
-           Last Updated: October 2025
+            Last Updated:  2025
           </p>
 
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed">
-              Welcome to <Link href="/" className="underline font-bold">CPLT20League.com</Link>. Your privacy matters to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.
+              At NPL Schedule <Link href="/" className="underline font-bold">CPLT20League.com</Link>, we respect your privacy and are committed to protecting any personal information you may share with us. This Privacy Policy outlines how we collect, use, and safeguard your information in compliance with global privacy standards and Google’s AdSense program requirements.
             </p>
 
-            <p className="text-md text-white mb-8 leading-relaxed">
+            {/* <p className="text-md text-white mb-8 leading-relaxed">
              By using this site, you agree to the terms described below. If you do not agree, please stop using the website.
-            </p>
+            </p> */}
 
             <ol className="text-white  ">
               <li className="text-3xl font-bold">
                 1. Information We Collect
               </li>
               <p className="pl-3 mb-3">
-                We collect information in the following ways:
+                We may collect limited personal data from you, including:
               </p>
             </ol>
             <div className="text-white ml-10 space-y-3 mb-3">
               <li>
-Directly from you: when you contact us, send feedback, or reach out via our contact forms.
+                Email address (only if you contact us directly)
               </li>
               <li>
-Automatically: through cookies and analytics tools that help us understand how visitors use our site.
+                Non-personal data such as IP address, browser type, device info, and pages visited (collected via analytics and cookies)
               </li>
-              <li>
-From third parties: such as Google AdSense and Google Analytics, which may collect non-personal data for ad personalization and traffic measurement.
-              </li>
+
             </div>
             <p className="text-md text-white mb-4 leading-relaxed">
-We do not collect sensitive information such as payment details, national ID numbers, or passwords.
+              We do not collect sensitive personal data like passwords, banking information, or government-issued IDs.
             </p>
 
 
@@ -107,68 +53,69 @@ We do not collect sensitive information such as payment details, national ID num
                 2. How We Use Your Information
               </li>
               <p className="pl-3 mb-3">
-                Collected information is used to:
+                Your information may be used to:
               </p>
             </ol>
             <div className="text-white ml-10 space-y-3 mb-3">
               <li>
+                Respond to inquiries or messages you send us
+              </li>
+              <li>
                 Improve website performance and user experience
               </li>
               <li>
-                Display relevant advertisements and analyze their performance
+                Monitor site usage and analyze traffic patterns
               </li>
               <li>
-                Respond to inquiries, feedback, or messages
-              </li>
-              <li>
-                Prevent spam, abuse, or unauthorized access
+                Comply with legal obligations
               </li>
             </div>
+            <p className="text-md text-white mb-4 leading-relaxed">
+              We do not sell, rent, or share your personal data with any third party for commercial gain.
+            </p>
 
 
 
 
             <ol className="text-white mt-8 ">
               <li className="text-3xl font-bold mb-3">
-                3. Cookies and Tracking Technologies
+                3. Cookies and Web Beacons
               </li>
               <p className="pl-3 mb-3">
-                Cookies help us remember user preferences, analyze traffic, and show relevant ads. Some cookies are managed by Google AdSense and Google Analytics for advertising and analytics purposes.
+                Like most websites, NPL Schedule uses “cookies” to enhance user experience. Cookies are small data files stored on your browser. These help us:
               </p>
-              <p className="pl-3 mb-3">
-You can disable cookies through your browser settings. To manage personalized advertising, you may visit Google Ads Settings.
-              </p>
-              <p className="pl-3 mb-3">
-                Types of cookies we use:
-              </p>
+
             </ol>
             <div className="text-white ml-10 space-y-3 mb-3">
               <li>
-                Essential cookies for core website functionality
+                Remember user preferences
               </li>
               <li>
-              Performance cookies for analytics and improvements
+                Serve relevant ads via Google AdSense
               </li>
               <li>
-                Advertising cookies to show relevant ads and reduce repetition
+                Analyze site traffic and visitor behavior
               </li>
             </div>
+            <p className="text-md text-white mb-4 leading-relaxed">
+              You can choose to disable cookies through your browser settings. However, this may affect how some parts of the site function.
+            </p>
 
 
 
 
             <ol className="text-white  mt-8">
               <li className="text-3xl font-bold">
-                4. Third-Party Services
+                4.  Google AdSense and Third-Party Advertisements
               </li>
               <p className="pl-3 mb-3">
                 We use trusted third-party services, including:
-            </p>
+              </p>
             </ol>
             <div className="text-white ml-10 space-y-3 mb-3">
               <li>
                 Google AdSense – to display advertisements
-             </li>
+              </li>
               <li>
                 Google Analytics – to understand visitor behavior and traffic patterns
               </li>
@@ -181,58 +128,48 @@ You can disable cookies through your browser settings. To manage personalized ad
 
             <ol className="text-white  mt-8">
               <li className="text-3xl font-bold">
-                5. Data Retention
+                5. Third-Party Links
               </li>
               <p className="pl-3 mb-3">
-               Non-personal analytics data is retained for performance analysis purposes. Messages or emails received through our contact forms are stored securely and removed when no longer required.
-             </p>
+                Our site may contain links to external websites. We are not responsible for the content, policies, or practices of any third-party websites. We encourage you to read the privacy policies of those sites before engaging with them.
+              </p>
             </ol>
 
 
             <ol className="text-white  mt-8">
               <li className="text-3xl font-bold">
-                6. Children's Privacy
+                6. Children’s Privacy
               </li>
               <p className="pl-3 mb-3">
-                This website is intended for a general audience and is not directed at children under the age of 13. We do not knowingly collect personal data from minors. If you believe a child has shared information with us, please contact us for immediate removal.
-         </p>
+                Our content is not directed to children under the age of 13. We do not knowingly collect any personal information from children. If we learn that we have inadvertently gathered data from a minor, we will delete it promptly.
+              </p>
             </ol>
 
             <ol className="text-white mt-8 ">
               <li className="text-3xl font-bold">
-                7. International Users
+                7. Your Consent
               </li>
               <p className="pl-3 mb-3">
-                If you access our website from outside South Asia, your information may be processed or stored in countries where our hosting or third-party service providers operate. By using this site, you consent to this data processing.
-            </p>
+                By using our website, you consent to our Privacy Policy and agree to its terms.
+              </p>
             </ol>
 
 
             <ol className="text-white mt-8 ">
               <li className="text-3xl font-bold">
-                8. Your Rights and Choices
+                8. Changes to This Policy
               </li>
               <p className="pl-3 mb-3">
-               You have the right to:
-            </p>
+                We may update our Privacy Policy from time to time. Any changes will be posted on this page with a revised “Last updated” date.
+              </p>
             </ol>
-            <div className="text-white ml-10 space-y-3 mb-3">
-              <li>
-                Request access to or deletion of your personal data
-            </li>
-              <li>
-                Disable cookies or opt out of personalized advertising
-              </li>
-              <li>
-                Withdraw consent by discontinuing use of this website
-              </li>
-            </div>
-            <p className="text-md text-white mb-4 leading-relaxed">
-             For such requests, contact us at:
+            
+            {/* <p className="text-md text-white mb-4 leading-relaxed">
+              For such requests, contact us at:
             </p>
             <p className="text-md text-white mb-4 leading-relaxed">
-             📧 infoCPLt20league@gmail.com
-            </p>
+              📧 contactnplschedule@gmail.com
+            </p> */}
 
             <ol className="text-white  mt-8">
               <li className="text-3xl font-bold">
@@ -240,10 +177,10 @@ You can disable cookies through your browser settings. To manage personalized ad
               </li>
               <p className="pl-3 mb-3">
                 This website displays Google AdSense advertisements to support hosting and operational costs.
-           </p>
+              </p>
               <p className="pl-3 mb-8">
                 All advertisements shown on CPLT20League.com comply with Google's publisher, content, and user-safety policies.
-           </p>
+              </p>
             </ol>
 
             <ol className="text-white mt-8 ">
@@ -251,11 +188,11 @@ You can disable cookies through your browser settings. To manage personalized ad
                 10. Updates to This Policy
               </li>
               <p className="pl-3 mb-3">
-               We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
-         </p>
+                We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
+              </p>
               <p className="pl-3 mb-3">
                 We encourage users to review this page periodically.
-       </p>
+              </p>
             </ol>
 
 
@@ -267,14 +204,12 @@ You can disable cookies through your browser settings. To manage personalized ad
                 If you have any questions regarding this Privacy Policy, please contact:
               </p>
               <p className="pl-3 mb-3">
-                📧 infoCPLt20league@gmail.com
+                📧 contactnplschedule@gmail.com
               </p>
-              <p className="pl-3 mb-3">
-                🌐 <a href="/contact-us/" className="underline"> https://CPLt20league.com/contact-us/ </a>
-              </p>
+             
             </ol>
             <p className="text-md text-white mb-8 leading-relaxed mt-8">
-              Note: This website is an independent cricket information platform and is not affiliated with the official Coastal Premier League.
+              Note: This website is an independent cricket information platform and is not affiliated with the official.
             </p>
 
 

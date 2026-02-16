@@ -104,11 +104,17 @@ export default function PointsTablePage() {
                          <Breadcrumb
                               items={[
                                    { label: 'Home', href: '/' },
-                                   { label: 'Points Table', href: '/points-table' , isCurrent: true }
+                                   { label: 'Points Table', href: '/points-table', isCurrent: true }
                               ]}
                          />
                     </div>
 
+                    <div className='flex flex-col items-left justify-center m-4'>
+                         <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Points Table</h1>
+                    <p className="text-gray-400 text-sm">Track team rankings, wins, losses, points, and Net Run Rate throughout the tournament.</p>
+
+
+                    </div>
 
 
                     {/* Points Table Component */}

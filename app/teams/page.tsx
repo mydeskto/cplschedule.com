@@ -9,15 +9,15 @@ import Link from "next/link"
 export async function generateMetadata(): Promise<Metadata> {
 
   return {
-    title: "CPL 2026 Squads: Full Player Lists for All Six Teams After Auction",
-    description: "Get the full CPL 2026 squads for all six teams after the Coastal Premier League auction. View complete player lists, roles, country details, and overseas stars.",
-    keywords: ["CPL 2026 all team list", "CPL 2026 all team Squad, players list", "CPL 2026 all team players list", "CPL 2026 squads", "CPL 2026 team players list"],
+    title: "Nepal Premier League 2026 Teams & Squads | Full Players List & Captains",
+    description: "Get the complete Nepal Premier League 2026 teams and squads list, including full players, captains, overseas signings and updated squad details for NPL 2026.",
+    keywords: ["NPL 2026 all team list", "NPL 2026 all team Squad, players list", "NPL 2026 all team players list", "NPL 2026 squads", "NPL 2026 team players list"],
     robots: {
       index: true, // This will override the root layout robots for this route only
       follow: true
     }
     , alternates: {
-      canonical: 'https://CPLt20league.com/teams',
+      canonical: 'https://nplschedule.com/teams',
     }
   }
 }
@@ -65,7 +65,7 @@ export default function TeamsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-slate-950 relative overflow-hidden pt-20">
+      <div className="min-h-screen bg-[#122754] relative overflow-hidden pt-20">
 
 
         {/* Breadcrumb */}
@@ -84,7 +84,9 @@ export default function TeamsPage() {
       </div> */}
 
         <div className="container mx-auto px-4 py-8 relative z-10">
-          <p className="text-gray-400 text-sm">The Coastal Premier League 2026 squads are now finalized after the official CPL auction. This page provides the complete and updated player lists for all six teams, including local stars, overseas players, and squad roles. Each team’s squad is verified and presented in a clean format, making it easy to check confirmed players, team combinations, and final selections for the <Link href="/" className="text-white hover:text-[#c49563] underline transition-colors">CPL 2026</Link> season.</p>
+          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">Nepal Premier League 2026 Teams & Squads</h1>
+          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 features competitive franchise teams built around Nepal’s top domestic talent and international players. Each team squad includes specialist batters, all-rounders, bowlers, and experienced captains aiming for the championship.</p>
+          <p className="text-gray-400 text-sm">Explore detailed squad breakdowns, player roles, captain information, and team updates for the NPL 2026 season.</p>
           <div className="max-w-7xl mx-auto">
             <TeamsGrid items={hoverItems} />
           </div>

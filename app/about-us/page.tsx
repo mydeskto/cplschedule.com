@@ -9,49 +9,9 @@ export const metadata: Metadata = {
 }
 
 export default function AboutUs() {
-  // JSON-LD Schema for SEO
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "About Us - CPL T20 | Coastal Premier League",
-    "description": "Learn about CPL T20 - your go-to source for everything related to the Coastal Premier League T20. Get match schedules, team updates, player stats and more.",
-    "url": "https://CPLt20league.com/about-us",
-    "inLanguage": "en-US",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "CPL T20 League",
-      "url": "https://CPLt20league.com"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://CPLt20league.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About Us",
-          "item": "https://CPLt20league.com/about-us"
-        }
-      ]
-    },
-    "about": {
-      "@type": "Organization",
-      "name": "CPLT20League.com",
-      "description": "Independent cricket information website providing coverage of the Coastal Premier League"
-    }
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
     <div className="min-h-screen bg-[#122754] font-inter ">
 
       <div className="max-w-full mx-auto pt-20">
@@ -62,46 +22,36 @@ export default function AboutUs() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed font-semibold">
-              CPLT20League.com is an independent cricket information website and is not affiliated with, endorsed by, or connected to the official Coastal Premier League or its organizers.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-8">Welcome</h2>
-            <p className="text-md text-white mb-6 leading-relaxed">
-              Welcome to CPLT20League.com, your trusted and independent hub for everything related to the Coastal Premier League (CPL T20).
-            </p>
-            <p className="text-md text-white mb-8 leading-relaxed">
-              Our purpose is to keep cricket fans updated with accurate, timely, and balanced information about CPL matches, teams, players, venues, schedules, and tickets — all in one convenient place.
+              Welcome to NPL Schedule – your trusted source for all things related to the Nepal Premier League (NPL). Whether you’re a die-hard fan, a casual viewer, or someone looking for reliable updates, we’ve got you covered with the latest NPL schedules, fixtures, match timings, and team details – all in one place.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Our Mission</h2>
-            <p className="text-md text-white mb-8 leading-relaxed">
-              We created this platform to make it easier for cricket lovers to follow Bangladesh's premier T20 competition.
+            <p className="text-md text-white mb-6 leading-relaxed">
+              At NPL Schedule, our mission is simple:
             </p>
             <p className="text-md text-white mb-8 leading-relaxed">
-              Our mission is to deliver verified coverage, simple navigation, and reliable updates so fans can stay informed without switching between multiple sources.
+To deliver accurate, timely, and easy-to-understand information about the National Premier League so fans never miss a moment of the action.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Who We Are</h2>
             <p className="text-md text-white mb-8 leading-relaxed">
-              We are a team of dedicated cricket followers and digital content creators who closely track Bangladesh cricket.
+              We are a team of passionate cricket enthusiasts, writers, and sports data analysts who believe in creating a one-stop hub for cricket fans. With years of experience in sports content creation and digital publishing, we ensure our readers always get the most up-to-date and genuine information.
             </p>
-            <p className="text-md text-white mb-8 leading-relaxed">
-              While CPL T20 League is not an official CPL website, our goal is to present authentic and consistent coverage using information from trusted cricket sources, public announcements, and credible reports.
-            </p>
+            
 
-            <h2 className="text-2xl font-bold text-white mb-4 mt-8">What You'll Find Here</h2>
+            <h2 className="text-2xl font-bold text-white mb-4 mt-8">What We Offer</h2>
             <ul className='text-white ml-10 space-y-5 list-disc mb-8'>
               <li>
-                Complete CPL T20 schedule and fixtures
+                <span className='font-bold text-2xl'>Updated NPL Fixtures </span>– Match, dates, times, and venues
               </li>
               <li>
-                Team squads, live scores, and match results
+                <span className='font-bold text-2xl'>Team Overviews</span> – Detailed info on all participating teams and players
               </li>
               <li>
-                Venue and ticket information
+               <span className='font-bold text-2xl'> News & Insights </span>– Real-time updates, pre-match analysis, and post-match reviews
               </li>
               <li>
-                Player statistics and post-match reports
+                <span className='font-bold text-2xl'>Mobile-Friendly Experience </span>– Fast, responsive design for browsing on any device
               </li>
             </ul>
 
@@ -109,12 +59,20 @@ export default function AboutUs() {
               We regularly review and update our content to maintain accuracy. If you notice any error or outdated information, feel free to contact us. We value feedback.
             </p>
 
+            
+
+            <h2 className="text-2xl font-bold text-white mb-4 mt-8">Why Trust Us</h2>
+            <p className="text-md text-white mb-4 leading-relaxed">
+              We are committed to accuracy, transparency, and user satisfaction. All our content is reviewed and updated regularly to maintain high standards of reliability. Our goal is to be your go-to source for cricket schedules without clutter or confusion.
+            </p>
+
+
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Contact Us</h2>
             <p className="text-md text-white mb-4 leading-relaxed">
               For questions, suggestions, or collaboration requests, email us at:
             </p>
             <p className="text-md text-white mb-4 leading-relaxed">
-              infoCPLt20league@gmail.com
+              contactnplschedule@gmail.com
             </p>
             <p className="text-md text-white mb-8 leading-relaxed">
               or reach out through our <a href="/contact-us" className="text-blue-400 hover:text-blue-300 underline">Contact Page</a>.

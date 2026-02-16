@@ -3,18 +3,19 @@
 import { useState, useEffect, useMemo } from "react"
 import { matchesData } from "@/data/matches-data"
 import Image from "next/image"
-import { MapPin, ChevronDown } from "lucide-react"
-import whiteLogo from "@/public/images/CPLT20_logo.png"
+import { MapPin, ChevronDown, X } from "lucide-react"
+import whiteLogo from "@/public/images/newlogo.png"
 
-export default function NPLSchedule() {
+export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-  const [selectedTeam, setSelectedTeam] = useState("All Teams")
+  const [selectedTeam, setSelectedTeam] = useState(initialTeam || "Select Team")
+  const [tempSelectedTeam, setTempSelectedTeam] = useState(initialTeam || "Select Team")
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   // Countdown Logic
   useEffect(() => {
-    const targetDate = new Date("August 15, 2026 13:00:00").getTime()
-    
+    const targetDate = new Date("November 17, 2026 13:00:00").getTime()
+
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = targetDate - now
@@ -40,37 +41,39 @@ export default function NPLSchedule() {
       allTeams.add(m.team1.name)
       allTeams.add(m.team2.name)
     })
-    return ["All Teams", ...Array.from(allTeams).sort()]
+    return ["Select Team", ...Array.from(allTeams).sort()]
   }, [])
 
   const filteredMatches = useMemo(() => {
-    if (selectedTeam === "All Teams") return matchesData.matches
-    return matchesData.matches.filter(m => 
+    if (selectedTeam === "Select Team") return matchesData.matches
+    return matchesData.matches.filter(m =>
       m.team1.name === selectedTeam || m.team2.name === selectedTeam
     )
   }, [selectedTeam])
 
   const formatDate = (dateStr: string) => {
     const [month, day] = dateStr.split(" ")
-    const monthMap: { [key: string]: string } = {Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" }
+    const monthMap: { [key: string]: string } = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" }
     return `${day} ${monthMap[month] || month}, 2026`
   }
 
   return (
     <div className="min-h-screen p-2 md:p-4 font-inter" style={{ backgroundColor: "#122754" }}>
       <div className="max-w-7xl mx-auto space-y-2">
-        
+
         {/* Top Section: Logo & Countdown */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/10 rounded-lg p-2 md:p-6 backdrop-blur-sm gap-8">
-          <div className="relative w-38 h-12 md:w-54 md:h-14">
+        <div className="flex items-center justify-center bg-white/5 border border-white/10 rounded-lg p-2 md:p-6 backdrop-blur-sm gap-8">
+          {/* <div className="relative w-80 h-54 md:w-54 md:h-14">
             <Image
               src={whiteLogo}
               alt="CPL Logo"
-              fill
+              
               className="object-contain"
               priority
+              height={196}
+              width={196}
             />
-          </div>
+          </div> */}
 
           <div className="flex gap-4 md:gap-8">
             {[
@@ -92,44 +95,82 @@ export default function NPLSchedule() {
         {/* Second Section: Title & Filter */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4 border-b border-white/10">
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
-            Scores & <span className="text-[#f26522]">Fixtures</span>
+            NPL 2026 Schedule | <span className="text-[#f26522]">Nepal Premier League</span> Fixtures
+            {/* BPL 2026 Schedule – Full &nbsp; Match<span className="text-[#f26522]">  Fixtures</span> */}
           </h2>
 
-          <div className="relative w-full md:w-72">
-            <button
-              onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className="w-full bg-white/5 border border-white/10 hover:border-[#f26522]/50 text-white rounded-sm px-5 py-4 flex items-center justify-between transition-all group"
-            >
-              <span className="text-xs font-black uppercase tracking-widest">{selectedTeam}</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isFilterOpen ? 'rotate-180' : ''} group-hover:text-[#f26522]`} />
-            </button>
 
-            {isFilterOpen && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-sm overflow-hidden z-[100] shadow-2xl max-h-80 overflow-y-auto thin-scrollbar">
-                {teams.map((team) => (
-                  <button
-                    key={team}
-                    onClick={() => {
-                      setSelectedTeam(team)
-                      setIsFilterOpen(false)
-                    }}
-                    className={`w-full text-left px-5 py-3 text-[10px] font-black uppercase tracking-widest transition-all hover:bg-white/10 ${
-                      selectedTeam === team ? 'text-[#f26522] bg-white/5' : 'text-white/60'
-                    }`}
-                  >
-                    {team}
-                  </button>
-                ))}
-              </div>
-            )}
+        </div>
+        <div>
+          <p className="text-white">
+            The <span className="text-[#f26522]">NPL 2026 schedule</span> is your ultimate guide to the Nepal Premier League 2026. Stay updated with complete match fixtures, dates, timings, venues, team squads, captains, and player details.
+          </p>
+          <p className="text-white">Follow <span className="text-[#f26522]">today’s NPL matches</span> live, track the updated points table, and get the latest news and tournament updates all in one place.</p>
+
+        </div>
+        <div className="flex justify-center items-center">
+          <div className="mr-4">
+            <span className="text-orange-500 font-black text-lg ">NPL Schedule 2026 </span>
           </div>
+          {/* <div>
+            <span className="text-white font-black text-md">Schedule 2025</span>
+          </div> */}
+        </div>
+        <div className="flex  justify-center items-stretch gap-4">
+          <div className="w-full md:w-1/3 relative">
+          <button
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            className="w-full h-full bg-white/5 border border-white/10 hover:border-[#f26522]/50 text-white rounded-sm px-5 py-4 flex items-center justify-between transition-all group"
+          >
+            <span className="text-xs font-black uppercase tracking-widest">{tempSelectedTeam}</span>
+            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isFilterOpen ? 'rotate-180' : ''} group-hover:text-[#f26522]`} />
+          </button>
+
+          {isFilterOpen && (
+            <div className="absolute top-full left-0 right-0 mt-2 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-sm overflow-hidden z-[100] shadow-2xl max-h-120 overflow-y-auto thin-scrollbar">
+              {teams.map((team) => (
+                <button
+                  key={team}
+                  onClick={() => {
+                    setTempSelectedTeam(team)
+                    setIsFilterOpen(false)
+                  }}
+                  className={`w-full text-left px-5 py-3 text-[12px] font-black uppercase tracking-widest transition-all hover:bg-white/10 ${tempSelectedTeam === team ? 'text-[#f26522] bg-white/5' : 'text-white/60'
+                    }`}
+                >
+                  {team}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="flex gap-3">
+          <button 
+            onClick={() => setSelectedTeam(tempSelectedTeam)}
+            className="w-full md:w-auto px-4 md:px-8 h-full bg-[#f26522] hover:bg-[#f26522]/90 text-black rounded-sm font-black text-xs md:text-sm uppercase tracking-widest transition-all duration-300 shadow-lg shadow-[#f26522]/20 hover:shadow-[#f26522]/40 hover:scale-105 active:scale-95"
+          >
+            Apply Filter
+          </button>
+          {selectedTeam !== "Select Team" && (
+            <button 
+              onClick={() => {
+                setSelectedTeam("Select Team")
+                setTempSelectedTeam("Select Team")
+              }}
+              className="w-full md:w-auto px-6 h-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-500/50 text-white rounded-sm font-black text-sm uppercase tracking-widest transition-all duration-300 flex items-center gap-2 group"
+            >
+              <X className="w-4 h-4 group-hover:text-red-500 transition-colors" />
+              <span className="hidden md:block">Clear</span>
+            </button>
+          )}
+        </div>
         </div>
 
         {/* Matches Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8">
           {filteredMatches.map((match) => (
-            <div 
-              key={match.id} 
+            <div
+              key={match.id}
               className="bg-white rounded-lg overflow-hidden shadow-2xl flex flex-col border border-white/10"
             >
               <div className="flex items-center justify-between p-6 ">

@@ -118,7 +118,7 @@ export default function PointsTable() {
                     >
                       {team.netRunRate}
                     </TableCell>
-                    <TableCell className="text-[#f26522] font-black text-center py-3 px-4 text-sm group-hover:scale-110 transition-transform">
+                    <TableCell className="text-[#f26522] font-black text-center py-3 px-4 text-sm  transition-transform">
                       {team.points}
                     </TableCell>
                   </TableRow>

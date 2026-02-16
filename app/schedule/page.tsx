@@ -1,42 +1,18 @@
+'use client'
 
-import { Metadata } from 'next'
-import Image from 'next/image'
+import { Suspense } from 'react'
 import NPLSchedule from '../../components/SchedulePage'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { useSearchParams } from 'next/navigation'
 
 
-export async function generateMetadata(): Promise<Metadata> {
-
-  return {
-    title: "CPL 2026 Schedule – Coastal Premier League Fixtures",
-    description: "Get the complete CPL 2026 schedule with match dates, fixtures, venues, timings, playoffs, and final details. Updated officially by BCB.",
-    keywords: ["CPL 2026 Schedule",
-      "Coastal Premier League Fixtures",
-      "CPL Today Match",
-      "CPL schedule",
-      "CPL 2026 schedule",
-      "CPL match schedule",
-      ],
-    robots: {
-    index: true, // This will override the root layout robots for this route only
-    follow: true,
-    googleBot: {
-        index: true,
-        follow: true,
-        noimageindex: false
-      },
-  }
-    , alternates: {
-      canonical: 'https://CPLt20league.com/schedule',
-    }
-  }
-}
-
- export default function ScheduleHome() {
+function ScheduleContent() {
+    const searchParams = useSearchParams()
+    const teamFromUrl = searchParams.get('team') || undefined
     // Define breadcrumb items
     const breadcrumbItems = [
         { label: 'Home', href: '/' },
-        { label: 'CPL Schedule 2026', href: '/schedule', isCurrent: true }
+        { label: 'NPL Schedule 2026', href: '/schedule', isCurrent: true }
     ];
 
     // JSON-LD Schema for SEO
@@ -117,17 +93,22 @@ export async function generateMetadata(): Promise<Metadata> {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+            
             <div className="min-h-screen bg-[#122754] pt-20 font-inter">
                 {/* Breadcrumb */}
                 <div className="px-5 md:px-10">
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
-                <NPLSchedule />
+                <NPLSchedule initialTeam={teamFromUrl} />
             </div>
         </>
+    )
+}
+
+export default function ScheduleHome() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#122754] pt-20" />}>
+            <ScheduleContent />
+        </Suspense>
     )
 }

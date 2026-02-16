@@ -4,6 +4,7 @@ import dynamic from "next/dynamic"
 import { Calendar, BarChart3, MapPin, Users, ChevronRight } from "lucide-react"
 import { pointsData } from "@/data/points-data"
 import { motion } from "framer-motion"
+import NPLSchedule from "@/components/SchedulePage"
 
 // Lazy load heavy components for better code splitting with loading states
 const HeroComponent = dynamic(() => import("@/components/Hero/home").then(mod => ({ default: mod.HeroComponent })), {
@@ -27,13 +28,12 @@ const Footer = dynamic(() => import("@/components/footer"), {
   ssr: false,
 })
 
+const FAQSection = dynamic(() => import("@/components/faq-section").then(mod => ({ default: mod.FAQSection })), {
+  ssr: false,
+})
+
 const NAV_ITEMS = [
-  {
-    href: "/schedule",
-    label: "Fixtures & Results",
-    icon: Calendar,
-    description: "Check upcoming match schedules and latest results."
-  },
+  
   {
     href: "/points-table",
     label: "Points Table",
@@ -41,10 +41,10 @@ const NAV_ITEMS = [
     description: "View real-time team standings and performance stats."
   },
   {
-    href: "/CPL-venue",
+    href: "/NPL-venue",
     label: "Venues",
     icon: MapPin,
-    description: "Explore the world-class stadiums hosting CPL 2026."
+    description: "Explore the world-class stadiums hosting NPL 2026."
   },
   {
     href: "/teams",
@@ -58,9 +58,10 @@ export const HomeContent = () => {
   return (
     <div className="bg-[#122754] min-h-screen">
       <HeroComponent />
-
+      <NPLSchedule/>
+    
       {/* What Are You Looking For Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-4">
             <motion.h2 
@@ -80,7 +81,7 @@ export const HomeContent = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {NAV_ITEMS.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -131,6 +132,7 @@ export const HomeContent = () => {
 
       <PointsTable />
       <NewsPageForHome />
+      <FAQSection />
     </div>
   )
 }
