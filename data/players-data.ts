@@ -1,693 +1,710 @@
+// Chitwan Rhinos imports
+// import kushalMalla from '@/public/images/chitwa/KhushMalla.webp'
+// import santoshKarki from '@/public/images/chitwa/santosh karki.webp'
+// import bipinRawal from '@/public/images/chitwa/bipin rawal.webp'
+// import ranjeetKumar from '@/public/images/chitwa/ranjeet kumar.webp'
+// import naresh from '@/public/images/chitwa/naresh bahadur sarki.webp'
+// import basilHammed from '@/public/images/chitwa/basil hameed.webp'
+// import sohailTanvir from '@/public/images/chitwa/sohail Tenvir.webp'
+// import sharadVesawkar from '@/public/images/chitwa/sharad vesawkar.webp'
+// import janNicol from '@/public/images/chitwa/jan nicol loftie-eaton.webp'
+// import rijanDhakal from '@/public/images/chitwa/rijin dhakal.webp'
+// import hassanEisakhil from '@/public/images/chitwa/hassan eisakhil.webp'
+// import lucBenkenstein from '@/public/images/chitwa/luc benkenstein.webp'
+// import amarSingh from '@/public/images/chitwa/amar singh.webp'
+// import raviBopara from '@/public/images/chitwa/ravi bopara.webp'
+// import deepakBhora from '@/public/images/chitwa/deepak bohara.webp'
+// import kamalSingh from '@/public/images/chitwa/kamal singh.webp'
+
 
 import anyWhere from '@/public/images/anyWhere.webp'
 
 
+// Lions imports
+// import rohitCard from '@/public/images/lions/rohitcard-removebg-preview.webp'
+// import sundeepCard from '@/public/images/lions/sundeepcard-removebg-preview.webp'
+// import bibekCard from '@/public/images/lions/bibekcard-removebg-preview.webp'
+// import tilakCard from '@/public/images/lions/tilakcard-removebg-preview.webp'
+// import abhisheshCard from '@/public/images/lions/abhisheshcard-removebg-preview.webp'
+// import dineshCard from '@/public/images/lions/dineshcard-removebg-preview.webp'
+// import durgeshCard from '@/public/images/lions/durgeshcard-removebg-preview.webp'
+// import aadilKhan from '@/public/images/lions/adilkhan.webp'
+// import bishalPatel from '@/public/images/lions/bishal.webp'
+// import sherMalla from '@/public/images/lions/sher.webp'
+// import dilipNath from '@/public/images/lions/dilip.webp'
+
+// Avengers imports
+// import kushalBhurtel from '@/public/images/avangers/kushal-bhurtel-1732632616.webp'
+// import akashChand from '@/public/images/avangers/akash-chand-1732598925.webp'
+// import tritRajDas from '@/public/images/avangers/trit-raj-das-1732599650.webp'
+// import sagarDhakal from '@/public/images/avangers/sagar-dhakal-1732599282.webp'
+// import bipinKhatri from '@/public/images/avangers/bipin-khatri-1732598362.webp'
+// import dineshKharel from '@/public/images/avangers/dinesh-kharel-1732603088.webp'
+// import kiranThagunna from '@/public/images/avangers/kiran-thagunna-1732600366.webp'
+// import modelImage from '@/public/images/avangers/model.webp'
+
+// Royals imports
+// import dipendraSingh from '@/public/images/royals/Dpendra-removebg-preview.webp'
+// import aarifSheikh from '@/public/images/royals/aarif-removebg-preview.webp'
+// import abinashBohara from '@/public/images/royals/abinash-removebg-preview.webp'
+// import binodBhandari from '@/public/images/royals/binod-removebg-preview.webp'
+// import ishanPandey from '@/public/images/royals/ishan-removebg-preview.webp'
+// import arjunKumal from '@/public/images/royals/arjun-removebg-preview.webp'
+// import khadakBohara from '@/public/images/royals/khadak-removebg-preview.webp'
+// import nareshBudhayer from '@/public/images/royals/narash-removebg-preview.webp'
+// import bhojRaj from '@/public/images/royals/bhoj-removebg-preview.webp'
+// import amitShrestha from '@/public/images/royals/amit-removebg-preview.webp'
+// import narenSaud from '@/public/images/royals/naren-removebg-preview.webp'
+// import harmeetSingh from '@/public/images/royals/harmet-removebg-preview.webp'
+// import dilpreetSingh from '@/public/images/royals/dilpreet-removebg-preview.webp'
+// import basantKhatri from '@/public/images/royals/basant-removebg-preview.webp'
+// import scottKuggeleijn from '@/public/images/royals/scott-removebg-preview.webp'
+// import brandonMcMullen from '@/public/images/royals/brenden-removebg-preview.webp'
+// import saifAliZaib from '@/public/images/royals/saif-removebg-preview.webp'
+// import rohanMustafa from '@/public/images/royals/rohan-removebg-preview.webp'
+
 export const playersData = {
 
-  "rajshahi-warriors": {
+  "chitwan-rhinos": {
     players: [
       {
-        name: "Nazmul Hossain Shanto",
-        role: "Top-order Batter",
-        country: "Bangladesh",
+        name: "Kushal Malla",
+        role: "Captain, Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Tanzid Hasan Tamim",
-        role: "Opening Batter",
-        country: "Bangladesh",
+        name: "Sohail Tanvir",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Nawaz",
-        role: "All-rounder (Left-arm Spin)",
-        country: "Pakistan",
+        name: "Sharad Vesawkar",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Sahibzada Farhan",
-        role: "Top-order Batter",
-        country: "Pakistan",
+        name: "Ravi Bopara",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Tanzim Hasan Sakib",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Jan Nicol Loftie Eaton",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Yasir Ali",
-        role: "Middle-order Batter",
-        country: "Bangladesh",
+        name: "Rijan Dhakal",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Akbar Ali",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
+        name: "Hassan Eisakhil",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Ripon Mondol",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Luc Benkenstein",
+        role: "All-Rounder",
         image: anyWhere,
+       
       },
       {
-        name: "Jishan Alam",
-        role: "—",
-        country: "Bangladesh",
+        name: "Amar Singh Rautela",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Hasan Murad",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
+        name: "Santosh Karki",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Abdul Gaffar Saqlain",
-        role: "—",
-        country: "Bangladesh",
+        name: "Bipin Rawal",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "SM Meherob Hasan",
-        role: "All-rounder (Spin)",
-        country: "Bangladesh",
+        name: "Ranjeet Kumar",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Robiul Haque",
-        role: "Medium-fast Bowler",
-        country: "Bangladesh",
+        name: "Deepak Bohora",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Mushfiqur Rahim",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
+        name: "Naresh Bahadur Sarki",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Shakhir H. Shuvro",
-        role: "—",
-        country: "Bangladesh",
+        name: "Basil Hameed",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Wasi Siddiquee",
-        role: "—",
-        country: "Bangladesh",
+        name: "Kamal Singh Airee",
+        role: "Bowler",
         image: anyWhere,
-      },
-      {
-        name: "Md Rubel",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Dushan Ishara Hemantha",
-        role: "All-rounder",
-        country: "Sri Lanka",
-        image: anyWhere,
-      },
-      {
-        name: "Jahandad Khan",
-        role: "Fast Bowler",
-        country: "Pakistan",
-        image: anyWhere,
+        
       }
     ],
-    coach: "Hannan Sarkar"
+    coach: "Gyanendra Malla"
   },
 
-  "noakhali-express": {
+  "lumbini-lions": {
     players: [
       {
-        name: "Soumya Sarkar",
-        role: "Batting All-rounder",
-        country: "Bangladesh",
+        name: "Rohit Paudel",
+        role: "Captain",
         image: anyWhere,
+        matches: "7",
+       
       },
       {
-        name: "Hasan Mahmud",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Sundeep Jora",
+        role: "Batsman",
         image: anyWhere,
+        matches: "8",
+        
       },
       {
-        name: "Kusal Mendis",
-        role: "Wicketkeeper-Batter",
-        country: "Sri Lanka",
+        name: "Bibek Yadav",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Johnson Charles",
-        role: "Wicketkeeper-Batter",
-        country: "West Indies",
+        name: "Tilak Bhandari",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Mahidul Islam Ankon",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Abhishesh Gautam",
+        role: "Bowler",
         image: anyWhere,
+       
       },
       {
-        name: "Jaker Ali Anik",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
+        name: "Dinesh Adhikari",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Habibur Rahman Sohan",
-        role: "—",
-        country: "Bangladesh",
+        name: "Durgesh Gupta",
+        role: "All-Rounder",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Musfik Hasan",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Aadil Khan",
+        role: "Wicketkeeper-Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Shahadat Hossain Dipu",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Bishal Patel",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Rejaur Rahman Raja",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Sher Malla",
+        role: "All-Rounder",
         image: anyWhere,
+       
       },
       {
-        name: "Nazmul Islam Apu",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
+        name: "Dilip Nath",
+        role: "Wicketkeeper-Batsman",
         image: anyWhere,
-      },
-      {
-        name: "Abu Hasim",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mehedi Hasan Rana",
-        role: "Left-arm Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Md Shykat Ali",
-        role: "All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Sabbir Hossain",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Rahmatullah Ali",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Ihsanullah Khan",
-        role: "Fast Bowler",
-        country: "Pakistan",
-        image: anyWhere,
-      },
-      {
-        name: "Haider Ali",
-        role: "Top-order Batter",
-        country: "Pakistan",
-        image: anyWhere,
+        
       }
     ],
-    coach: "Khaled Mahmud Sujon"
+    coach: "TBA"
   },
-  "dhaka-capitals": {
+  "pokhara-avengers": {
     players: [
       {
-        name: "Taskin Ahmed",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Kushal Bhurtel",
+        role: "Batsman",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Saif Hasan",
-        role: "Top-order Batter",
-        country: "Bangladesh",
+        name: "Aakash Chand",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Alex Hales",
-        role: "Opening Batter",
-        country: "England",
-        image: anyWhere,
-      },
-      {
-        name: "Usman Khan",
-        role: "Top-order Batter",
-        country: "UAE / Pakistan",
-        image: anyWhere,
-      },
-      {
-        name: "Shamim Hossain",
-        role: "Middle-order Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mohammad Saifuddin",
-        role: "Bowling All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mohammad Mithun",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Taijul Islam",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mohammad Sabbir Rahman",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Md Nasir Hossain",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Tofayel Ahmed",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Irfan Shukkur",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Abdullah Al Mamun",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Maruf Mridha",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Jayed Ullah",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Moinul Islam",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Dasun Shanaka",
+        name: "Sandeep Chhetri",
         role: "All-rounder",
-        country: "Sri Lanka",
         image: anyWhere,
+        
       },
       {
-        name: "Zubairullah Akbari",
-        role: "—",
-        country: "Afghanistan",
+        name: "Trit Raj Das",
+        role: "All-rounder",
         image: anyWhere,
+       
+      },
+      {
+        name: "Sagar Dhakal",
+        role: "Bowler",
+        image: anyWhere,
+        },
+      {
+        name: "Bipin Khatri",
+        role: "All-Rounder",
+        image: anyWhere,
+         },
+      {
+        name: "Dinesh Kharel",
+        role: "Batsman",
+        image: anyWhere,
+        },
+      {
+        name: "Arjun Kumal",
+        role: "All-Rounder",
+        image: anyWhere,
+        },
+      {
+        name: "Krishna Poudel",
+        role: "Bowler",
+        image: anyWhere,
+       },
+      {
+        name: "Abhishek Tiwari",
+        role: "All-Rounder",
+        image: anyWhere,
+       },
+      {
+        name: "Kiran Thagunna",
+        role: "All-Rounder",
+        image: "kiranThagunna",
+        }
+    ],
+    coach: "TBA"
+  },
+  "sudurpaschim-royals": {
+    players: [
+      {
+        name: "Dipendra Singh Airee",
+        role: "Captain",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Aarif Sheikh",
+        role: "All-Rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Abinash Bohara",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Binod Bhandari",
+        role: "Wicket-Keeper",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Ishan Pandey",
+        role: "All-Rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Arjun Kumal",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Khadak Bahadur Bohara",
+        role: "Bowler",
+        image: anyWhere,
+      
+      },
+      {
+        name: "Naresh Budhayer",
+        role: "Batsman",
+        image: anyWhere,
+      
+      },
+      {
+        name: "Bhoj Raj Bhatta",
+        role: "All-Rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Amit Shrestha",
+        role: "Batsman",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Naren Saud",
+        role: "Batsman",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Harmeet Singh Baddhan",
+        role: "All-Rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Dilpreet Singh Bajwa",
+        role: "All-Rounder",
+        image: anyWhere,
+      
+      },
+      {
+        name: "Basant Khatri",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Scott Kuggeleijn",
+        role: "All-Rounder",
+        image: anyWhere,
+      
+      },
+      {
+        name: "Brandon McMullen",
+        role: "All-Rounder",
+        image: anyWhere,
+      
+      },
+      {
+        name: "Saif Ali Zaib",
+        role: "All-Rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Rohan Mustafa",
+        role: "All-Rounder",
+        image: anyWhere,
+        
+      },
+    ],
+    coach: "TBA"
+  },
+  "karnali-yaks": {
+    players: [
+      {
+        name: "Sompal Kami",
+        role: "Captain",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Gulsan Jha",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Arjun Gharti",
+        role: "Bowling all-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Dipendra Rawat",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Bipin Sharma",
+        role: "Bowling all-rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Unish Singh",
+        role: "Bowling all-rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Deepak Dumre",
+        role: "Wicket-keeper batsman",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Yuvraj Khatri",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Pawan Sarraf",
+        role: "Bowling all-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Imran Shekh",
+        role: "All-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "   Mohammad Aadil Alam",
+        role: "",
+        image: anyWhere,
+       
       }
     ],
-    coach: "Toby Radford"
+    coach: "Monty Desai"
   },
-  "sylhet-titans": {
+  "kathmandu-gurkhas": {
     players: [
       {
-        name: "Mehedi Hasan Miraz",
-        role: "All-rounder",
-        country: "Bangladesh",
+        name: "Karan KC",
+        role: "Captain",
         image: anyWhere,
+        
       },
       {
-        name: "Nasum Ahmed",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
+        name: "Nandan Yadav",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Saim Ayub",
-        role: "Top-order Batter",
-        country: "Pakistan",
+        name: "Shahab Alam",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Mohammad Amir",
-        role: "Fast Bowler",
-        country: "Pakistan",
+        name: "Dipesh Kandel",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Parvez Hossain Emon",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Rashid Khan",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Syed Khaled Ahmed",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Bhim Sharki",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Afif Hossain Dhrubo",
-        role: "Batting All-rounder",
-        country: "Bangladesh",
+        name: "Uttam Magar",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Rony Talukdar",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Aakash Tripathi",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Zakir Hasan",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
+        name: "Santosh Yadav",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Md Ruyel Miah",
-        role: "Fast Bowler",
-        country: "Bangladesh",
+        name: "Tul B Thapa",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Ariful Islam",
-        role: "All-rounder",
-        country: "Bangladesh",
+        name: "Bikash Aagri",
+        role: "",
         image: anyWhere,
-      },
-      {
-        name: "Ebadat Hossain",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mominul Haque",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Shohidul Islam",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Rahatul Ferdous Javed",
-        role: "Batter / All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Tawfique Khan Tushar",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Angelo Mathews",
-        role: "All-rounder",
-        country: "Sri Lanka",
-        image: anyWhere,
-      },
-      {
-        name: "Aaron Jones",
-        role: "Batter",
-        country: "USA",
-        image: anyWhere,
+        
       }
     ],
-    coach: "Sohel Islam"
+    coach: "TBA"
   },
-  "chattogram-royals": {
+  "janakpur-bolts": {
     players: [
       {
-        name: "Mehedi Hasan",
-        role: "Batting All-rounder",
-        country: "Bangladesh",
+        name: "Aasif Sheikh",
+        role: "Captain",
         image: anyWhere,
+        
       },
       {
-        name: "Tanvir Islam",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
+        name: "Anil Sah",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Ahmed Abrar",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Shubh Kansakar",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Naim",
-        role: "Top-order Batter",
-        country: "Bangladesh",
+        name: "Kishore Mahato",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Mohammad Shoriful Islam",
-        role: "Left-arm Fast Bowler",
-        country: "Bangladesh",
+        name: "Lalit Rajbanshi",
+        role: "",
         image: anyWhere,
+        
       },
       {
-        name: "Abu Hider Rony",
-        role: "Left-arm Fast Bowler",
-        country: "Bangladesh",
+        name: "Rupesh Singh",
+        role: "",
         image: anyWhere,
+       
       },
       {
-        name: "Mahmudul Hasan Joy",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Hemant Dhami",
+        role: "Bowler",
         image: anyWhere,
+        
       },
       {
-        name: "Mahfijul Islam Robin",
-        role: "Batter",
-        country: "Bangladesh",
+        name: "Rupesh Kumar Singh",
+        role: "All-rounder ",
         image: anyWhere,
+        
       },
       {
-        name: "Sumon Khan",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Ziaur Rahman",
+        name: "Aakash Tripathi",
         role: "All-rounder",
-        country: "Bangladesh",
         image: anyWhere,
+        
       },
       {
-        name: "Arafat Sunny",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mukidul Islam",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Md Mukidul Islam Mugdho",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Shuvagata Hom Chowdhury",
-        role: "All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Salman Hossain",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Zahiduzzaman Khan",
-        role: "—",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Niroshan Dickwella",
-        role: "Wicketkeeper-Batter",
-        country: "Sri Lanka",
-        image: anyWhere,
-      },
-      {
-        name: "Angelo Perera",
-        role: "All-rounder",
-        country: "Sri Lanka",
-        image: anyWhere,
-      }
-    ],
-    coach: "Justin Kemp"
-  },
-  "rangpur-riders": {
-    players: [
-      {
-        name: "Nurul Hasan Sohan",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mustafizur Rahman",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Khawaja Nafay",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Sufiyan Muqeem",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Litton Kumar Das",
-        role: "Wicketkeeper-Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Towhid Hridoy",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Nahid Rana",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Rakibul Hasan",
-        role: "Left-arm Spinner",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Aliss Al Islam",
-        role: "Leg Spinner",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mrittunjoy Chowdhury",
-        role: "Left-arm Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Nayeem Hasan",
-        role: "Off-spin Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Kamrul Islam Rabbi",
-        role: "Fast Bowler",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mahmudullah Riyad",
-        role: "All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Abdul Halim",
-        role: "All-rounder",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Iftakhar Hossain Ifti",
-        role: "Batter",
-        country: "Bangladesh",
-        image: anyWhere,
-      },
-      {
-        name: "Mehedi Hasan Shohag",
+        name: "Tul Bahadur Thapa",
         role: "Spinner",
-        country: "Bangladesh",
         image: anyWhere,
+        
       },
       {
-        name: "Emilio Gay",
-        role: "Batter",
-        country: "England",
+        name: "Arniko Yadav",
+        role: "All-rounder",
         image: anyWhere,
-      },
-      {
-        name: "Md Akhlaq",
-        role: "Wicketkeeper-Batter",
-        country: "Pakistan",
-        image: anyWhere,
+        
       }
     ],
-    coach: "Mickey Arthur"
+    coach: "TBA"
   },
-  
+  "biratnagar-kings": {
+    players: [
+      {
+        name: "Sandeep Lamichhane",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Basir Ahamad",
+        role: "All-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Lokesh Bam",
+        role: "Wicketkeeper-Batsman",
+        image: anyWhere,
+       },
+      {
+        name: `Subash Bhandari`,
+        role: "Bowling All-rounder",
+        image: anyWhere,
+       
+      },
+      {
+        name: "Naren Bhatta",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Pratish GC",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Narayan Joshi",
+        role: "All-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Shrawan Kisku",
+        role: "Bowling All-rounder",
+        image: anyWhere,
+        
+        
+      },
+      {
+        name: "Sahil Patel",
+        role: "Batsman/Wicket-keeper",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Shankar Rana",
+        role: "Batting All-rounder",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Surya Tamang",
+        role: "Bowler",
+        image: anyWhere,
+        
+      },
+      {
+        name: "Chris Lynn",
+        role: "Batsman",
+        image: anyWhere,
+        
+      },
+    ],
+    coach: "Kalam Ali"
+  },
 }

@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 
 // Lazy load components with animations
 export const LazyMatchCarousel = dynamic(
-  () => import('@/app/matches/components/match_carosule'),
+  () => import('@/components/match_carosule'),
   { 
     ssr: false,
     loading: () => <div className="h-64 bg-gray-200 rounded animate-pulse" />

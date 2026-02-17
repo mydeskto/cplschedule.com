@@ -34,10 +34,10 @@ export const pointsData = [
   },
   {
     position: 3,
-    team: "Kathmandu Gorkhas",
+    team: "Kathmandu Gurkhas",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/392043-kzYjrSVxDd6DR0xeVnAxTYmk4YcOyK.png",
     matches: 0,
-    link: "/teams/kathmandu-gorkhas/",
+    link: "/teams/kathmandu-gurkhas/",
     won: 0,
     loss: 0,
     noResult: 0,

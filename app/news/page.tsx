@@ -96,13 +96,13 @@ export default function NewsPage() {
           <p className="text-gray-400 text-sm">We regularly publish updates to keep fans informed throughout the NPL 2026 season.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[...newsArticles]
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .map((article) => (
               <NewsCard key={article.id} {...article} image={typeof article.image === "string" ? article.image : article.image.src} />
             ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )

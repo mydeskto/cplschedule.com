@@ -106,7 +106,7 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
       </div>
 
       <div className="flex items-center gap-6">
-        <Link href="/news/NPL-tickets/">
+        <Link href="/tickets">
           <Button className="bg-[#f26522] hover:bg-white text-black font-black px-8 py-4 rounded-sm text-[11px] tracking-[0.2em] transition-all duration-500 shadow-2xl shadow-[#f26522]/20 hover:scale-105 active:scale-95">
             NPL TICKETS 2026
           </Button>
