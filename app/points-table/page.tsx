@@ -34,10 +34,10 @@ export default function PointsTablePage() {
                "item": {
                     "@type": "SportsTeam",
                     "name": team.name,
-                    "url": `https://CPLt20league.com/team/${team.slug}`,
+                    "url": `https://nplschedule.com/team/${team.slug}`,
                     "memberOf": {
                          "@type": "SportsLeague",
-                         "name": "Coastal Premier League"
+                         "name": "Nepal Premier League"
                     },
                     "numberOfWins": team.wins,
                     "numberOfLosses": team.losses,
@@ -58,35 +58,35 @@ export default function PointsTablePage() {
                          __html: JSON.stringify({
                               "@context": "https://schema.org",
                               "@type": "WebPage",
-                              "@id": "https://CPLt20league.com/points-table#webpage",
-                              "name": "CPL 2026 Points Table",
-                              "description": "CPL 2025-26 Points Table: Live Team Rankings and Standings for Coastal Premier League",
-                              "url": "https://CPLt20league.com/points-table",
+                              "@id": "https://nplschedule.com/points-table#webpage",
+                              "name": "NPL 2026 Points Table",
+                              "description": "NPL 2025-26 Points Table: Live Team Rankings and Standings for Nepal Premier League",
+                              "url": "https://nplschedule.com/points-table",
                               "inLanguage": "en-US",
                               "isPartOf": {
-                                   "@id": "https://CPLt20league.com/#website"
+                                   "@id": "https://nplschedule.com/#website"
                               },
                               "about": {
                                    "@type": "SportsLeague",
-                                   "@id": "https://CPLt20league.com/#sportsleague",
-                                   "name": "Coastal Premier League",
+                                   "@id": "https://nplschedule.com/#sportsleague",
+                                   "name": "Nepal Premier League",
                                    "sport": "Cricket"
                               },
                               "breadcrumb": {
                                    "@type": "BreadcrumbList",
-                                   "@id": "https://CPLt20league.com/points-table#breadcrumb",
+                                   "@id": "https://nplschedule.com/points-table#breadcrumb",
                                    "itemListElement": [
                                         {
                                              "@type": "ListItem",
                                              "position": 1,
                                              "name": "Home",
-                                             "item": "https://CPLt20league.com/"
+                                             "item": "https://nplschedule.com/"
                                         },
                                         {
                                              "@type": "ListItem",
                                              "position": 2,
                                              "name": "Points Table",
-                                             "item": "https://CPLt20league.com/points-table"
+                                             "item": "https://nplschedule.com/points-table"
                                         }
                                    ]
                               }

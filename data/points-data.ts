@@ -19,6 +19,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des: "View the Sudurpaschim Royals 2026 squad, key players, and captain details for the NPL 2026 season"
   },
   {
     position: 2,
@@ -31,6 +32,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"Explore the Biratnagar Kings squad, player roles, and performance stats for NPL 2026."
   },
   {
     position: 3,
@@ -43,6 +45,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des: "Check the Kathmandu Gurkhas squad, top performers, and captain updates for NPL 2026."
   },
   {
     position: 4,
@@ -55,6 +58,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"See the Lumbini Lions squad, emerging talents, and player stats for NPL 2026."
   },
   {
     position: 5,
@@ -67,6 +71,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"Discover the Pokhara Avengers squad, key players, and captain information for NPL 2026."
   },
   {
     position: 6,
@@ -79,6 +84,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"View the Karnali Yaks squad, full roster, and performance stats for NPL 2026."
   },
   {
     position: 7,
@@ -91,6 +97,7 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"Explore the Chitwan Rhinos squad, player roles, and top performers for NPL 2026."
   },
   {
     position: 8,
@@ -103,5 +110,6 @@ export const pointsData = [
     noResult: 0,
     netRunRate: "0.000",
     points: 0,
+    des:"Check the Janakpur Bolts squad, full roster, and captain details for NPL 2026."
   },
 ]

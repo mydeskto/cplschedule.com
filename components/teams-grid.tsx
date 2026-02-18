@@ -14,6 +14,7 @@ export const TeamsGrid = ({
     title: string;
     logo: string;
     link: string;
+    des: string;
   }[];
   className?: string;
 }) => {
@@ -50,7 +51,7 @@ export const TeamsGrid = ({
                     <div className="h-0.5 w-12 bg-[#f26522]/30 mx-auto transition-all duration-500 group-hover:w-20 group-hover:bg-[#f26522]" />
                  </div>
                  <p className="text-white/60 font-light text-sm leading-relaxed">
-                    Explore the complete squad, performance statistics, and team history for the NPL 2026 season.
+                   {item.des}
                  </p>
                  <div className="flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase pt-2">
                     View Squad

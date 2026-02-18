@@ -20,17 +20,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
      const team = pointsData.find((t) => t.team.toLowerCase().replace(/\s+/g, "-") === normalizedSlug)
 
      return {
-          title: team ? `${team.team} - CPL Team Profile` : "Team - Coastal Premier League",
+          title: team ? `${team.team} - NPL 2026 Squads and Full Players List of all Team` : "Team - Nepal Premier League",
           description: team
-               ? `${team.team} team profile, squad, statistics and latest updates from Coastal Premier League. Matches played: ${team.matches}, Points: ${team.points}`
-               : "Coastal Premier League team information and statistics",
-          keywords: [team?.team || "CPL Team", "Coastal Premier League", "Cricket Team", "CPL Squad"],
+               ? `${team.team} team profile, squad, statistics and latest updates from Nepal Premier League. Matches played: ${team.matches}, Points: ${team.points}`
+               : "Nepal Premier League team information and statistics",
+          keywords: [team?.team || "NPL Team", "Nepal Premier League", "Cricket Team", "NPL Squad"],
           robots: {
                index: true, // This will override the root layout robots for this route only
                follow: true
           }
           , alternates: {
-               canonical: `https://CPLt20league.com/teams/${slug}`,
+               canonical: `https://nplschedule.com/teams/${slug}`,
           }
      }
 }
@@ -103,7 +103,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           sport: "Cricket",
           memberOf: {
                "@type": "SportsOrganization",
-               name: "Coastal Premier League"
+               name: "Nepal Premier League"
           },
           coach: teamInfo?.coach ? {
                "@type": "Person",
@@ -114,8 +114,8 @@ export default async function TeamPage({ params }: TeamPageProps) {
                name: teamInfo.captain
           } : undefined,
           logo: teamInfo?.logo || team?.logo,
-          description: `${team?.team || teamInfo?.teamName} - Coastal Premier League 2026 team profile, squad, and statistics`,
-          url: `https://CPLt20league.com/teams/${slug}`
+          description: `${team?.team || teamInfo?.teamName} - Nepal Premier League 2026 team profile, squad, and statistics`,
+          url: `https://nplschedule.com/teams/${slug}`
      };
 
      const breadcrumbSchema = {
@@ -126,19 +126,19 @@ export default async function TeamPage({ params }: TeamPageProps) {
                     "@type": "ListItem",
                     position: 1,
                     name: "Home",
-                    item: "https://CPLt20league.com/"
+                    item: "https://nplschedule.com/"
                },
                {
                     "@type": "ListItem",
                     position: 2,
                     name: "Teams",
-                    item: "https://CPLt20league.com/teams"
+                    item: "https://nplschedule.com/teams"
                },
                {
                     "@type": "ListItem",
                     position: 3,
                     name: team?.team || "Team",
-                    item: `https://CPLt20league.com/teams/${slug}`
+                    item: `https://nplschedule.com/teams/${slug}`
                }
           ]
      };
@@ -256,6 +256,8 @@ export default async function TeamPage({ params }: TeamPageProps) {
                          return null
                     })}
                </div>
+
+               <h2 className="text-3xl font-bold text-white mb-6 text-center pb-2">{team?.team} Squad | NPL 2026</h2>
                
                <div className="w-full px-4 md:px-6 py-8 relative z-10">
                     {/* Teams player section */}

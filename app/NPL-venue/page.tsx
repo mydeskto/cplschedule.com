@@ -113,7 +113,7 @@ export default function VenuesPage() {
           <Breadcrumb
             items={[
               { label: 'Home', href: '/' },
-              { label: 'CPL Venues', href: '/CPL-venue', isCurrent: true }
+              { label: 'NPL Venues', href: '/NPL-venue', isCurrent: true }
             ]}
           />
         </div>
@@ -121,7 +121,7 @@ export default function VenuesPage() {
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 font-font-inter ">
           {/* Header */}
           <div className="mb-12 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Nepal Premier League 2026 Venues</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Nepal Premier League 2026 Venues | NPL 2026 Venue</h1>
             {/* <p className="text-lg text-white max-w-2xl mx-auto mb-6">
               Explore the Coastal Premier League 2026 Venues - Stadiums, Capacity & Match Schedule
             </p> */}
@@ -129,10 +129,10 @@ export default function VenuesPage() {
             {/* Intro Paragraph */}
             <div className="max-w-full mx-auto text-center">
               <p className="text-base text-gray-300 leading-relaxed mb-4">
-                Matches of Nepal Premier League 2026 will be played across selected cricket stadiums known for their pitch conditions, crowd atmosphere, and match history. Venue details help fans understand match locations, playing surfaces, and conditions.
+                The Nepal Premier League 2026 (NPL 2026) venue for all matches is the University Cricket Ground, known for its excellent pitch conditions, competitive playing surface, and lively crowd atmosphere. This venue has hosted major domestic tournaments, making it a top location for exciting NPL 2026 matches.
               </p>
               <p className="text-base text-gray-300 leading-relaxed">
-                Below are the confirmed and expected venues for NPL 2026.
+                Fans can use this information to plan their visit, follow the match schedule, and track pitch conditions. Stay updated with the latest details on the NPL 2026 venue, stadium facilities, and tickets.
               </p>
             </div>
           </div>

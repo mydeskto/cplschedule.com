@@ -32,10 +32,10 @@ const FOOTER_LINKS = {
     { name: "Disclaimer", href: "/disclaimer" },
   ],
   socials: [
-    { name: "YouTube", href: "https://www.youtube.com/@CPLt20league", icon: Youtube },
-    { name: "Facebook", href: "https://www.facebook.com/CPLt20league", icon: Facebook },
-    { name: "Twitter", href: "https://x.com/CPLt20league", icon: Twitter },
-    { name: "Instagram", href: "https://www.instagram.com/CPLt20league/", icon: Instagram },
+    { name: "YouTube", href: "https://www.youtube.com/@NPLSchedule", icon: Youtube },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61588296753073", icon: Facebook },
+    { name: "Twitter", href: "https://x.com/nplschedule", icon: Twitter },
+    { name: "Instagram", href: "https://www.instagram.com/nplschedule/", icon: Instagram },
   ]
 }
 

@@ -27,6 +27,7 @@ export default function TeamsPage() {
     title: team.team,
     logo: team.logo,
     link: `/teams/${encodeURIComponent(team.team.toLowerCase().replace(/\s+/g, "-"))}`,
+    des: team.des
   }))
 
 
@@ -40,24 +41,24 @@ export default function TeamsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "@id": "https://CPLt20league.com/teams#teamlist",
-            "name": "CPL 2026 Teams - Full Squad List, Captains & Players",
-            "description": "Explore all CPL 2026 teams with full squad lists, captains, key players, and stats. Get the latest updates on every Coastal Premier League T20 team.",
-            "url": "https://CPLt20league.com/teams",
+            "@id": "https://nplschedule.com/teams#teamlist",
+            "name": "NPL 2026 Teams - Full Squad List, Captains & Players",
+            "description": "Explore all NPL 2026 teams with full squad lists, captains, key players, and stats. Get the latest updates on every Nepal Premier League T20 team.",
+            "url": "https://nplschedule.com/teams",
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "itemListElement": pointsData.map((team, index) => ({
               "@type": "ListItem",
               "position": index + 1,
               "item": {
                 "@type": "SportsTeam",
-                "@id": `https://CPLt20league.com/teams/${encodeURIComponent(team.team.toLowerCase().replace(/\s+/g, "-"))}#team`,
+                "@id": `https://nplschedule.com/teams/${encodeURIComponent(team.team.toLowerCase().replace(/\s+/g, "-"))}#team`,
                 "name": team.team,
-                "description": `${team.team} - Coastal Premier League 2026 Squad`,
-                "url": `https://CPLt20league.com/teams/${encodeURIComponent(team.team.toLowerCase().replace(/\s+/g, "-"))}`,
+                "description": `${team.team} - Nepal Premier League 2026 Squad`,
+                "url": `https://nplschedule.com/teams/${encodeURIComponent(team.team.toLowerCase().replace(/\s+/g, "-"))}`,
                 "memberOf": {
                   "@type": "SportsLeague",
-                  "@id": "https://CPLt20league.com/#sportsleague",
-                  "name": "Coastal Premier League"
+                  "@id": "https://nplschedule.com/#sportsleague",
+                  "name": "Nepal Premier League"
                 }
               }
             }))
@@ -84,9 +85,10 @@ export default function TeamsPage() {
       </div> */}
 
         <div className="container mx-auto px-4 py-8 relative z-10">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">Nepal Premier League 2026 Teams & Squads</h1>
-          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 features competitive franchise teams built around Nepal’s top domestic talent and international players. Each team squad includes specialist batters, all-rounders, bowlers, and experienced captains aiming for the championship.</p>
-          <p className="text-gray-400 text-sm">Explore detailed squad breakdowns, player roles, captain information, and team updates for the NPL 2026 season.</p>
+          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Squads and Full Players List of all Team</h1>
+          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.</p>
+          <p className="text-gray-400 text-sm">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the latest NPL 2026 team squads, player roles, captain updates, and match line-ups throughout the season.</p>
+          <p className="text-gray-400 text-sm">Stay up to date with full squad lists, key players, and tournament news to never miss a moment of NPL 2026 action.</p>
           <div className="max-w-7xl mx-auto">
             <TeamsGrid items={hoverItems} />
           </div>

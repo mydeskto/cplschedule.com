@@ -151,10 +151,10 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
                   <p className="text-[10px] font-black tracking-[0.3em] text-white/30 text-center uppercase">Follow Us</p>
                   <div className="flex items-center justify-center gap-6">
                     {[
-                      { Icon: FaYoutube, url: "https://www.youtube.com/channel/UCsin34Ns_3LDsvyQnBv73mw" },
-                      { Icon: FaFacebook, url: "https://www.facebook.com/profile.php?id=61582279622646" },
-                      { Icon: FaXTwitter, url: "https://x.com/CPLt20league" },
-                      { Icon: FaInstagram, url: "https://www.instagram.com/CPLt20league/" },
+                      { Icon: FaYoutube, url: "https://www.youtube.com/@NPLSchedule" },
+                      { Icon: FaFacebook, url: "https://www.facebook.com/profile.php?id=61588296753073" },
+                      { Icon: FaXTwitter, url: "https://x.com/nplschedule" },
+                      { Icon: FaInstagram, url: "https://www.instagram.com/nplschedule//" },
                     ].map(({ Icon, url }, index) => (
                       <a
                         key={index}
