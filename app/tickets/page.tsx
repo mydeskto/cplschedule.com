@@ -155,7 +155,7 @@ export default function TicketsPage() {
         <section>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase">
-              How to Buy NPL 2026 Tickets <span className="text-[#f26522]">Online</span>
+              how to buy npl ticket online <span className="text-[#f26522]">2026</span>
             </h2>
             <div className="h-1 w-24 bg-[#f26522] mx-auto rounded-full mt-4" />
           </div>

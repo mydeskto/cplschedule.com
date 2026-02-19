@@ -4,14 +4,14 @@ import { Breadcrumb } from '@/components/breadcrumb'
 import { teamsData } from '@/data/teamData'
 
 export const metadata: Metadata = {
-     title: "CPL 2026 Points Table",
-     description: "CPL 2025-26 Points Table: Live Team Standings & Rankings for Coastal Premier League",
+     title: "Nepal Premier League 2026 Points Table : Standings & Ranking",
+     description: "Follow the Nepal Premier League 2026 standings live. Track rankings, results, wins, losses, and Net Run Rate (NRR) in real time.",
      keywords: [
-          "CPL 2026 Points Table",
-          "Coastal Premier League standings",
-          "CPL team rankings",
-          "CPL T20 standings",
-          "CPL points table",
+          "NPL 2026 Points Table",
+          "Nepal Premier League standings",
+          "NPL team rankings",
+          "NPL T20 standings",
+          "NPL points table",
 
      ],
      robots: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
           follow: true,
      },
      alternates: {
-          canonical: "https://CPLt20league.com/points-table",
+          canonical: "https://nplschedule.com/points-table",
      },
 }
 
@@ -110,7 +110,7 @@ export default function PointsTablePage() {
                     </div>
 
                     <div className='flex flex-col items-left justify-center m-4'>
-                         <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Points Table</h1>
+                         <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Points Table | Latest Standings and Team Rankings</h1>
                     <p className="text-gray-400 text-sm">Track team rankings, wins, losses, points, and Net Run Rate throughout the tournament.</p>
 
 

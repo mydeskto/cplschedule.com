@@ -131,6 +131,14 @@ export const HomeContent = () => {
       </section>
 
       <PointsTable />
+      <div className="">
+        <div>
+            <p className="text-xl font-black text-white text-center mb-4">View real-time standings, wins, losses, and NRR.</p>
+        </div>
+        <p className="text-white/80 text-center max-w-3xl mx-auto" >
+          <Link href="/points-table" className="text-[#f26522] hover:underline">👉 Explore NPL Points Table</Link>
+        </p>
+      </div>
       <NewsPageForHome />
       <FAQSection />
     </div>

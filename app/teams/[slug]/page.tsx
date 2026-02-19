@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
      const team = pointsData.find((t) => t.team.toLowerCase().replace(/\s+/g, "-") === normalizedSlug)
 
      return {
-          title: team ? `${team.team} - NPL 2026 Squads and Full Players List of all Team` : "Team - Nepal Premier League",
+          title: team ? `${team.team} - Squad 2026 | Full Players List & Captain` : "Team - Nepal Premier League",
           description: team
-               ? `${team.team} team profile, squad, statistics and latest updates from Nepal Premier League. Matches played: ${team.matches}, Points: ${team.points}`
+               ? `  Check the ${team.team} squad for NPL 2026. Explore players, captain details, and team updates`
                : "Nepal Premier League team information and statistics",
           keywords: [team?.team || "NPL Team", "Nepal Premier League", "Cricket Team", "NPL Squad"],
           robots: {
@@ -220,7 +220,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
                                                        {/* Captain */}
                                                        <div className="pb-4 flex gap-5 reveal-animation reveal-delay-4">
                                                             <p className="text-white font-normal tracking-widest text-[14px] leading-[21px]">
-                                                                 Captain - <span className="text-white underline"><Link href={teamInfo.captainProfileLink}>{teamInfo.captain}</Link></span>
+                                                                 Captain - <span className="text-white underline"><a href={teamInfo.captainProfileLink} target="_blank">{teamInfo.captain}</a></span>
                                                             </p>
                                                        </div>
                                                        <div className="bg-black h-[2px] w-[calc(100%+32px)] relative -left-4 mb-2"/>
@@ -258,6 +258,31 @@ export default async function TeamPage({ params }: TeamPageProps) {
                </div>
 
                <h2 className="text-3xl font-bold text-white mb-6 text-center pb-2">{team?.team} Squad | NPL 2026</h2>
+               <h2 className="text-md font-bold text-white mb-6 text-center pb-2">{team?.description} </h2>
+
+               <div className="w-full flex justify-center mb-8">
+                    {team?.quickLinks && team.quickLinks.length > 0 && (
+                         <div className="w-full max-w-3xl bg-gradient-to-r from-slate-900/40 to-slate-900/20 border border-white/10 rounded-2xl px-6 py-4 flex flex-wrap items-center justify-center gap-4 shadow-[0_10px_30px_rgba(2,6,23,0.8)]">
+                              <h3 className="text-white font-semibold mr-3">Quick Links</h3>
+
+                              <div className="flex flex-wrap gap-3">
+                                   {team.quickLinks.map((link, index) => (
+                                        <Link
+                                             key={index}
+                                             href={link.link}
+                                             className="group inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white rounded-xl shadow-md transition-transform duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-red-400"
+                                             aria-label={`Open ${link.name}`}
+                                        >
+                                             <span className="text-sm font-medium">{link.name}</span>
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-3 h-3 opacity-90 ml-1 transition-transform group-hover:translate-x-0.5">
+                                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7" />
+                                             </svg>
+                                        </Link>
+                                   ))}
+                              </div>
+                         </div>
+                    )}
+               </div>
                
                <div className="w-full px-4 md:px-6 py-8 relative z-10">
                     {/* Teams player section */}

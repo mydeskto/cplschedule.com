@@ -70,7 +70,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f26522] hover:text-black transition-all duration-500 group"
+                  className="w-10 h-10 rounded-sm text-white bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f26522] hover:text-black transition-all duration-500 group"
                 >
                   <social.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-orange-500/80 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] font-black tracking-[0.2em] text-white/80 uppercase">
-            © 2026 Nepal Premier League. INDEPENDENT COVERAGE.
+            © 2026 NPLSCHEDULE.
           </p>
           <div className="flex items-center gap-8">
              {/* <div className="flex items-center gap-2 text-[10px] font-black tracking-[0.2em] text-white/20 uppercase">

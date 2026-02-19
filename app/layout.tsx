@@ -227,13 +227,7 @@ export default function RootLayout({
 
         {/* Preload critical resources - Only truly critical above-the-fold content */}
         {/* Preload LCP element - First hero image for optimal LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero/hero1.avif"
-          fetchPriority="high"
-          imageSizes="100vw"
-        />
+
 
         {/* Preload additional hero images only on larger screens (saves mobile bandwidth) */}
         {/* Note: Media queries in preload may cause warnings - only preload if critical */}
@@ -243,44 +237,37 @@ export default function RootLayout({
 
         {/* Google tag (gtag.js) - Load lazily to reduce blocking */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-9HXKDY7FZL"
+          src="https://www.googletagmanager.com/gtag/js?id=G-2VB2EJB4MH"
           strategy="lazyOnload"
         />
 
         <Script id="google-analytics-init" strategy="lazyOnload">
           {`
-           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-          gtag('config', 'G-9HXKDY7FZL');
+  gtag('config', 'G-2VB2EJB4MH');
         `}
         </Script>
 
         {/* Google Ads - Must use regular script tag (not Next.js Script) to avoid data-nscript attribute */}
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3169729065573671"
           crossOrigin="anonymous"
-        />
+        /> */}
 
         {/* Google Consent Messages - Load lazily */}
-        <Script
+        {/* <Script
           src="https://fundingchoicesmessages.google.com/i/pub-3169729065573671?ers=1"
           strategy="lazyOnload"
-        />
+        /> */}
 
 
         <meta
           name="google-site-verification"
-          content="x90NCjSnxugpZh7YX9GWlgUjF-OUMCxRlokDIvxHd0Y"
-        />
-
-        <link
-          rel="preload"
-          href="/images/AnimatedChevronWhite.svg"
-          as="image"
-          type="image/svg+xml"
+          content="9qHebp0tN1SV_uN3U3RIVs5Go4Bny923d5yd6_6k6Pc"
         />
 
 

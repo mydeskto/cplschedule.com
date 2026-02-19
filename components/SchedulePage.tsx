@@ -1,10 +1,10 @@
-"use client"
 
 import { useState, useEffect, useMemo } from "react"
 import { matchesData } from "@/data/matches-data"
 import Image from "next/image"
 import { MapPin, ChevronDown, X } from "lucide-react"
 import whiteLogo from "@/public/images/newlogo.png"
+import Link from "next/link"
 
 export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -94,18 +94,18 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
 
         {/* Second Section: Title & Filter */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4 border-b border-white/10">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
+          <h1 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
             NPL 2026 Schedule | <span className="text-[#f26522]">Nepal Premier League</span> Fixtures
             {/* BPL 2026 Schedule – Full &nbsp; Match<span className="text-[#f26522]">  Fixtures</span> */}
-          </h2>
+          </h1>
 
 
         </div>
         <div>
           <p className="text-white">
-            The <span className="text-[#f26522]">NPL 2026 schedule</span> is your ultimate guide to the Nepal Premier League 2026. Stay updated with complete match fixtures, dates, timings, venues, team squads, captains, and player details.
+            The <span className="text-[#f26522]">NPL 2026 schedule</span> is your ultimate guide to the Nepal Premier League 2026. Stay updated with complete match fixtures, dates, timings, venues, <Link href="/teams" className="text-[#f26522]">team squads</Link>, captains, and player details.
           </p>
-          <p className="text-white">Follow <span className="text-[#f26522]">today’s NPL matches</span> live, track the updated points table, and get the latest news and tournament updates all in one place.</p>
+          <p className="text-white">Follow <a className="text-[#f26522]" href="https://nplt20league.com/" target="_blank">today’s NPL matches</a> live, track the updated points table, and get the latest news and tournament updates all in one place.</p>
 
         </div>
         <div className="flex justify-center items-center">
