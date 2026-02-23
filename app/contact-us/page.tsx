@@ -32,15 +32,15 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_qz337a9',
-        'template_ahknqkp',
+        'hellokashi',
+        'template_ofl7tpn',
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        'F7FEMaMhpJMiv7g-t'
+        'Szs8doA-A_rJ_Qngl'
       );
 
       if (result.status === 200) {
@@ -103,7 +103,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Email Inquiry</h4>
-                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">contactnplschedule@gmail.com</p>
+                    <p className="font-medium md:font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">contactnplschedule@gmail.com</p>
                   </div>
                 </div>
 

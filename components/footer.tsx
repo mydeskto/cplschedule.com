@@ -29,7 +29,9 @@ const FOOTER_LINKS = {
     { name: "About Us", href: "/about-us" },
     { name: "Contact Us", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
     { name: "Disclaimer", href: "/disclaimer" },
+    { name: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   socials: [
     { name: "YouTube", href: "https://www.youtube.com/@NPLSchedule", icon: Youtube },
@@ -63,6 +65,7 @@ export default function Footer() {
             <p className="text-white/80 text-sm leading-relaxed max-w-sm font-light mb-6">
               Welcome to nplschedule.com, your trusted source for the Nepal Premier League 2026. Find complete match schedules, team squads, captains, venues, tickets, and the latest news, all in one place for fans who want to stay updated.
             </p>
+            <h2 className="text-white mb-4 text-xs font-bold uppercase tracking-widest">FOLLOW US ON</h2>
             <div className="flex items-center gap-4">
               {FOOTER_LINKS.socials.map((social) => (
                 <a
@@ -81,7 +84,7 @@ export default function Footer() {
           {/* Links Columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12">
             <div className="space-y-6">
-              <h4 className="text-[10px] font-black tracking-[0.3em] uppercase text-[#f26522]">Tournament</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">Tournament</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.sitemap.map((link) => (
                   <li key={link.name}>
@@ -95,7 +98,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[10px] font-black tracking-[0.3em] uppercase text-[#f26522]">NPL Teams Schedule</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">NPL Teams Schedule</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.teams.map((link) => (
                   <li key={link.name}>
@@ -109,7 +112,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[10px] font-black tracking-[0.3em] uppercase text-[#f26522]">Support</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">Legal Pages</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.legal.map((link) => (
                   <li key={link.name}>

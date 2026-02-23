@@ -110,7 +110,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
         </div>
         <div className="flex justify-center items-center">
           <div className="mr-4">
-            <span className="text-orange-500 font-black text-lg ">NPL Schedule 2026 </span>
+            <p className="text-orange-500 font-black text-lg ">NPL Schedule 2026 </p>
           </div>
           {/* <div>
             <span className="text-white font-black text-md">Schedule 2025</span>

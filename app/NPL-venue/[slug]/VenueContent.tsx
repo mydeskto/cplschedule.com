@@ -125,14 +125,14 @@ function VenueContent({ venue }: { venue: any }) {
               <div className="bg-white/5 border border-white/10 rounded-sm p-8 space-y-8">
                 <div className="flex justify-between items-center">
                   <h2 className="text-lg font-black text-white uppercase tracking-widest">Other Venues</h2>
-                  <Link href="/CPL-venue" className="text-[#f26522] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
+                  <Link href="/NPL-venue" className="text-[#f26522] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
                 </div>
 
                 <div className="space-y-4">
                   {venuesData.venues.filter(v => v.slug !== venue.slug).slice(0, 4).map((venueItem) => (
                     <Link
                       key={venueItem.slug}
-                      href={`/CPL-venue/${venueItem.slug}`}
+                      href={`/NPL-venue/${venueItem.slug}`}
                       className="group flex items-center justify-between p-4 bg-white/5 border border-transparent hover:border-[#f26522]/30 hover:bg-white/10 rounded-sm transition-all duration-300"
                     >
                       <div className="space-y-1">

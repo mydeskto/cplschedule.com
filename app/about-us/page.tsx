@@ -1,12 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'About Us - CPL T20 | Coastal Premier League',
-  description: 'Learn about CPL T20 - your go-to source for everything related to the Coastal Premier League T20. Get match schedules, team updates, player stats and more.',
-  alternates: {
-    canonical: "https://CPLt20league.com/about-us/"
-  },
-}
+import Link from 'next/link'
 
 export default function AboutUs() {
 
@@ -21,69 +13,45 @@ export default function AboutUs() {
           </h1>
 
           <div className="prose prose-lg max-w-none">
-            <p className="text-md text-white mb-6 leading-relaxed font-semibold">
-              Welcome to NPL Schedule – your trusted source for all things related to the Nepal Premier League (NPL). Whether you’re a die-hard fan, a casual viewer, or someone looking for reliable updates, we’ve got you covered with the latest NPL schedules, fixtures, match timings, and team details – all in one place.
+            <p className="text-md text-white mb-6 leading-relaxed">
+              Welcome to NPL Schedule, your trusted source for comprehensive Nepal Premier League (NPL) information. We provide schedules, fixtures, results, team details, and cricket news in a clear, reliable format.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Our Mission</h2>
             <p className="text-md text-white mb-6 leading-relaxed">
-              At NPL Schedule, our mission is simple:
-            </p>
-            <p className="text-md text-white mb-8 leading-relaxed">
-To deliver accurate, timely, and easy-to-understand information about the National Premier League so fans never miss a moment of the action.
+              To deliver accurate, timely, and user-friendly information so that fans never miss NPL action.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Who We Are</h2>
-            <p className="text-md text-white mb-8 leading-relaxed">
-              We are a team of passionate cricket enthusiasts, writers, and sports data analysts who believe in creating a one-stop hub for cricket fans. With years of experience in sports content creation and digital publishing, we ensure our readers always get the most up-to-date and genuine information.
+            <p className="text-md text-white mb-6 leading-relaxed">
+              We are a team of sports enthusiasts, writers, and analysts dedicated to compiling reliable cricket data. With years of experience in sports publishing, we ensure all information is verified and current.
             </p>
-            
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">What We Offer</h2>
-            <ul className='text-white ml-10 space-y-5 list-disc mb-8'>
-              <li>
-                <span className='font-bold text-2xl'>Updated NPL Fixtures </span>– Match, dates, times, and venues
-              </li>
-              <li>
-                <span className='font-bold text-2xl'>Team Overviews</span> – Detailed info on all participating teams and players
-              </li>
-              <li>
-               <span className='font-bold text-2xl'> News & Insights </span>– Real-time updates, pre-match analysis, and post-match reviews
-              </li>
-              <li>
-                <span className='font-bold text-2xl'>Mobile-Friendly Experience </span>– Fast, responsive design for browsing on any device
-              </li>
+            <ul className="text-white space-y-2 list-disc pl-6 mb-6">
+              <li>Up-to-date Match Fixtures – dates, times, and venues</li>
+              <li>Team & Player Profiles – squads, stats, and key players</li>
+              <li>News & Analysis – match previews, reviews, and highlights</li>
+              <li>Mobile-Friendly Design – fast and responsive browsing</li>
+              <li>Regular Updates – continuous content review for accuracy</li>
             </ul>
 
-            <p className="text-md text-white mb-8 leading-relaxed">
-              We regularly review and update our content to maintain accuracy. If you notice any error or outdated information, feel free to contact us. We value feedback.
-            </p>
-
-            
-
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Why Trust Us</h2>
-            <p className="text-md text-white mb-4 leading-relaxed">
-              We are committed to accuracy, transparency, and user satisfaction. All our content is reviewed and updated regularly to maintain high standards of reliability. Our goal is to be your go-to source for cricket schedules without clutter or confusion.
+            <p className="text-md text-white mb-6 leading-relaxed">
+              We maintain transparency, credibility, and accuracy. All content is reviewed and updated regularly to provide fans with reliable information.
             </p>
 
+            <h2 className="text-2xl font-bold text-white mb-4 mt-8">Advertising Transparency</h2>
+            <p className="text-md text-white mb-6 leading-relaxed">
+              This website uses Google AdSense to display ads in accordance with Google's publisher and content policies. Ads support website maintenance and are shown safely for users.
+            </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Contact Us</h2>
-            <p className="text-md text-white mb-4 leading-relaxed">
-              For questions, suggestions, or collaboration requests, email us at:
-            </p>
-            <p className="text-md text-white mb-4 leading-relaxed">
-              contactnplschedule@gmail.com
+            <p className="text-md text-white mb-2 leading-relaxed">
+              📧 contactnplschedule@gmail.com
             </p>
             <p className="text-md text-white mb-8 leading-relaxed">
-              or reach out through our <a href="/contact-us" className="text-blue-400 hover:text-blue-300 underline">Contact Page</a>.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-8">Transparency Note</h2>
-            <p className="text-md text-white mb-4 leading-relaxed">
-              This website displays Google AdSense advertisements to support hosting and website maintenance.
-            </p>
-            <p className="text-md text-white mb-8 leading-relaxed">
-              All ads shown on our platform comply with Google's content, publisher, and user-safety policies.
+              Or reach us via our <Link href="/contact-us" className="text-[#f26522] hover:underline">Contact Page</Link>.
             </p>
 
           </div>
@@ -94,5 +62,3 @@ To deliver accurate, timely, and easy-to-understand information about the Nation
     </>
   )
 }
-
-

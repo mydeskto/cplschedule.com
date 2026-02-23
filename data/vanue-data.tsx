@@ -69,9 +69,9 @@ export const venuesData: { venues: Venue[] } = {
       image: "/images/stadium/trib.webp",
       mapEmbed:
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.5755188922662!2d85.28773027425285!3d27.677887226792453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18150060281b%3A0x3480092f29e97741!2sTU%20Cricket%20Stadium!5e1!3m2!1sen!2snp!4v1760977812491!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-      seoTitle: "Tribhuvan University International Cricket Ground, Kirtipur - NPL 2025 Venue & Match Schedule",
+      seoTitle: "Tribhuvan University International Cricket Ground | Pitch Report & Records",
       metaDescription:
-        "Tribhuvan University International Cricket Ground, Kirtipur will host key matches of the Nepal Premier League (NPL) 2025, including the Final. View full NPL 2025 fixtures, schedule, and details for this iconic Nepal venue.",
+        "Explore the latest pitch report, average scores, match records, and key stats for Tribhuvan University International Cricket Ground in Kathmandu.",
       keywords: [
         "Tribhuvan University Cricket Ground",
         "Kirtipur Cricket Ground",
@@ -132,9 +132,9 @@ export const venuesData: { venues: Venue[] } = {
       image: "/images/stadium/mulpani.jpeg",
       mapEmbed:
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.471578983446!2d85.38758282546787!3d27.721038126174793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1ba5c056614d%3A0xb5508c113c77b4d1!2sMulpani%20International%20Cricket%20Ground%2C%20Gokarneshwor%2044600!5e1!3m2!1sen!2snp!4v1760979577178!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-      seoTitle: "Mulpani Cricket Ground, Kathmandu - NPL 2025 Venue & Full Match Schedule",
+      seoTitle: "Mulpani Cricket Ground | Pitch Report, Records & Venue Stats",
       metaDescription:
-        "Mulpani Cricket Ground, Kathmandu - one of the main venues for the Nepal Premier League (NPL) 2025. Check key details, location, capacity, and full match schedule.",
+        "Check pitch behaviour, average totals, playing conditions, and match records for Mulpani Cricket Ground, Kathmandu.",
       keywords: [
         "Mulpani Cricket Ground",
         "Mulpani International Cricket Ground",
@@ -189,9 +189,9 @@ export const venuesData: { venues: Venue[] } = {
       image: "/images/stadium/birat.jpeg",
       mapEmbed:
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45135.60488691443!2d87.24938799856167!3d26.488972712538057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef71f2582761c3%3A0x656eb3a12f1c3e45!2sBiratnagar%20Cricket%20Ground!5e1!3m2!1sen!2snp!4v1760979865594!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-      seoTitle: "Biratnagar Cricket Ground, Biratnagar - NPL 2025 Venue & Full Match Schedule",
+      seoTitle: "Biratnagar Cricket Ground | Pitch Report & Match Records",
       metaDescription:
-        "Explore Biratnagar Cricket Ground, Biratnagar - one of the key venues for the Nepal Premier League (NPL) 2025. Check its location, capacity, pitch report, and complete match schedule.",
+        "View pitch analysis, average scores, venue conditions, and match records for Biratnagar Cricket Ground, Nepal.",
       keywords: [
         "Biratnagar Cricket Ground",
         "Biratnagar Stadium",

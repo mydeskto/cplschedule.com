@@ -1,13 +1,5 @@
-import { Link } from 'lucide-react'
-import { Metadata } from 'next'
+import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Disclaimer - CPL T20 | Coastal Premier League',
-  description: 'Disclaimer for CPLT20League.com - Important information about the use of our website and content accuracy.',
-  alternates: {
-    canonical: 'https://CPLt20league.com/disclaimer',
-  },
-}
 
 export default function Disclaimer() {
 
@@ -20,83 +12,63 @@ export default function Disclaimer() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 text-left">
             Disclaimer
           </h1>
-          <p className="text-sm text-white mb-6 leading-relaxed">
-            Last Updated: October 2025
-          </p>
 
           <div className="prose prose-lg max-w-none">
 
             <p className="text-md text-white mb-6 leading-relaxed">
-              The information provided on NPL Schedule <Link href="/" className="underline font-bold">CPLT20League.com</Link> is published in good faith and for general informational purposes only. We aim to offer accurate and timely updates about the National Premier League (NPL), but we make no guarantees regarding the completeness, reliability, or accuracy of any information found on this website.
+              The information on NPL Schedule is provided for general informational purposes only. While we strive to maintain accuracy and timeliness, we make no guarantees regarding the completeness, reliability, or suitability of any content on this website.
             </p>
 
-           
-
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                1. No Professional Advice
+            <ol className="text-white mt-8 space-y-6 list-decimal pl-6">
+              <li>
+                <span className="text-2xl font-bold block mb-2"> No Professional Advice</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  Content here is for informational purposes only. It is not legal, financial, or professional advice. Any actions you take based on information from this website are entirely at your own risk.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                The content on this site is not intended to substitute for professional advice, whether sports-related, legal, or otherwise. Any action you take based on the information you find on this website is strictly at your own risk.
-              </p>
-            
-            </ol>
 
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                2. Third-Party Content and External Links
+              <li>
+                <span className="text-2xl font-bold block mb-2"> Third-Party Links and Content</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  This website may link to external sites. We do not control, endorse, or guarantee the content, products, or services of these sites. Please review their policies before interacting or sharing personal information.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                Our website may contain links to external sites that are not provided or maintained by us. While we strive to link only to high-quality, reputable sources, we have no control over the content and nature of those sites. These links do not imply a recommendation or endorsement of the views expressed within them.
-              </p>
-              <p className="pl-3 mb-3 text-md">
-                Please note that other sites may have different privacy policies and terms which are beyond our control. Be sure to check their policies before engaging in any business or uploading any personal information.
-              </p>
-            </ol>
 
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                3. Match Schedule and Updates
+              <li>
+                <span className="text-2xl font-bold block mb-2"> Match Schedules and Updates</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  Match dates, times, and venues may change without notice. NPL Schedule is not responsible for changes made by tournament organizers. Users should confirm official match information independently.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                While we work hard to provide accurate NPL match schedules and updates, we are not responsible for any changes made by the league organizers. Match timings, venues, or formats may change without prior notice.
-              </p>
-              
-            </ol>
 
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                4. Copyright and Fair Use
+              <li>
+                <span className="text-2xl font-bold block mb-2"> Copyright & Trademarks</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  All logos, images, and team names are the property of their respective owners. NPL Schedule does not claim ownership unless explicitly stated. Any use is for editorial, educational, or informational purposes only.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                All logos, team names, and tournament-related content belong to their respective owners. NPL Schedule does not claim ownership of any copyrighted materials unless explicitly stated. Any use of such material is done under “fair use” for informational and educational purposes.
-              </p>
-              
-            </ol>
 
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                5. Your Consent
+              <li>
+                <span className="text-2xl font-bold block mb-2"> Limitation of Liability</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  NPL Schedule and its team are not liable for any direct, indirect, incidental, or consequential damages resulting from your use of this website.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                By using our website, you hereby consent to our disclaimer and agree to its terms.
-              </p>
-              
-            </ol>
 
-            <ol className="text-white mt-8">
-              <li className="text-3xl font-bold">
-                8. Contact Us
+              <li>
+                <span className="text-2xl font-bold block mb-2"> User Consent</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  By using this website, you accept this Disclaimer and agree to its terms.
+                </p>
               </li>
-              <p className="pl-3 my-3 text-md">
-                If you have any questions or concerns regarding this Disclaimer, please contact us at:
-              </p>
-              <p className="pl-3 mb-3 text-md">
-                📧 contactnplschedule@gmail.com
-              </p>
-              
-            </ol>
 
+              <li>
+                <span className="text-2xl font-bold block mb-2"> Contact</span>
+                <p className="pl-0 my-3 text-md font-normal">
+                  📧 contactnplschedule@gmail.com
+                </p>
+              </li>
+            </ol>
 
           </div>
         </div>
@@ -106,5 +78,3 @@ export default function Disclaimer() {
     </>
   )
 }
-
-

@@ -10,7 +10,7 @@ const PROGRESS_ROUTES = new Set([
   "/stats/",
   "/teams/",
   "/schedule/",
-  "/CPL-venue/",
+  "/NPL-venue/",
   "/blog/",
   "/contact-us/"
 ])

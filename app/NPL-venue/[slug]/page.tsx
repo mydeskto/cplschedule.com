@@ -25,7 +25,7 @@ export async function generateMetadata(props: VenueDetailPageProps): Promise<Met
   // Use venue keywords if available, otherwise fallback to default keywords
   const keywords = venue.keywords && venue.keywords.length > 0 
     ? venue.keywords 
-    : [venue.name, "CPL 2026", "cricket venue", "Coastal Premier League", venue.location];
+    : [venue.name, "NPL 2026", "cricket venue", "Nepal Premier League", venue.location];
 
   return {
     title: venue.seoTitle,
@@ -45,7 +45,7 @@ export async function generateMetadata(props: VenueDetailPageProps): Promise<Met
       ],
     },
     alternates: {
-      canonical: `https://CPLt20league.com/CPL-venue/${venue.slug}/`,
+      canonical: `https://nplschedule.com/NPL-venue/${venue.slug}/`,
     }
   }
 }
@@ -66,7 +66,7 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
       <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#122754' }}>
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-4">Venue Not Found</h1>
-          <Link href="/CPL-venue" className="text-white hover:underline">
+          <Link href="/NPL-venue" className="text-white hover:underline">
             Back to Venues
           </Link>
         </div>
@@ -88,13 +88,13 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
         "@type": "ListItem",
         position: 2,
         name: "Venues",
-        item: "https://CPLt20league.com/CPL-venue/",
+        item: "https://nplschedule.com/NPL-venue/",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: venue.name,
-        item: `https://CPLt20league.com/CPL-venue/${venue.slug}/`,
+        item: `https://nplschedule.com/NPL-venue/${venue.slug}/`,
       },
     ],
   }
@@ -114,14 +114,14 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
     capacity: venue.capacity,
     sport: "Cricket",
     description: venue.description || venue.metaDescription,
-    url: `https://CPLt20league.com/CPL-venue/${venue.slug}/`,
+    url: `https://nplschedule.com/NPL-venue/${venue.slug}/`,
     image: venue.image,
     keywords: venue.keywords && venue.keywords.length > 0 
       ? venue.keywords.join(', ') 
-      : `${venue.name}, CPL 2026, cricket venue, Coastal Premier League, ${venue.location}`,
+      : `${venue.name}, NPL 2026, cricket venue, Nepal Premier League, ${venue.location}`,
     containedIn: {
       "@type": "CivicStructure",
-      name: "Bangladesh"
+      name: "Nepal Premier League"
     }
   }
 
@@ -147,8 +147,8 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
           <Breadcrumb
             items={[
               { label: 'Home', href: '/' },
-              { label: 'Venues', href: '/CPL-venue', isCurrent: true },
-              // { label: venue.name, href: `/CPL-venue/${venue.slug}` }
+              { label: 'Venues', href: '/NPL-venue', isCurrent: true },
+              // { label: venue.name, href: `/NPL-venue/${venue.slug}` }
             ]}
           />
         </div>

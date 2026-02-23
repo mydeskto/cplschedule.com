@@ -63,19 +63,19 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Where can I check the NPL 2026 schedule?",
-    answer: "You can view the complete NPL 2026 schedule and match fixtures on our Schedule page."
+    answer: "You can view the complete NPL 2026 schedule and match fixtures on our Schedule pcurage."
   },
   {
     question: "How many teams are participating in NPL 2026?",
-    answer: "Nepal Premier League 2026 features multiple franchise teams. Full team and squad details are available on the Teams page."
+    answer: "Eight teams are participating in the Nepal Premier League (NPL) 2026."
   },
   {
     question: "Which venues will host NPL 2026 matches?",
-    answer: "Matches will be played at designated cricket stadiums. Venue details are listed on the Venues page."
+    answer: "For NPL 2026 (Season 3), the full schedule remains unreleased, so venues aren't finalized."
   },
   {
     question: "How can I book NPL 2026 tickets?",
-    answer: "Ticket booking information and availability updates can be found on our Tickets page."
+    answer: "NPL 2026 tickets are not yet available for booking, as the full schedule and official sales haven't been released by the Cricket Association of Nepal (CAN)."
   }
 ]
 
@@ -88,7 +88,7 @@ export const FAQSection = () => {
 
   return (
 
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#122754] relative overflow-hidden">
+    <section className="py-2 px-4 sm:px-6 lg:px-8 bg-[#122754] relative overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

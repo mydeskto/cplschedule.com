@@ -61,7 +61,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
 
         {/* Mobile Right Side - Buy Ticket Short Button */}
         <div className="flex items-center">
-          <Link href="/blog/NPL-tickets/">
+          <Link href="/tickets/">
             <Button className="bg-[#f26522] hover:bg-white text-black font-black py-4 px-4 rounded-sm text-[9px] tracking-[0.1em] whitespace-nowrap shadow-xl shadow-[#f26522]/20">
               TICKETS
             </Button>
@@ -93,14 +93,14 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
             >
               {/* Sidebar Header */}
               <div className="flex items-center justify-between p-6 border-b border-white/5">
-                <div className="relative h-8 w-32">
+                <Link className="relative h-8 w-32" href="/" onClick={toggleMobileMenu}>
                   <Image
                     src={whiteLogo}
                     alt="NPL Logo"
                     fill
                     className="object-contain"
                   />
-                </div>
+                </Link>
                 <button
                   onClick={toggleMobileMenu}
                   className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-all"
@@ -139,7 +139,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
               {/* Bottom Section */}
               <div className="p-8 space-y-8 bg-black/20">
                 {/* Buy Ticket CTA in Sidebar */}
-                <Link href="/blog/NPL-tickets/" onClick={toggleMobileMenu}>
+                <Link href="/tickets/" onClick={toggleMobileMenu}>
                   <Button className="w-full bg-[#f26522] hover:bg-white text-black font-black py-7 rounded-sm text-[11px] tracking-[0.2em] group transition-all duration-500 shadow-2xl shadow-[#f26522]/10">
                     BOOK TICKETS 2026
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />

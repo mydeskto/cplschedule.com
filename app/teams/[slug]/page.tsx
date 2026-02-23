@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
      const team = pointsData.find((t) => t.team.toLowerCase().replace(/\s+/g, "-") === normalizedSlug)
 
      return {
-          title: team ? `${team.team} - Squad 2026 | Full Players List & Captain` : "Team - Nepal Premier League",
+          title: team ? `${team.team} Squad 2026 | Full Players List & Captain` : "Team - Nepal Premier League",
           description: team
                ? `  Check the ${team.team} squad for NPL 2026. Explore players, captain details, and team updates`
                : "Nepal Premier League team information and statistics",
@@ -206,10 +206,10 @@ export default async function TeamPage({ params }: TeamPageProps) {
                                                        </div>
 
                                                        {/* Official Team Site Button */}
-                                                       <button className="mt-6 px-6 py-3 w-60 h-8 font-bold transform -skew-x-12 bg-red-500 hover:bg-red-600 text-white transition-all duration-300 flex items-center gap-2 hover:scale-105 active:scale-95">
+                                                       <Link href={teamInfo?.website || "#"} target="_blank" className="mt-6 px-6 py-3 w-60 h-8 font-bold transform -skew-x-12 bg-red-500 hover:bg-red-600 text-white transition-all duration-300 flex items-center gap-2 hover:scale-105 active:scale-95">
                                                             <span className="work-san">Official Team Site</span>
                                                             <span>↗</span>
-                                                       </button>
+                                                       </Link>
                                                   </div>
                                              </div>
 
