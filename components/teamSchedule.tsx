@@ -476,8 +476,8 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
                   <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
                     <div className="bg-black/20 h-full w-[1px]"></div>
                     <div className="flex md:flex-col justify-center items-center gap-2">
-                      <Link href="/matches/" className="text-sm font-semibold text-[#122754] hover:underline">
-                        Summary &
+                      <Link href="/teams/" className="text-sm font-semibold text-[#122754] hover:underline">
+                        teams &
                       </Link>
                       <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
                         Points Table

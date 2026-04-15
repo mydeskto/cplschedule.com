@@ -332,7 +332,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
           </p>
 
         </div>
-        <div className=" ">
+        <div className="mb-8 ">
           <div className="my-4 text-center">
             <p className="text-orange-500 font-black text-lg ">NPL 2026 Schedule & Full Fixtures</p>
           </div>
@@ -438,8 +438,8 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                 <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
                   <div className="bg-black/20 h-full w-[1px]"></div>
                   <div className="flex md:flex-col justify-center items-center gap-2">
-                  <Link href="/matches/" className="text-sm font-semibold text-[#122754] hover:underline">
-                    Summary &
+                  <Link href="/teams/" className="text-sm font-semibold text-[#122754] hover:underline">
+                    Teams &
                   </Link>
                   <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
                     Points Table
