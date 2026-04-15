@@ -28,7 +28,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
     // { to: "/schedule", label: "SCHEDULE" },
     { to: "/teams", label: "TEAMS" },
     { to: "/news", label: "NEWS" },
-    { to: "/NPL-venue", label: "VENUES" },
+    { to: "/npl-venue", label: "VENUES" },
     { to: "/contact-us", label: "CONTACT" },
   ]
 

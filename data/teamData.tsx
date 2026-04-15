@@ -18,6 +18,7 @@ export const teamsData= [
     venue: "Tribhuvan University Cricket Ground, Kirtipur",
     website: "https://nplt20league.com/teams/kathmandu-gorkhas/",
     profileLink: "/teams/kathmandu-gurkhas/",
+    outboundLink: "https://nplt20league.com/teams/kathmandu-gorkhas/",
     captainProfileLink: "https://nplt20league.com/player/karan-kc/profile/",
   },
   {
@@ -31,6 +32,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://lumbinilions.com.np/",
     profileLink: "/teams/lumbini-lions/",
+    outboundLink: "https://nplt20league.com/teams/lumbini-lions/",
     captainProfileLink: "https://nplt20league.com/player/rohit-paudel/profile/",
   },
   {
@@ -45,6 +47,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://nplt20league.com/teams/biratnagar-kings/",
     profileLink: "/teams/biratnagar-kings/",
+    outboundLink : "https://nplt20league.com/teams/biratnagar-kings/",
     captainProfileLink: "https://nplt20league.com/player/sandeep-lamichhane/profile/",
   },
   {
@@ -59,6 +62,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://chitwanrhinos.com/",
     profileLink: "/teams/chitwan-rhinos/",
+    outboundLink:"https://nplt20league.com/teams/chitwan-rhinos/",
     captainProfileLink: "https://nplt20league.com/player/kushal-malla/profile/",
   },
   {
@@ -73,6 +77,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://nplt20league.com/teams/janakpur-bolts/",
     profileLink: "/teams/janakpur-bolts/",
+    outboundLink:"https://nplt20league.com/teams/janakpur-bolts/",
     captainProfileLink: "https://nplt20league.com/player/anil-sah/profile/",
   },
   {
@@ -86,6 +91,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://pokharaavengers.com/",
     profileLink: "/teams/pokhara-avengers/",
+    outboundLink:"https://nplt20league.com/teams/pokhara-avengers/",
     captainProfileLink: "https://nplt20league.com/player/kushal-bhurtel/profile/",
   },
   {
@@ -100,6 +106,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://nplt20league.com/teams/karnali-yaks/",
     profileLink: "/teams/karnali-yaks/",
+    outboundLink:"https://nplt20league.com/teams/karnali-yaks/",
     captainProfileLink: "https://nplt20league.com/player/sompal-kami/profile/",
   },
   {
@@ -113,6 +120,7 @@ export const teamsData= [
     venue: "N/A",
     website: "https://sudurpaschimroyals.com/",
     profileLink: "/teams/sudurpaschim-royals/",
+    outboundLink:"https://nplt20league.com/teams/sudurpaschim-royals/",
     captainProfileLink: "https://nplt20league.com/player/dipendra-singh-airee/profile/",
   },
 ];

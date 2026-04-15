@@ -28,9 +28,9 @@ const carouselData = [
     id: "NPL-reg-198",
     backgroundImage: nplFixtures,
     title: "NPL 2026 Schedule",
-    subtitle: "Nepal Premier League 2026 Schedule ",
-    description: "NPL Fixtures & Match Details",
-    buttonText: "View Schedule",
+    subtitle: "Nepal Premier League Season 3 Schedule ",
+    description: "NPL Season 3 Fixtures & Match Details",
+    buttonText: "View Full Schedule",
     link: "/schedule",
     tag: "NPL FIXTURES"
   },
@@ -80,7 +80,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      <div className="relative w-full h-[85vh] md:h-[70vh] max-h-[800px] md:max-h-[700px] min-h-[550px] md:min-h-[500px]">
+      <div className="relative w-full h-[75vh] md:h-[70vh] max-h-[800px] md:max-h-[700px] min-h-[550px] md:min-h-[500px]">
         <Carousel
           setApi={setApi}
           plugins={[
@@ -98,7 +98,7 @@ export function HeroCarousel() {
           <CarouselContent className="h-full -ml-0">
             {carouselData.map((slide, index) => (
               <CarouselItem key={slide.id} className="pl-0 basis-full">
-                <div className="relative w-full h-[80vh] md:h-[70vh] max-h-[800px] md:max-h-[700px] min-h-[550px] md:min-h-[500px] overflow-hidden">
+                <div className="relative w-full h-[70vh] md:h-[70vh] max-h-[800px] md:max-h-[700px] min-h-[550px] md:min-h-[500px] overflow-hidden">
                   {/* Background Image with Motion */}
                   <motion.div 
                     initial={{ scale: 1.1 }}

@@ -25,7 +25,7 @@ export const pointsData = [
       { name: "Match Schedule", link: "/schedule" },
       { name: "Points Table", link: "/points-table" },
       { name: "Tickets", link: "/tickets" },
-      { name: "Venue Details", link: "/NPL-venue" }
+      { name: "Venue Details", link: "/npl-venue" }
     ] 
   },{
     position: 2,
@@ -44,7 +44,7 @@ export const pointsData = [
       { name: "Fixtures", link: "/schedule" },
       { name: "Team Standings", link: "/points-table" },
       { name: "Book Tickets", link: "/tickets" },
-      { name: "Match Venue Details", link: "/NPL-venue" }
+      { name: "Match Venue Details", link: "/npl-venue" }
     ]
   },
   {
@@ -64,7 +64,7 @@ export const pointsData = [
       { name: "Complete Schedule", link: "/schedule" },
       { name: "Points Table", link: "/points-table" },
       { name: "Tickets", link: "/tickets" },
-      { name: "University Cricket Ground", link: "/NPL-venue/tribhuvan-university-cricket-ground-kirtipur/" }
+      { name: "University Cricket Ground", link: "/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" }
     ]
   },
   {
@@ -84,7 +84,7 @@ export const pointsData = [
       { name: "Upcoming Matches", link: "/schedule" },
       { name: "Points Table", link: "/points-table" },
       { name: "Book Tickets", link: "/tickets" },
-      { name: "Venue Info", link: "/NPL-venue" }
+      { name: "Venue Info", link: "/npl-venue" }
     ]
   },
   {
@@ -104,7 +104,7 @@ export const pointsData = [
       { name: "Match Fixtures", link: "/schedule" },
       { name: "Team Rankings", link: "/points-table" },
       { name: "Book Tickets", link: "/tickets" },
-      { name: "NPL 2026 Venue", link: "/NPL-venue" }
+      { name: "NPL 2026 Venue", link: "/npl-venue" }
     ]
   },
   {
@@ -124,7 +124,7 @@ export const pointsData = [
       { name: "Full Schedule", link: "/schedule" },
       { name: "Points Table", link: "/points-table" },
       { name: "Tickets", link: "/tickets" },
-      { name: "Venue Details", link: "/NPL-venue" }
+      { name: "Venue Details", link: "/npl-venue" }
     ]
   },
   {
@@ -144,7 +144,7 @@ export const pointsData = [
       { name: "Upcoming Matches", link: "/schedule" },
       { name: "Team Rankings", link: "/points-table" },
       { name: "Book Tickets", link: "/tickets" },
-      { name: "Official Venue", link: "/NPL-venue" }
+      { name: "Official Venue", link: "/npl-venue" }
     ]
   },
   {
@@ -164,7 +164,7 @@ export const pointsData = [
       { name: "Match Fixtures", link: "/schedule" },
       { name: "Points Table", link: "/points-table" },
       { name: "Tickets", link: "/tickets" },
-      { name: "University Cricket Ground", link: "/NPL-venue/tribhuvan-university-cricket-ground-kirtipur/" }
+      { name: "University Cricket Ground", link: "/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" }
     ]
   },
 ]

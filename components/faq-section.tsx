@@ -18,7 +18,7 @@ const faqSchema = {
       name: "When will NPL 2026 start?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The official start date of the Nepal Premier League 2026 will be updated once confirmed by tournament organizers."
+        text: "Nepal Premier League Season 3 is set to be played in October–November 2026, according to the annual calendar of the Cricket Association of Nepal (CAN)."
       }
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
 const faqData: FAQItem[] = [
   {
     question: "When will NPL 2026 start?",
-    answer: "The official start date of the Nepal Premier League 2026 will be updated once confirmed by tournament organizers."
+    answer: "Nepal Premier League Season 3 is set to be played in October–November 2026, according to the annual calendar of the Cricket Association of Nepal (CAN)."
   },
   {
     question: "Where can I check the NPL 2026 schedule?",

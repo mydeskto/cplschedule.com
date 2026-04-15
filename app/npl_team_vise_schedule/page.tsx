@@ -1,20 +1,53 @@
-'use client'
 
-import { Suspense } from 'react'
 import NPLSchedule from '../../components/SchedulePage'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { useSearchParams } from 'next/navigation'
 import { matchesData } from '@/data/matches-data'
 import { buildScheduleSportsEventsGraph } from '@/lib/sports-event-jsonld'
+import NPLScheduleTeamWise from '@/components/teamSchedule'
+import { Metadata } from 'next'
 
 
-function ScheduleContent() {
-    const searchParams = useSearchParams()
-    const teamFromUrl = searchParams.get('team') || undefined
+export async function generateMetadata(): Promise<Metadata> {
+
+  return {
+    title: "NPL 2026 Schedule: Team-Wise Fixtures, Dates & Today Match Updates",
+    description: "Check the complete NPL 2026 team-wise schedule, fixtures, and match dates. Get the latest NPL schedule and NPL today match schedule with all upcoming matches and updates.",
+    keywords: ["NPL Match Schedule 2026",
+      "Nepal Premier League Fixtures",
+      "NPL Today Match",
+      "npl schedule",
+      "NPL 2026 schedule",
+      "NPL Match Timetable",
+      "npl schedule 2026",
+      "npl schedule today",
+      "npl match schedule",
+      "NPL Cricket Schedule",
+      "Nepal T20 League Schedule",
+      "NPL Match Calendar",
+      "NPL Live Match Schedule",
+      "Nepal Premier League Match Dates",
+      "NPLT20 Fixtures 2026"],
+    robots: {
+    index: true, // This will override the root layout robots for this route only
+    follow: true,
+    googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false
+      },
+  }
+    , alternates: {
+      canonical: 'https://nplt20league.com/npl_team-wise-schedule',
+    }
+  }
+}
+
+
+export default function ScheduleHome() {
     // Define breadcrumb items
     const breadcrumbItems = [
         { label: 'Home', href: '/' },
-        { label: 'NPL Schedule 2026', href: '/schedule', isCurrent: true }
+        { label: 'NPL Team-Wise Schedule 2026', href: '/npl_team-wise-schedule', isCurrent: true }
     ];
 
     const scheduleSportsEventsSchema = buildScheduleSportsEventsGraph(matchesData.matches)
@@ -26,7 +59,7 @@ function ScheduleContent() {
         "@id": "https://nplschedule.com/schedule#webpage",
         "name": "NPL 2026 Schedule, Fixtures, Dates & Match List",
         "description": "Complete NPL 2026 schedule with match dates, fixtures, venues, timings, playoffs, and final details for Nepal Premier League Season 3.",
-        "url": "https://nplschedule.com/schedule",
+        "url": "https://nplschedule.com/npl_team-wise-schedule",
         "inLanguage": "en",
         "isPartOf": {
           "@id": "https://nplschedule.com/#website"
@@ -49,42 +82,12 @@ function ScheduleContent() {
             {
                 "@type": "ListItem",
                 position: 2,
-                name: "NPL Schedule 2026",
-                item: "https://nplschedule.com/schedule"
+                name: "NPL Team-Wise Schedule 2026",
+                item: "https://nplschedule.com/npl_team-wise-schedule"
             }
         ]
     };
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "Which teams are playing in NPL 2026?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The Nepal Premier League Season 3 features eight teams: Biratnagar Kings, Janakpur Bolts, Kathmandu Gurkhas, Chitwan Rhinos, Sudurpaschim Royals, Pokhara Avengers, Karnali Yaks, and Lumbini Lions."
-                }
-            },
-            {
-                "@type": "Question",
-                name: "When does the Nepal Premier League 2026 take place?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The NPL 2026 Season 3 is expected in October–November 2026, with fixtures at Tribhuvan University International Cricket Ground, Kirtipur."
-                }
-            },
-            {
-                "@type": "Question",
-                name: "Where can I find the NPL 2026 schedule?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The full NPL 2026 schedule is available on nplschedule.com with match fixtures, venues, timings, and playoff dates."
-                }
-            }
-        ]
-    };
 
     return (
         <>
@@ -107,16 +110,8 @@ function ScheduleContent() {
                 <div className="px-5 md:px-10">
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
-                <NPLSchedule initialTeam={teamFromUrl} />
+                <NPLScheduleTeamWise />
             </div>
         </>
-    )
-}
-
-export default function ScheduleHome() {
-    return (
-        <Suspense fallback={<div className="min-h-screen bg-[#122754] pt-20" />}>
-            <ScheduleContent />
-        </Suspense>
     )
 }

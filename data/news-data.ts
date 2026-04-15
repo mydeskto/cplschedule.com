@@ -64,7 +64,7 @@ export const newsArticles: NewsArticle[] = [
 
 <h2>Key Announcements</h2>
 
-<p>CAN has finalized the <a href="/" class="text-[#f26522] underline transition-colors">NPL 2026 schedule</a> for late October to November, shifting slightly earlier than previous seasons to avoid colder weather. The tournament will feature eight teams competing in a double round-robin format followed by playoffs, culminating in the final at <a href="/NPL-venue/tribhuvan-university-cricket-ground-kirtipur/" class="text-white hover:text-[#c49563] underline transition-colors">TU Cricket Ground, Kirtipur</a>. The league aims to nurture emerging talent while providing high-quality competitive cricket for fans.</p>
+<p>CAN has finalized the <a href="/" class="text-[#f26522] underline transition-colors">NPL 2026 schedule</a> for late October to November, shifting slightly earlier than previous seasons to avoid colder weather. The tournament will feature eight teams competing in a double round-robin format followed by playoffs, culminating in the final at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" class="text-white hover:text-[#c49563] underline transition-colors">TU Cricket Ground, Kirtipur</a>. The league aims to nurture emerging talent while providing high-quality competitive cricket for fans.</p>
 
 <p>The Lumbini Lions enter as defending champions after their 2025 triumph.</p>
 

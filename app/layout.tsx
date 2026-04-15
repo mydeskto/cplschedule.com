@@ -32,8 +32,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'NPL 2026 Schedule | Nepal Premier League Fixtures & Match Dates',
-  description: 'Check the complete NPL 2026 schedule for the Nepal Premier League. View match dates, fixtures, teams, squads, players, and captain details.',
+  title: 'NPL 2026 Schedule | Fixtures, Teams, Points Table & Venues',
+  description: 'Follow the NPL 2026 schedule and get full Nepal Premier League fixtures, match dates, venues, and team details. Stay updated and watch every match live.',
   metadataBase: new URL('https://nplschedule.com'),
   alternates: {
     canonical: 'https://nplschedule.com/',
@@ -252,17 +252,17 @@ export default function RootLayout({
         </Script>
 
         {/* Google Ads - Must use regular script tag (not Next.js Script) to avoid data-nscript attribute */}
-        {/* <script
+        <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3169729065573671"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4357484609268769"
           crossOrigin="anonymous"
-        /> */}
+        />
 
         {/* Google Consent Messages - Load lazily */}
-        {/* <Script
-          src="https://fundingchoicesmessages.google.com/i/pub-3169729065573671?ers=1"
+        <Script
+          src="https://fundingchoicesmessages.google.com/i/pub-4357484609268769?ers=1"
           strategy="lazyOnload"
-        /> */}
+        />
 
 
         <meta
@@ -288,6 +288,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: webSiteSchemaJson }}
         />
+
+        <link rel="canonical" href="https://www.nplschedule.com/" />
+
       </head>
       <body
         suppressHydrationWarning={true}

@@ -95,7 +95,7 @@ export const venuesData: { venues: Venue[] } = {
         addressCountry: "NP",
         fullAddress: "Tribhuvan University Campus, Kirtipur, Kathmandu, Nepal",
       },
-      url: "/NPL-venue/tribhuvan-university-cricket-ground-kirtipur/",
+      url: "/npl-venue/tribhuvan-university-cricket-ground-kirtipur/",
       matches: [
         { date: "2025-11-17", time: "12:00 PM", match: "Biratnagar Kings vs Chitwan Rhinos" },
         { date: "2025-11-18", time: "12:00 PM", match: "Janakpur Bolts vs Karnali Yaks" },
@@ -158,7 +158,7 @@ export const venuesData: { venues: Venue[] } = {
         addressCountry: "NP",
         fullAddress: "Mulpani International Cricket Ground, Gokarneshwor, Kathmandu, Nepal",
       },
-      url: "/NPL-venue/mulpani-cricket-ground-kathmandu/",
+      url: "/npl-venue/mulpani-cricket-ground-kathmandu/",
       matches: [
         { date: "2025-11-19", time: "12:00 PM", match: "Kathmandu Gurkhas vs Lumbini Lions" },
         { date: "2025-11-23", time: "12:00 PM", match: "Karnali Yaks vs Sudurpaschim Royals" },
@@ -215,7 +215,7 @@ export const venuesData: { venues: Venue[] } = {
         addressCountry: "NP",
         fullAddress: "Biratnagar Cricket Ground, Biratnagar, Province No. 1, Nepal",
       },
-        url: "/NPL-venue/biratnagar-cricket-ground-biratnagar/",
+        url: "/npl-venue/biratnagar-cricket-ground-biratnagar/",
       matches: [
         { date: "2025-11-17", time: "12:00 PM", match: "Biratnagar Kings vs Chitwan Rhinos" },
         { date: "2025-11-22", time: "12:00 PM", match: "Biratnagar Kings vs Kathmandu Gurkhas" },

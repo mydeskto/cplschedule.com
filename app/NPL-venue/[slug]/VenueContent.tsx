@@ -34,7 +34,7 @@ function VenueContent({ venue }: { venue: any }) {
       {/* Dynamic Header/Breadcrumb */}
       <div className="container mx-auto px-4 py-8">
         <Link 
-          href="/NPL-venue" 
+          href="/npl-venue" 
           className="inline-flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase hover:translate-x-[-8px] transition-transform duration-300"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -109,7 +109,7 @@ function VenueContent({ venue }: { venue: any }) {
                 <h3 className="text-2xl font-black uppercase tracking-tighter mb-4">Location</h3>
                 <div className="space-y-4">
                   <p className="font-bold text-lg leading-tight">{venue.address.fullAddress}</p>
-                  <p className="text-black/70 text-sm font-medium">{venue.address.addressLocality}, Bangladesh</p>
+                  <p className="text-black/70 text-sm font-medium">{venue.address.addressLocality}, Nepal</p>
                   <div className="flex gap-4 pt-4">
                     <button 
                       onClick={handleCopyLink}
@@ -125,14 +125,14 @@ function VenueContent({ venue }: { venue: any }) {
               <div className="bg-white/5 border border-white/10 rounded-sm p-8 space-y-8">
                 <div className="flex justify-between items-center">
                   <h2 className="text-lg font-black text-white uppercase tracking-widest">Other Venues</h2>
-                  <Link href="/NPL-venue" className="text-[#f26522] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
+                  <Link href="/npl-venue" className="text-[#f26522] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
                 </div>
 
                 <div className="space-y-4">
                   {venuesData.venues.filter(v => v.slug !== venue.slug).slice(0, 4).map((venueItem) => (
                     <Link
                       key={venueItem.slug}
-                      href={`/NPL-venue/${venueItem.slug}`}
+                      href={`/npl-venue/${venueItem.slug}`}
                       className="group flex items-center justify-between p-4 bg-white/5 border border-transparent hover:border-[#f26522]/30 hover:bg-white/10 rounded-sm transition-all duration-300"
                     >
                       <div className="space-y-1">

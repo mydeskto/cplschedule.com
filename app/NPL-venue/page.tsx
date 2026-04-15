@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://nplschedule.com/NPL-venue",
+    canonical: "https://nplschedule.com/npl-venue",
   },
 
 }
@@ -46,17 +46,17 @@ export default function VenuesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "@id": "https://nplschedule.com/NPL-venue#collectionpage",
+            "@id": "https://nplschedule.com/npl-venue#collectionpage",
             "name": "Nepal Premier League 2026 Venues - Stadiums, Capacity & Match Schedule",
             "description": "Explore all NPL 2026 venues including Shere Bangla National Stadium, Sylhet International Cricket Stadium, and Zahur Ahmed Chowdhury Stadium.",
-            "url": "https://nplschedule.com/NPL-venue",
+            "url": "https://nplschedule.com/npl-venue",
             "inLanguage": "en-US",
             "isPartOf": {
               "@id": "https://nplschedule.com/#website"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
-              "@id": "https://nplschedule.com/NPL-venue#breadcrumb",
+              "@id": "https://nplschedule.com/npl-venue#breadcrumb",
               "itemListElement": [
                 {
                   "@type": "ListItem",
@@ -68,13 +68,13 @@ export default function VenuesPage() {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "NPL Venues",
-                  "item": "https://nplschedule.com/NPL-venue"
+                  "item": "https://nplschedule.com/npl-venue"
                 }
               ]
             },
             "mainEntity": {
               "@type": "ItemList",
-              "@id": "https://nplschedule.com/NPL-venue#venues",
+              "@id": "https://nplschedule.com/npl-venue#venues",
               "name": "Nepal Premier League 2026 Cricket Venues",
               "numberOfItems": venuesData.venues.length,
               "itemListOrder": "https://schema.org/ItemListOrderAscending",
@@ -83,9 +83,9 @@ export default function VenuesPage() {
                 "position": index + 1,
                 "item": {
                   "@type": "SportsActivityLocation",
-                  "@id": `https://nplschedule.com/NPL-venue/${venue.slug}#stadium`,
+                  "@id": `https://nplschedule.com/npl-venue/${venue.slug}#stadium`,
                   "name": venue.name,
-                  "url": `https://nplschedule.com/NPL-venue/${venue.slug}`,
+                  "url": `https://nplschedule.com/npl-venue/${venue.slug}`,
                   "description": `Cricket stadium with a seating capacity of ${venue.capacity}, hosting Nepal Premier League matches.`,
                   "maximumAttendeeCapacity": venue.capacity,
                   "sport": "Cricket",
@@ -113,7 +113,7 @@ export default function VenuesPage() {
           <Breadcrumb
             items={[
               { label: 'Home', href: '/' },
-              { label: 'NPL Venues', href: '/NPL-venue', isCurrent: true }
+              { label: 'NPL Venues', href: '/npl-venue', isCurrent: true }
             ]}
           />
         </div>

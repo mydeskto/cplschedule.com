@@ -9,7 +9,7 @@ import Link from "next/link"
 export async function generateMetadata(): Promise<Metadata> {
 
   return {
-    title: "Nepal Premier League 2026 Teams & Squads | Full Players List & Captains",
+    title: "NPL 2026 Squads & Full Players List of All Teams ",
     description: "Get the complete Nepal Premier League 2026 teams and squads list, including full players, captains, overseas signings and updated squad details for NPL 2026.",
     keywords: ["NPL 2026 all team list", "NPL 2026 all team Squad, players list", "NPL 2026 all team players list", "NPL 2026 squads", "NPL 2026 team players list"],
     robots: {
@@ -85,9 +85,9 @@ export default function TeamsPage() {
       </div> */}
 
         <div className="container mx-auto px-4 py-8 relative z-10">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Squads and Full Players List of all Team</h1>
-          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.</p>
-          <p className="text-gray-400 text-sm">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the latest NPL 2026 team squads, player roles, captain updates, and match line-ups throughout the season. Stay up to date with full squad lists, key players, and tournament news to never miss a moment of <a href="http://nplt20league.com" className="text-[#f26522]">NPL 2026</a> action.</p>
+          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Squads & Full Players List of All Teams </h1>
+          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.          </p>
+          <p className="text-gray-400 text-sm">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the full NPL 2026 team squads, player details, captain updates, and <Link href="/" className="text-[#f26522] hover:underline">match line-ups</Link> throughout the season. Stay up to date with key players, squad lists, and <Link href="/news" className="text-[#f26522] hover:underline">tournament news</Link> to never miss a moment of NPL 2026 action.</p>
           <p className="text-gray-400 text-sm"></p>
           <div className="max-w-7xl mx-auto">
             <TeamsGrid items={hoverItems} />

@@ -1,5 +1,7 @@
+"use client"
 
-import { useState, useEffect, useMemo, useRef } from "react"
+import { useState, useEffect, useMemo, useRef, Suspense } from "react"
+import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { matchesData } from "@/data/matches-data"
 import Image from "next/image"
 import { MapPin, ChevronDown, X } from "lucide-react"
@@ -252,20 +254,67 @@ function findTeamByScheduleName(name: string): TeamInfo | undefined {
   return teamsData.find((t) => n.includes(t.id.replace(/-/g, " ")) || t.teamName.toLowerCase().includes(n.split(/\s+/)[0] ?? ""))
 }
 
-export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
- const adInitialized = useRef(false);
+export default function NPLScheduleTeamWise({ initialTeam }: { initialTeam?: string }) {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-white">Loading schedule...</div>}>
+      <ScheduleContent initialTeam={initialTeam} />
+    </Suspense>
+  )
+}
+
+function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
+  const adInitialized = useRef(false);
   const adContainerRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  const teamParam = searchParams.get('team');
+  const [selectedTeam, setSelectedTeam] = useState<string>(initialTeam || teamParam || "all");
+
+  useEffect(() => {
+    if (teamParam && teamParam !== selectedTeam) {
+      setSelectedTeam(teamParam);
+    }
+  }, [teamParam]);
+
+  const handleTeamChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const val = e.target.value;
+    setSelectedTeam(val);
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
+    if (val === "all") {
+      current.delete('team');
+    } else {
+      current.set('team', val);
+    }
+    const search = current.toString();
+    const query = search ? `?${search}` : "";
+    router.push(`${pathname}${query}`, { scroll: false });
+  };
+
+  const filteredMatches = useMemo(() => {
+    const withOriginalIndices = matches.map((m, i) => ({ ...m, originalIndex: i }));
+    if (!selectedTeam || selectedTeam === "all") return withOriginalIndices;
+    return withOriginalIndices.filter(match => {
+      const parsed = parseVsTeams(match.match);
+      if (!parsed) return false;
+      const homeTeam = findTeamByScheduleName(parsed.home);
+      const awayTeam = findTeamByScheduleName(parsed.away);
+      return homeTeam?.id === selectedTeam || awayTeam?.id === selectedTeam;
+    });
+  }, [selectedTeam]);
 
   // Initialize Google AdSense ad after script loads
   useEffect(() => {
     if (adInitialized.current) return;
-    
+
     const initializeAd = () => {
       try {
         if (
-          typeof window !== 'undefined' && 
-          (window as any).adsbygoogle && 
-          !adInitialized.current && 
+          typeof window !== 'undefined' &&
+          (window as any).adsbygoogle &&
+          !adInitialized.current &&
           adContainerRef.current
         ) {
           // Check if ad element exists in DOM
@@ -308,152 +357,138 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
     <div className="min-h-screen p-2 md:p-4 font-inter" style={{ backgroundColor: "#122754" }}>
       <div className="max-w-7xl mx-auto space-y-2">
 
-       
+
 
         {/* Second Section: Title & Filter */}
         <div className=" w-full items-center justify-between gap-6 py-4 border-b border-white/10">
           <h1 className="text-1xl md:text-3xl text-center font-black text-white tracking-normal">
-            <span className="text-[#f26522]">Nepal Premier League 2026</span>  Schedule, Fixtures, Dates & Complete Match List
+            <span className="text-[#f26522]"> NPL 2026</span> Team-Wise Schedule & Fixtures
             {/* BPL 2026 Schedule – Full &nbsp; Match<span className="text-[#f26522]">  Fixtures</span> */}
           </h1>
 
 
         </div>
-        <div>
+        <div className="mb-8">
           <p className="text-white text-center mb-4">
-            The NPL 2026 Schedule provides the complete timetable for the Nepal Premier League Season 3, including match dates, fixtures, teams, venues, and start times. Cricket fans can easily check today’s matches, follow the full tournament schedule, and stay updated with upcoming fixtures in one place.
+            The Nepal Premier League 2026 season 3 brings a complete NPL 2026 schedule for fans who want quick access to team-wise fixtures, match dates, and upcoming clashes. Whether you are looking for the full NPL schedule or checking the NPL today match schedule, this section helps you stay updated with every game.
 
 
           </p>
           <p className="text-white text-center">
-            Whether you are looking for the NPL 2026 timetable , match fixtures, or team schedules, this page provides everything in a simple and easy-to-use format.
-
+            Each team will compete in a round-robin format, making every match important for points table standings and playoff qualification. Fans searching for NPL today match schedule or upcoming fixtures can easily track their favorite teams and key matches throughout the tournament.
 
           </p>
 
         </div>
-        <div className=" ">
-          <div className="my-4 text-center">
-            <p className="text-orange-500 font-black text-lg ">NPL 2026 Schedule & Full Fixtures</p>
-          </div>
-          <p className="text-white text-center">
-            According to the official calendar from the Cricket Association of Nepal (CAN), the Nepal Premier League Season 3 is expected to take place in October–November 2026. This season will feature 8 teams competing in 32 exciting T20 matches at a single venue: the Tribhuvan University International Cricket Ground.
 
-
-
-          </p>
-          {/* <div>
-            <span className="text-white font-black text-md">Schedule 2025</span>
-          </div> */}
-        </div>
-        
 
         {/* Fixtures — white cards, text in main page blue (#122754) */}
         <div className="space-y-2">
-          {matches.map((match, index) => {
-            const pairs = parseVsTeams(match.match)
-            const venueLabel = venueShortLabel(match.venue)
-            const dateLabel = formatFixtureDateLabel(match.date)
-            const matchNo = ordinalMatch(index + 1)
+          {filteredMatches.length === 0 ? (
+            <div className="text-center py-10">
+              <p className="text-white text-lg">No matches found for the selected team.</p>
+            </div>
+          ) : (
+            filteredMatches.map((match, index) => {
+              const pairs = parseVsTeams(match.match)
+              const venueLabel = venueShortLabel(match.venue)
+              const dateLabel = formatFixtureDateLabel(match.date)
+              const matchNo = ordinalMatch(match.originalIndex + 1)
 
-            return (
-              <div
-                key={`${match.date}-${index}-${match.match}`}
-                className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#122754]/18 bg-white shadow-md shadow-[#122754]/8"
-              >
-                <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#122754]/12">
-                  <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#122754]">{dateLabel}</p>
-                </div>
+              return (
+                <div
+                  key={`${match.date}-${index}-${match.match}`}
+                  className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#122754]/18 bg-white shadow-md shadow-[#122754]/8"
+                >
+                  <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#122754]/12">
+                    <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#122754]">{dateLabel}</p>
+                  </div>
 
-                <div className="flex-1 min-w-0 px-4 py-2 sm:py-5">
-                  <p className="text-[11px] sm:text-xs text-[#122754]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
-                    <span className="font-semibold text-[#122754]">Upcoming</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
-                    <span>{matchNo} Match</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
-                    <span>{venueLabel}</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
-                    <span>Nepal Premier League</span>
-                  </p>
+                  <div className="flex-1 min-w-0 px-4 py-2 sm:py-5">
+                    <p className="text-[11px] sm:text-xs text-[#122754]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
+                      <span className="font-semibold text-[#122754]">Upcoming</span>
+                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                      <span>{matchNo} Match</span>
+                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                      <span>{venueLabel}</span>
+                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                      <span>Nepal Premier League</span>
+                    </p>
 
-                  {pairs ? (
-                    <div className="space-y-1">
-                      {[pairs.home, pairs.away].map((side) => {
-                        const team = findTeamByScheduleName(side)
-                        const display = team?.teamName ?? side
-                        const logo = team?.logo ?? "/placeholder.svg"
-
-
-                        const isEven = parseInt(matchNo) % 2 === 0;
+                    {pairs ? (
+                      <div className="space-y-1">
+                        {[pairs.home, pairs.away].map((side) => {
+                          const team = findTeamByScheduleName(side)
+                          const display = team?.teamName ?? side
+                          // Deterministically alternate between profileLink and outboundLink based on match index (even vs odd)
+                          const isEven = parseInt(matchNo) % 2 === 0;
                           console.log("match number no ", isEven)
                           const href = isEven
                             ? (team?.profileLink || "#")
                             : (team?.outboundLink || "#");
 
+                          const logo = team?.logo ?? "/placeholder.svg"
 
-                        return (
-                          <div key={side} className="flex items-center justify-between gap-3">
-                            <Link href={href} className="flex items-center gap-2 min-w-0">
-                              <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#122754]/15 bg-slate-50">
-                                <Image
-                                  src={logo}
-                                  alt={`${display} logo`}
-                                  fill
-                                  className="object-contain p-0.5"
-                                  sizes="40px"
-                                />
-                              </div>
-                              <span className="text-sm sm:text-base font-semibold text-[#122754] truncate">
-                                {display}{" "}
-                                <span className="font-normal text-[#122754]/65">(NPL)</span>
-                              </span>
+                          return (
+                            <div key={side} className="flex items-center justify-between gap-3">
+                              <Link href={href} className="flex items-center gap-2 min-w-0">
+                                <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#122754]/15 bg-slate-50">
+                                  <Image
+                                    src={logo}
+                                    alt={`${display} logo`}
+                                    fill
+                                    className="object-contain p-0.5"
+                                    sizes="40px"
+                                  />
+                                </div>
+                                <span className="text-sm sm:text-base font-semibold text-[#122754] truncate">
+                                  {display}{" "}
+                                  <span className="font-normal text-[#122754]/65">(NPL)</span>
+                                </span>
 
-                            </Link>
-                            
-                          </div>
-                        )
-                      })}
-                      <span className="text-sm flex items-center justify-end relative -top-4 text-[#122754]/90">
-                      {match.time}
-                      </span>
+                              </Link>
+
+                            </div>
+                          )
+                        })}
+                        <span className="text-sm flex items-center justify-end relative -top-4 text-[#122754]/90">
+                          {match.time}
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <p className="text-sm sm:text-base font-semibold text-[#122754]">{match.match}</p>
+                        <p className="text-xs text-[#122754]/80">{match.time}</p>
+                        {match.venueLink ? (
+                          <a
+                            href={match.venueLink}
+                            className="text-xs text-[#122754] underline underline-offset-2"
+                          >
+                            {match.venue}
+                          </a>
+                        ) : (
+                          <p className="text-xs text-[#122754]/75">{match.venue}</p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
+                    <div className="bg-black/20 h-full w-[1px]"></div>
+                    <div className="flex md:flex-col justify-center items-center gap-2">
+                      <Link href="/matches/" className="text-sm font-semibold text-[#122754] hover:underline">
+                        Summary &
+                      </Link>
+                      <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
+                        Points Table
+                      </Link>
                     </div>
-                  ) : (
-                    <div className="space-y-2">
-                      <p className="text-sm sm:text-base font-semibold text-[#122754]">{match.match}</p>
-                      <p className="text-xs text-[#122754]/80">{match.time}</p>
-                      {match.venueLink ? (
-                        <a
-                          href={match.venueLink}
-                          className="text-xs text-[#122754] underline underline-offset-2"
-                        >
-                          {match.venue}
-                        </a>
-                      ) : (
-                        <p className="text-xs text-[#122754]/75">{match.venue}</p>
-                      )}
-                    </div>
-                  )}
-                </div>
-
-                <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
-                  <div className="bg-black/20 h-full w-[1px]"></div>
-                  <div className="flex md:flex-col justify-center items-center gap-2">
-                  <Link href="/matches/" className="text-sm font-semibold text-[#122754] hover:underline">
-                    Summary &
-                  </Link>
-                  <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
-                    Points Table
-                  </Link>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            }))}
         </div>
       </div>
     </div>
   )
 }
-
-
-

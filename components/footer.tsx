@@ -8,14 +8,14 @@ import { motion } from "framer-motion"
 
 const FOOTER_LINKS = {
   teams: [
-    { name: "Biratnagar Kings", href: "/schedule?team=Biratnagar Kings" },
-    { name: "Chitwan Rhinos", href: "/schedule?team=Chitwan Rhinos" },
-    { name: "Janakpur Bolts", href: "/schedule?team=Janakpur Bolts" },
-    { name: "Karnali Yaks", href: "/schedule?team=Karnali Yaks" },
-    { name: "Kathmandu Gorkhas", href: "/schedule?team=Kathmandu Gorkhas" },
-    { name: "Lumbini Lions", href: "/schedule?team=Lumbini Lions" },
-    { name: "Pokhara Avengers", href: "/schedule?team=Pokhara Avengers" },
-    { name: "Sudurpaschim Royals", href: "/schedule?team=Sudurpaschim Royals" },
+    { name: "Biratnagar Kings", href: "/npl_team_vise_schedule?team=biratnagar-kings" },
+    { name: "Chitwan Rhinos", href: "/npl_team_vise_schedule?team=chitwan-rhinos" },
+    { name: "Janakpur Bolts", href: "/npl_team_vise_schedule?team=janakpur-bolts" },
+    { name: "Karnali Yaks", href: "/npl_team_vise_schedule?team=karnali-yaks" },
+    { name: "Kathmandu Gorkhas", href: "/npl_team_vise_schedule?team=kathmandu-gurkhas" },
+    { name: "Lumbini Lions", href: "/npl_team_vise_schedule?team=lumbini-lions" },
+    { name: "Pokhara Avengers", href: "/npl_team_vise_schedule?team=pokhara-avengers" },
+    { name: "Sudurpaschim Royals", href: "/npl_team_vise_schedule?team=sudurpaschim-royals" },
   ],
   sitemap: [
     { name: "Home", href: "/" },
@@ -23,7 +23,7 @@ const FOOTER_LINKS = {
     { name: "Teams", href: "/teams" },
     { name: "News", href: "/news" },
     { name: "Points Table", href: "/points-table" },
-    { name: "Venues", href: "/NPL-venue" },
+    { name: "Venues", href: "/npl-venue" },
   ],
   legal: [
     { name: "About Us", href: "/about-us" },

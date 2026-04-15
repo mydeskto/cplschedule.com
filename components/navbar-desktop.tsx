@@ -16,7 +16,7 @@ const NAV_LINKS = [
   { href: "/teams", label: "TEAMS" },
   { href: "/points-table", label: "POINTS TABLE" },
   { href: "/news", label: "NEWS" },
-  { href: "/NPL-venue", label: "VENUES", icon: "stadium" },
+  { href: "/npl-venue", label: "VENUES", icon: "stadium" },
   { href: "/contact-us", label: "CONTACT US", icon: "mail" },
 ]
 
@@ -36,9 +36,9 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
   return (
     <motion.div
       className={cn(
-        "flex items-center justify-between py-3 px-12 w-full transition-all duration-700",
+        "flex items-center justify-between py-1 px-12 w-full transition-all duration-700",
         isScrolled
-          ? "bg-black/90 backdrop-blur-2xl border-b border-white/5 py-2"
+          ? "bg-black/90 backdrop-blur-2xl border-b border-white/5 py-1"
           : "bg-transparent"
       )}
     >
@@ -50,7 +50,7 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
           <Image
             src={whiteLogo}
             alt="NPL Logo"
-            height={120}
+            height={60}
             width={140}
             className="object-contain"
             priority

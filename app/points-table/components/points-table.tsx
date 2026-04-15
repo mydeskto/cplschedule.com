@@ -35,7 +35,7 @@ export default function PointsTable() {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter">
-            Points <span className="text-[#f26522]">Table</span>
+          NPL 2026 <span className="text-[#f26522]">Points Table</span>
           </h2>
           <div className="h-1 w-24 bg-[#f26522] rounded-full" />
         </motion.div>
