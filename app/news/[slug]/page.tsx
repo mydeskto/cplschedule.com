@@ -131,6 +131,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
         image={article.image}
         summary={article.summary}
         slug={slug}
+        faq={article.faq}
         imageTitle={article.imageTitle || ''}
         imageAlt={article.imageAlt || ''}
         imageCaption={article.imageCaption || ''}

@@ -23,6 +23,7 @@ const FOOTER_LINKS = {
     { name: "Teams", href: "/teams" },
     { name: "News", href: "/news" },
     { name: "Points Table", href: "/points-table" },
+    { name: "Auction", href: "/auction" },
     { name: "Venues", href: "/npl-venue" },
   ],
   legal: [

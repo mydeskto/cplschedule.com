@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'NPL 2026 Schedule | Fixtures, Teams, Points Table & Venues',
-  description: 'Follow the NPL 2026 schedule and get full Nepal Premier League fixtures, match dates, venues, and team details. Stay updated and watch every match live.',
+  description: 'Complete Nepal Premier League (NPL) 2026 schedule with all 32 fixtures, match dates, timings, venues, teams, and  points table. Follow every NPL Season 3 match in one place.',
   metadataBase: new URL('https://nplschedule.com'),
   alternates: {
     canonical: 'https://nplschedule.com/',

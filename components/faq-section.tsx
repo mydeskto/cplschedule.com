@@ -9,75 +9,95 @@ interface FAQItem {
   answer: string
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "When will NPL 2026 start?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nepal Premier League Season 3 is set to be played in October–November 2026, according to the annual calendar of the Cricket Association of Nepal (CAN)."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Where can I check the NPL 2026 schedule?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You can view the complete NPL 2026 schedule and match fixtures on our Schedule page."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How many teams are participating in NPL 2026?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nepal Premier League 2026 features multiple franchise teams. Full team and squad details are available on the Teams page."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Which venues will host NPL 2026 matches?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Matches will be played at designated cricket stadiums. Venue details are listed on the Venues page."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How can I book NPL 2026 tickets?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ticket booking information and availability updates can be found on our Tickets page."
-      }
-    }
-  ]
-};
-
 const faqData: FAQItem[] = [
   {
     question: "When will NPL 2026 start?",
-    answer: "Nepal Premier League Season 3 is set to be played in October–November 2026, according to the annual calendar of the Cricket Association of Nepal (CAN)."
+    answer:
+      "Nepal Premier League Season 3 is scheduled to begin on November 17, 2026, with Janakpur Bolts vs Kathmandu Gurkhas.",
+  },
+  {
+    question: "When is the NPL 2026 final?",
+    answer:
+      "The final is scheduled for December 13, 2026, at Tribhuvan University International Cricket Ground.",
   },
   {
     question: "Where can I check the NPL 2026 schedule?",
-    answer: "You can view the complete NPL 2026 schedule and match fixtures on our Schedule pcurage."
+    answer:
+      "The full match-by-match schedule, with dates, times, and venue, is listed on this page and updated as CAN confirms official fixtures.",
   },
   {
     question: "How many teams are participating in NPL 2026?",
-    answer: "Eight teams are participating in the Nepal Premier League (NPL) 2026."
+    answer:
+      "Eight: Biratnagar Kings, Chitwan Rhinos, Janakpur Bolts, Karnali Yaks, Kathmandu Gurkhas, Lumbini Lions, Pokhara Avengers, and Sudurpaschim Royals.",
   },
   {
-    question: "Which venues will host NPL 2026 matches?",
-    answer: "For NPL 2026 (Season 3), the full schedule remains unreleased, so venues aren't finalized."
+    question: "Which venue will host NPL 2026 matches?",
+    answer:
+      "All 32 matches are played at the Tribhuvan University International Cricket Ground in Kirtipur, which has hosted every match of all three NPL seasons.",
+  },
+  {
+    question: "What is the NPL 2026 format?",
+    answer:
+      "A single round-robin league stage (28 matches, each team plays every other team once) followed by a 4-team playoff: Qualifier 1, Eliminator, Qualifier 2, and the Final.",
+  },
+  {
+    question: "Who won the previous NPL seasons?",
+    answer:
+      "Janakpur Bolts won the inaugural 2024 season, defeating Sudurpaschim Royals in the final. Lumbini Lions won their maiden title in 2025, also beating Sudurpaschim Royals in the final.",
+  },
+  {
+    question: "Who is the most successful team in NPL history?",
+    answer:
+      "Janakpur Bolts and Lumbini Lions are tied with one title each. Sudurpaschim Royals have finished runner-up in both seasons so far.",
+  },
+  {
+    question: "Who has scored the most runs in NPL history?",
+    answer:
+      "Rohit Paudel (Lumbini Lions) leads with 555 runs across the first two seasons.",
+  },
+  {
+    question: "Who has taken the most wickets in NPL history?",
+    answer: "Scott Kuggeleijn (Sudurpaschim Royals) leads with 27 wickets.",
+  },
+  {
+    question: "How can I watch NPL 2026 live?",
+    answer:
+      "Previous seasons were broadcast on Star Sports and Kantipur Max in Nepal, with DishHome Go and FanCode as OTT/streaming options. Confirm the 2026 broadcast partners closer to the tournament.",
   },
   {
     question: "How can I book NPL 2026 tickets?",
-    answer: "NPL 2026 tickets are not yet available for booking, as the full schedule and official sales haven't been released by the Cricket Association of Nepal (CAN)."
-  }
+    answer:
+      "Ticket sales, pricing, and the official ticketing partner will be announced closer to the tournament. Check the Tickets page for updates.",
+  },
+  {
+    question: "How does the NPL points table work?",
+    answer:
+      "Teams earn 2 points for a win, 0 for a loss, and 1 each for a no-result. Net Run Rate (NRR) is used to break ties in the standings.",
+  },
+  {
+    question: "What is the prize money for NPL 2026?",
+    answer:
+      "In prior seasons, the winning team received रू 1.1 crore, with runner-up, third, and fourth place also receiving a share of the prize pool. Confirm 2026 figures once officially announced.",
+  },
+  {
+    question: "Who is the title sponsor of NPL?",
+    answer:
+      "Siddhartha Bank is the title sponsor under a five-year agreement (2024–2029), and the tournament is officially known as the Siddhartha Bank Nepal Premier League.",
+  },
 ]
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+}
 
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number>(0) // First question open by default

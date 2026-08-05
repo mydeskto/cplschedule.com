@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: "/teams", label: "TEAMS" },
   { href: "/points-table", label: "POINTS TABLE" },
   { href: "/news", label: "NEWS" },
+  { href: "/auction", label: "AUCTION" },
   { href: "/npl-venue", label: "VENUES", icon: "stadium" },
   { href: "/contact-us", label: "CONTACT US", icon: "mail" },
 ]

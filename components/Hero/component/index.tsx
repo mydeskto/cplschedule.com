@@ -140,27 +140,27 @@ export function HeroCarousel() {
                               </motion.div>
 
                               <div className="space-y-4">
-                                <motion.h2
+                                <motion.p
                                   initial={{ opacity: 0, x: -30 }}
                                   animate={{ opacity: 1, x: 0 }}
                                   transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                                  className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-white tracking-tighter"
+                                  className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[0.9] text-white tracking-tighter"
                                 >
                                   {slide.title.split(' ').map((word, i) => (
                                     <span key={i} className={i % 2 !== 0 ? "text-transparent stroke-text" : ""}>
                                       {word}{' '}
                                     </span>
                                   ))}
-                                </motion.h2>
+                                </motion.p>
 
-                                <motion.h3
+                                <motion.p
                                   initial={{ opacity: 0, y: 20 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ duration: 0.6, delay: 0.5 }}
-                                  className="text-xl sm:text-2xl md:text-3xl font-light text-[#f26522] italic"
+                                  className="text-lg sm:text-xl md:text-2xl font-light text-[#f26522] italic"
                                 >
                                   {slide.subtitle}
-                                </motion.h3>
+                                </motion.p>
 
                                 {slide.description && (
                                   <motion.p

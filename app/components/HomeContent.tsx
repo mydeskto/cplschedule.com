@@ -57,6 +57,17 @@ const NAV_ITEMS = [
   }
 ]
 
+const TEAM_SCHEDULE_LINKS = [
+  { name: "Biratnagar Kings", href: "/npl_team_vise_schedule?team=biratnagar-kings" },
+  { name: "Chitwan Rhinos", href: "/npl_team_vise_schedule?team=chitwan-rhinos" },
+  { name: "Janakpur Bolts", href: "/npl_team_vise_schedule?team=janakpur-bolts" },
+  { name: "Karnali Yaks", href: "/npl_team_vise_schedule?team=karnali-yaks" },
+  { name: "Kathmandu Gorkhas", href: "/npl_team_vise_schedule?team=kathmandu-gurkhas" },
+  { name: "Lumbini Lions", href: "/npl_team_vise_schedule?team=lumbini-lions" },
+  { name: "Pokhara Avengers", href: "/npl_team_vise_schedule?team=pokhara-avengers" },
+  { name: "Sudurpaschim Royals", href: "/npl_team_vise_schedule?team=sudurpaschim-royals" },
+];
+
 export const HomeContent = () => {
   const featuredVenue = venuesData.venues[0]
 
@@ -74,7 +85,7 @@ export const HomeContent = () => {
             
             <div className="h-1 w-24 bg-[#f26522] mx-auto rounded-full" />
             <p className="text-white pt-2 text-center text-sm">
-              The Nepal Premier League Season 3 will feature 8 strong teams competing for the title. Fans can follow their favorite squads and track every match they play.
+              The <a href="https://nplt20league.com/" className="hover:underline text-[#f26522]">Nepal Premier League Season 3</a> will feature 8 strong teams competing for the title. Fans can follow their favorite squads and track every match they play.
             </p>
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -93,6 +104,45 @@ export const HomeContent = () => {
       </section>
 
 
+      <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-[#f26522]/5 blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase">
+              Team Wise <span className="text-[#f26522]">Schedules</span>
+            </h2>
+            <div className="h-1 w-24 bg-[#f26522] mx-auto rounded-full" />
+            <p className="text-white/80 pt-2 text-center text-sm md:text-base max-w-2xl mx-auto font-light">
+              Don't miss a single match. Choose your favorite team below to view their complete NPL 2026 tournament fixtures.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
+            {TEAM_SCHEDULE_LINKS.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="group relative overflow-hidden rounded-lg bg-white/5 border border-white/10 px-4 py-3 transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 hover:border-[#f26522]/50 hover:shadow-md hover:shadow-[#f26522]/10"
+              >
+                <div className="relative z-10 flex items-center justify-between gap-3">
+                  <span className="text-xs md:text-sm font-bold text-white tracking-tight uppercase group-hover:text-[#f26522] transition-colors line-clamp-1">
+                    {link.name}
+                  </span>
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f26522]/10 text-[#f26522] transition-transform duration-300 group-hover:bg-[#f26522] group-hover:text-black group-hover:scale-110">
+                    <ChevronRight className="h-3 w-3" />
+                  </div>
+                </div>
+                
+                {/* Subtle gradient hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#f26522]/0 via-[#f26522]/0 to-[#f26522]/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       <section className="py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
@@ -105,6 +155,60 @@ export const HomeContent = () => {
               All 32 matches of NPL 2026 will be played at a single venue:
 
             </p>
+          </div>
+          {/* venue details section */}
+          <div className="mb-10 w-full md:w-[80%] mx-auto overflow-hidden rounded-sm border border-white/10 bg-white shadow-md shadow-[#122754]/8">
+            <table className="w-full border-collapse text-left">
+              <thead>
+                <tr className="bg-[#122754]">
+                  <th className="px-4 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-white w-[38%] sm:w-[32%] border-r border-white/10">
+                    Detail
+                  </th>
+                  <th className="px-4 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-white">
+                    Info
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-[#122754]">
+                {[
+                  { detail: "Also known as", info: "Kirtipur Cricket Ground" },
+                  { detail: "Established", info: "1998" },
+                  { detail: "Capacity", info: "~20,000" },
+                  { detail: "Ends", info: "Pavilion End, Chobhar End" },
+                  { detail: "Curator", info: "Tribhuvan University" },
+                  { detail: "Home team", info: "Nepal national cricket team" },
+                  { detail: "Timezone", info: "UTC +5:45 (NPT)" },
+                  {
+                    detail: "Pitch",
+                    info: "Generally batting-friendly; teams batting first have historically scored well",
+                  },
+                  {
+                    detail: "Highest total (NPL)",
+                    info: "Biratnagar Kings, 220/6 vs Pokhara Avengers, 18 Nov 2025",
+                  },
+                  {
+                    detail: "Lowest total (NPL)",
+                    info: "Janakpur Bolts, 51/10 vs Sudurpaschim Royals, 11 Dec 2024",
+                  },
+                  {
+                    detail: "Highest individual score (NPL)",
+                    info: "Mark Watt, 114* vs Lumbini Lions, 22 Nov 2025",
+                  },
+                ].map((row, i) => (
+                  <tr
+                    key={row.detail}
+                    className={`border-t border-[#122754]/12 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+                  >
+                    <td className="px-4 py-3 text-xs sm:text-sm font-bold align-top border-r border-[#122754]/12">
+                      {row.detail}
+                    </td>
+                    <td className="px-4 py-3 text-xs sm:text-sm font-medium leading-relaxed">
+                      {row.info}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {featuredVenue && (

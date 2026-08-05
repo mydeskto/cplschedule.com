@@ -7,11 +7,16 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import AuthorDetails from "@/components/authordetails"
 import Image from 'next/image';
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 interface NewsArticleProps {
   title: string;
   date: string;
   imageTitle: string;
   imageAlt: string;
+    faq?: FAQItem[];
   imageCaption: string;
   content: string;
   image: string | { src: string };
@@ -19,7 +24,7 @@ interface NewsArticleProps {
   slug?: string;
 }
 
-export default function NewsArticle({ title, date, content, image, summary, slug, imageTitle, imageAlt, imageCaption }: NewsArticleProps) {
+export default function NewsArticle({ title, date, content, image, summary, slug, imageTitle, imageAlt, imageCaption ,  faq = [] }: NewsArticleProps) {
   const imageUrl = typeof image === 'string' ? image : image.src;
 
   // Define breadcrumb items for the article page using the actual slug from URL
@@ -89,6 +94,30 @@ export default function NewsArticle({ title, date, content, image, summary, slug
               )
             ))}
           </div>
+
+          {faq.length > 0 && (
+            <div
+              className="prose prose-lg prose-invert max-w-none"
+              id="faq"
+            >
+            
+              <div className="space-y-4">
+                {faq.map((item, index) => (
+                  <div
+                    key={item.question || index}
+                    className="bg-slate-800 rounded-lg p-4 border border-slate-700"
+                  >
+                    <h3 className="text-white font-semibold text-left">
+                      Q{index + 1}: {item.question}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mt-3 whitespace-pre-line">
+                      {item.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Author Details */}
           {/* <AuthorDetails /> */}
