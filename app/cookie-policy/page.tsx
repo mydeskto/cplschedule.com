@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { PageHero } from '@/components/Hero/PageHero'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy - NPL Schedule | Nepal Premier League',
@@ -11,13 +12,15 @@ export const metadata: Metadata = {
 export default function CookiePolicy() {
 
   return (
-    <div className="min-h-screen bg-[#122754] font-inter pt-20">
+    <div className="min-h-screen bg-transparent font-inter">
+      <PageHero
+        title="Cookie"
+        accent="Policy"
+        eyebrow="NPL Schedule"
+        sub="How NPL Schedule uses cookies and similar technologies for experience, ads, and site performance."
+      />
       <div className="max-w-full mx-auto">
         <div className="rounded-lg p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 text-left">
-            Cookie Policy
-          </h1>
-
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed">
               This Cookie Policy explains how NPL Schedule uses cookies and similar technologies on our website to enhance user experience, serve relevant ads, and analyze site performance.

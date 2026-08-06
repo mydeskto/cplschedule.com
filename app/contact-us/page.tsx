@@ -55,11 +55,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#122754] text-white overflow-hidden pt-20">
-      
+    <div className="min-h-screen bg-transparent text-white overflow-hidden pt-20">
       <div className="container mx-auto px-4 py-24 relative">
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#f26522]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#c8102e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
         <div className="max-w-6xl mx-auto">
@@ -72,14 +71,14 @@ export default function Contact() {
               className="lg:col-span-5 space-y-12"
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 text-[#f26522]">
+                <div className="inline-flex items-center gap-2 text-[#c8102e]">
                   <MessageSquare className="w-5 h-5" />
                   <span className="text-xs font-black tracking-[0.3em] uppercase">Connect With Us</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight">
+                <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight">
                   Have a <span className="text-transparent stroke-text-gold">Question?</span> <br />
-                  We're Here to Help.
-                </h2>
+                  We&apos;re Here to Help.
+                </h1>
                 <p className="text-white/60 font-light text-lg leading-relaxed max-w-md">
                   Whether you're inquiring about tickets, team partnerships, or media accreditation, our team is ready to assist you.
                 </p>
@@ -87,33 +86,33 @@ export default function Contact() {
 
               <div className="space-y-8 pt-4">
                 {/* <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f26522]/50 transition-all duration-500 flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#f26522]" />
+                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#c8102e]/50 transition-all duration-500 flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-[#c8102e]" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Headquarters</h4>
-                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors">Sher-e-Bangla National Cricket Stadium</p>
+                    <p className="font-bold text-white group-hover:text-[#c8102e] transition-colors">Sher-e-Bangla National Cricket Stadium</p>
                     <p className="text-white/60 text-sm">Mirpur, Dhaka, Bangladesh</p>
                   </div>
                 </div> */}
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f26522]/50 transition-all duration-500 flex-shrink-0">
-                    <Mail className="w-5 h-5 text-[#f26522]" />
+                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#c8102e]/50 transition-all duration-500 flex-shrink-0">
+                    <Mail className="w-5 h-5 text-[#c8102e]" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Email Inquiry</h4>
-                    <p className="font-medium md:font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">contactnplschedule@gmail.com</p>
+                    <p className="font-medium md:font-bold text-white group-hover:text-[#c8102e] transition-colors uppercase">contactnplschedule@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f26522]/50 transition-all duration-500 flex-shrink-0">
-                    <Globe className="w-5 h-5 text-[#f26522]" />
+                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#c8102e]/50 transition-all duration-500 flex-shrink-0">
+                    <Globe className="w-5 h-5 text-[#c8102e]" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black tracking-widest uppercase text-white/40 mb-1">Official Website</h4>
-                    <p className="font-bold text-white group-hover:text-[#f26522] transition-colors uppercase">www.nplschedule.com</p>
+                    <p className="font-bold text-white group-hover:text-[#c8102e] transition-colors uppercase">www.nplschedule.com</p>
                   </div>
                 </div>
               </div>
@@ -127,8 +126,8 @@ export default function Contact() {
             >
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-12 h-12">
-                <div className="absolute top-4 right-4 w-[1px] h-6 bg-[#f26522]" />
-                <div className="absolute top-4 right-4 h-[1px] w-6 bg-[#f26522]" />
+                <div className="absolute top-4 right-4 w-[1px] h-6 bg-[#c8102e]" />
+                <div className="absolute top-4 right-4 h-[1px] w-6 bg-[#c8102e]" />
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -140,7 +139,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="EX: John Doe"
-                      className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#f26522]/50 transition-all h-14 uppercase font-bold text-xs"
+                      className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#c8102e]/50 transition-all h-14 uppercase font-bold text-xs"
                       required
                     />
                   </div>
@@ -152,7 +151,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="EX: john@agency.com"
-                      className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#f26522]/50 transition-all h-14 uppercase font-bold text-xs"
+                      className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#c8102e]/50 transition-all h-14 uppercase font-bold text-xs"
                       required
                     />
                   </div>
@@ -165,7 +164,7 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Inquiry Topic"
-                    className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#f26522]/50 transition-all h-14 uppercase font-bold text-xs"
+                    className="bg-white/5 border-white/10 text-white placeholder-white/20 rounded-sm focus:border-[#c8102e]/50 transition-all h-14 uppercase font-bold text-xs"
                     required
                   />
                 </div>
@@ -177,7 +176,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-sm p-4 text-white placeholder-white/20 focus:border-[#f26522]/50 transition-all uppercase font-bold text-xs resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-sm p-4 text-white placeholder-white/20 focus:border-[#c8102e]/50 transition-all uppercase font-bold text-xs resize-none"
                     placeholder="How can we assist you?"
                     required
                   ></textarea>
@@ -186,7 +185,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-[#f26522] hover:bg-white text-black font-black py-8 rounded-sm text-xs tracking-[0.3em] transition-all duration-500 shadow-xl shadow-[#f26522]/10 flex items-center justify-center gap-3"
+                  className="w-full bg-[#c8102e] hover:bg-white text-black font-black py-8 rounded-sm text-xs tracking-[0.3em] transition-all duration-500 shadow-xl shadow-[#c8102e]/10 flex items-center justify-center gap-3"
                 >
                   {isLoading ? 'PROCESSING...' : (
                     <>
@@ -204,7 +203,7 @@ export default function Contact() {
       
       <style jsx global>{`
         .stroke-text-gold {
-          -webkit-text-stroke: 1px #f26522;
+          -webkit-text-stroke: 1px #c8102e;
         }
       `}</style>
     </div>

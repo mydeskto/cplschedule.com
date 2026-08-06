@@ -56,12 +56,12 @@ const MatchCard = ({ match }: { match: Match }) => (
     transition={{ duration: 0.3 }}
     className="w-full"
   >
-    <Card className="bg-[#1a1f3c] border-white/10 text-white overflow-hidden hover:border-[#f26522]/50 transition-colors duration-300 shadow-xl">
+    <Card className="bg-[#1a1f3c] border-white/10 text-white overflow-hidden hover:border-[#c8102e]/50 transition-colors duration-300 shadow-xl">
        <CardContent className="p-6">
           <div className="flex justify-between items-center mb-4">
              <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider ${
                 match.status === "live" ? "bg-red-600 text-white animate-pulse" : 
-                match.status === "completed" ? "border border-[#f26522] text-[#f26522]" : "bg-slate-700 text-white"
+                match.status === "completed" ? "border border-[#c8102e] text-[#c8102e]" : "bg-slate-700 text-white"
              }`}>
                 {match.status === "completed" ? "RESULT" : match.status === "live" ? "LIVE" : "UPCOMING"}
              </span>
@@ -106,7 +106,7 @@ const MatchCard = ({ match }: { match: Match }) => (
                 <Clock className="w-3 h-3" />
                 {match.date} • {match.time}
              </div>
-             <p className="text-sm font-medium text-[#f26522] text-center">
+             <p className="text-sm font-medium text-[#c8102e] text-center">
                 {match.result || match.matchType}
              </p>
           </div>
@@ -149,27 +149,27 @@ export default function MatchCarousel() {
   }
 
   return (
-    <div className="w-full bg-[#122754] py-8 relative overflow-hidden font-inter">
+    <div className="w-full bg-[#111528] py-8 relative overflow-hidden font-inter">
       <div className="max-w-7xl mx-auto mb-6 px-4">
-        <div className="flex items-center justify-between mb-4 text-[#f26522]">
-          <h2 className="text-3xl font-bold text-[#f26522]">MATCHES</h2>
+        <div className="flex items-center justify-between mb-4 text-[#c8102e]">
+          <h2 className="text-3xl font-bold text-[#c8102e]">MATCHES</h2>
           <div className="flex space-x-1">
              {[...Array(4)].map((_, i) => (
                 <Image key={i} src={chevronImage} height={20} width={30} alt="" className="-mt-2 animate-bounce" style={{ animationDelay: `${i * 0.2}s` }} />
              ))}
           </div>
         </div>
-        <h2 className="text-lg font-bold text-[#f26522] mb-4">CPL Live Score 2026 Today Time Table</h2>
+        <h2 className="text-lg font-bold text-[#c8102e] mb-4">CPL Live Score 2026 Today Time Table</h2>
 
         {/* Tabs */}
-        <div className="flex gap-2 border-b border-[#f26522]/30 overflow-x-auto scrollbar-none">
-          <button onClick={() => setActiveTab("live")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "live" ? "text-[#f26522] border-b-2 border-[#f26522]" : "text-gray-400 hover:text-[#f26522]"}`}>
+        <div className="flex gap-2 border-b border-[#c8102e]/30 overflow-x-auto scrollbar-none">
+          <button onClick={() => setActiveTab("live")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "live" ? "text-[#c8102e] border-b-2 border-[#c8102e]" : "text-gray-400 hover:text-[#c8102e]"}`}>
             Live ({liveMatches.length})
           </button>
-          <button onClick={() => setActiveTab("matches")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "matches" ? "text-[#f26522] border-b-2 border-[#f26522]" : "text-gray-400 hover:text-[#f26522]"}`}>
+          <button onClick={() => setActiveTab("matches")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "matches" ? "text-[#c8102e] border-b-2 border-[#c8102e]" : "text-gray-400 hover:text-[#c8102e]"}`}>
             Matches ({completedMatches.length})
           </button>
-          <button onClick={() => setActiveTab("upcoming")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "upcoming" ? "text-[#f26522] border-b-2 border-[#f26522]" : "text-gray-400 hover:text-[#f26522]"}`}>
+          <button onClick={() => setActiveTab("upcoming")} className={`px-6 py-2 font-semibold transition-colors whitespace-nowrap ${activeTab === "upcoming" ? "text-[#c8102e] border-b-2 border-[#c8102e]" : "text-gray-400 hover:text-[#c8102e]"}`}>
             Upcoming ({upcomingMatches.length})
           </button>
         </div>
@@ -204,10 +204,10 @@ export default function MatchCarousel() {
                     {/* Controls */}
                     {displayedMatches.length > 1 && (
                       <div className="flex justify-center mt-6 gap-4">
-                        <Button variant="outline" size="icon" onClick={prevSlide} className="rounded-full border-[#f26522] text-[#f26522] hover:bg-[#f26522] hover:text-[#122754]">
+                        <Button variant="outline" size="icon" onClick={prevSlide} className="rounded-full border-[#c8102e] text-[#c8102e] hover:bg-[#c8102e] hover:text-[#111528]">
                            <ChevronLeft className="w-5 h-5" />
                         </Button>
-                        <Button variant="outline" size="icon" onClick={nextSlide} className="rounded-full border-[#f26522] text-[#f26522] hover:bg-[#f26522] hover:text-[#122754]">
+                        <Button variant="outline" size="icon" onClick={nextSlide} className="rounded-full border-[#c8102e] text-[#c8102e] hover:bg-[#c8102e] hover:text-[#111528]">
                            <ChevronRight className="w-5 h-5" />
                         </Button>
                       </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { VenueCard } from "@/components/venue-card"
 import { venuesData } from "@/data/vanue-data"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { PageHero } from "@/components/Hero/PageHero"
 export const metadata: Metadata = {
   title: "Nepal Premier League 2026 Venues | Stadiums & Match Locations",
   description:
@@ -107,7 +107,17 @@ export default function VenuesPage() {
       />
 
 
-      <main className="min-h-screen bg-[#122754] text-white pt-20">
+      <main className="min-h-screen bg-transparent text-white">
+        <PageHero
+          title="NPL"
+          accent="Venues"
+          sub="Stadiums and match locations for Nepal Premier League 2026 — capacity, pitch notes, and how to plan your visit for Season 3."
+          ctas={[
+            { label: "View venues", href: "#venues-grid", primary: true },
+            { label: "Buy tickets", href: "/tickets" },
+          ]}
+        />
+
         {/* Breadcrumb */}
         <div className="w-full px-4 md:px-6 pt-6">
           <Breadcrumb
@@ -119,14 +129,8 @@ export default function VenuesPage() {
         </div>
 
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 font-font-inter ">
-          {/* Header */}
+          {/* Intro */}
           <div className="mb-12 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Nepal Premier League 2026 Venues | NPL 2026 Venue</h1>
-            {/* <p className="text-lg text-white max-w-2xl mx-auto mb-6">
-              Explore the Coastal Premier League 2026 Venues - Stadiums, Capacity & Match Schedule
-            </p> */}
-
-            {/* Intro Paragraph */}
             <div className="max-w-full mx-auto text-center">
               <p className="text-base text-gray-300 leading-relaxed mb-4">
                 The Nepal Premier League 2026 (NPL 2026) venue for all matches is the University Cricket Ground, known for its excellent pitch conditions, competitive playing surface, and lively crowd atmosphere. This venue has hosted major domestic tournaments, making it a top location for exciting NPL 2026 matches.
@@ -137,11 +141,8 @@ export default function VenuesPage() {
             </div>
           </div>
 
-          {/* CPL 2026 Venues Section */}
-         
-
           {/* Venues Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div id="venues-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {venuesData.venues.map((venue) => (
               <VenueCard
                 key={venue.id}

@@ -1,18 +1,21 @@
 import Link from 'next/link'
+import { PageHero } from '@/components/Hero/PageHero'
 
 
 export default function Disclaimer() {
 
   return (
     <>
-    <div className="min-h-screen bg-[#122754] font-inter ">
+    <div className="min-h-screen bg-transparent font-inter">
+      <PageHero
+        title="NPL"
+        accent="Disclaimer"
+        eyebrow="NPL Schedule"
+        sub="General information only — schedules may change, and third-party links are outside our control."
+      />
 
-      <div className="max-w-full mx-auto pt-20">
+      <div className="max-w-full mx-auto">
         <div className=" rounded-lg  p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 text-left">
-            Disclaimer
-          </h1>
-
           <div className="prose prose-lg max-w-none">
 
             <p className="text-md text-white mb-6 leading-relaxed">

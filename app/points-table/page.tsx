@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import PointsTable from './components/points-table'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { teamsData } from '@/data/teamData'
+import { PageHero } from '@/components/Hero/PageHero'
 
 export const metadata: Metadata = {
      title: "Nepal Premier League 2026 Points Table : Standings & Ranking",
@@ -98,7 +99,17 @@ export default function PointsTablePage() {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
                />
-               <div className="min-h-screen bg-[#122754] relative overflow-hidden pt-20">
+               <div className="min-h-screen bg-transparent relative overflow-hidden">
+                    <PageHero
+                         title="NPL"
+                         accent="Standings"
+                         sub="Live Nepal Premier League 2026 points table — rankings, wins, losses, points, and Net Run Rate as Season 3 unfolds."
+                         ctas={[
+                              { label: "View table", href: "#points-table", primary: true },
+                              { label: "Fixtures", href: "/" },
+                         ]}
+                    />
+
                     {/* Breadcrumb */}
                     <div className="w-full px-4 md:px-6 pt-4 relative z-10">
                          <Breadcrumb
@@ -109,13 +120,9 @@ export default function PointsTablePage() {
                          />
                     </div>
 
-                    <div className='flex flex-col items-left justify-center m-4'>
-                         <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Points Table | Latest Standings and Team Rankings</h1>
+                    <div id="points-table" className='flex flex-col items-left justify-center m-4'>
                     <p className="text-gray-400 text-sm">Track team rankings, wins, losses, points, and Net Run Rate throughout the tournament.</p>
-
-
                     </div>
-
 
                     {/* Points Table Component */}
                     <PointsTable />

@@ -108,7 +108,7 @@ export const FAQSection = () => {
 
   return (
 
-    <section className="py-2 px-4 sm:px-6 lg:px-8 bg-[#122754] relative overflow-hidden">
+    <section className="py-2 px-4 sm:px-6 lg:px-8 bg-transparent relative overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -120,7 +120,7 @@ export const FAQSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-sm bg-[#f26522] text-black mb-4 shadow-lg shadow-[#f26522]/20"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-sm bg-[#c8102e] text-black mb-4 shadow-lg shadow-[#c8102e]/20"
           >
             <HelpCircle className="w-8 h-8" />
           </motion.div>
@@ -131,7 +131,7 @@ export const FAQSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase"
           >
-            Frequently Asked <span className="text-[#f26522]">Questions</span>
+            Frequently Asked <span className="text-[#c8102e]">Questions</span>
           </motion.h2>
 
           <motion.div
@@ -139,7 +139,7 @@ export const FAQSection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="h-1 w-24 bg-[#f26522] mx-auto rounded-full"
+            className="h-1 w-24 bg-[#c8102e] mx-auto rounded-full"
           />
 
           <motion.p
@@ -168,7 +168,7 @@ export const FAQSection = () => {
                 className={`
                   rounded-sm overflow-hidden transition-all duration-500
                   ${openIndex === index
-                    ? 'bg-white/10 border border-[#f26522]/50 shadow-lg shadow-[#f26522]/10'
+                    ? 'bg-white/10 border border-[#c8102e]/50 shadow-lg shadow-[#c8102e]/10'
                     : 'bg-white/5 border border-white/10 hover:border-white/20'
                   }
                 `}
@@ -183,7 +183,7 @@ export const FAQSection = () => {
                     <div className={`
                       flex-shrink-0 w-8 h-8 rounded-sm flex items-center justify-center text-xs font-black transition-all duration-300
                       ${openIndex === index
-                        ? 'bg-[#f26522] text-black'
+                        ? 'bg-[#c8102e] text-black'
                         : 'bg-white/10 text-white/60 group-hover:bg-white/20'
                       }
                     `}>
@@ -210,7 +210,7 @@ export const FAQSection = () => {
                       className={`
                         w-6 h-6 transition-colors duration-300
                         ${openIndex === index
-                          ? 'text-[#f26522]'
+                          ? 'text-[#c8102e]'
                           : 'text-white/40 group-hover:text-white/60'
                         }
                       `}
@@ -264,8 +264,8 @@ export const FAQSection = () => {
       </div>
 
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#f26522]/5 blur-[120px] rounded-full -mr-48 -mt-48" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#f26522]/5 blur-[120px] rounded-full -ml-48 -mb-48" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#c8102e]/5 blur-[120px] rounded-full -mr-48 -mt-48" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#c8102e]/5 blur-[120px] rounded-full -ml-48 -mb-48" />
     </section>
   )
 }

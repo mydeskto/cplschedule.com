@@ -1,10 +1,10 @@
 
-import NPLSchedule from '../../components/SchedulePage'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { matchesData } from '@/data/matches-data'
 import { buildScheduleSportsEventsGraph } from '@/lib/sports-event-jsonld'
 import NPLScheduleTeamWise from '@/components/teamSchedule'
 import { Metadata } from 'next'
+import { PageHero } from '@/components/Hero/PageHero'
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -105,12 +105,23 @@ export default function ScheduleHome() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             
-            <div className="min-h-screen bg-[#122754] pt-20 font-inter">
+            <div className="min-h-screen bg-transparent font-inter">
+                <PageHero
+                    title="NPL"
+                    accent="Team Schedule"
+                    sub="Filter Nepal Premier League 2026 fixtures by franchise — every team’s path through the league stage and playoffs."
+                    ctas={[
+                        { label: "Team fixtures", href: "#team-schedule", primary: true },
+                        { label: "Full schedule", href: "/schedule" },
+                    ]}
+                />
                 {/* Breadcrumb */}
                 <div className="px-5 md:px-10">
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
-                <NPLScheduleTeamWise />
+                <div id="team-schedule">
+                  <NPLScheduleTeamWise />
+                </div>
             </div>
         </>
     )

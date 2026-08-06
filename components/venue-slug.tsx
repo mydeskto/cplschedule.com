@@ -56,7 +56,7 @@ export default function VenuesPage() {
         }}
       />
 
-            <main className="min-h-screen bg-[#122754] text-white pt-25">
+            <main className="min-h-screen bg-[#111528] text-white pt-25">
         {/* Breadcrumb */}
         <div className="w-full px-4 md:px-6 pt-6">
           <Breadcrumb

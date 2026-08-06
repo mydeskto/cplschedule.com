@@ -35,9 +35,9 @@ export const TeamsGrid = ({
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <div className="rounded-sm h-full w-full p-8 overflow-hidden bg-white/5 border border-white/10 group-hover:border-[#f26522]/50 relative z-20 transition-all duration-500 hover:bg-white/10">
+          <div className="rounded-sm h-full w-full p-8 overflow-hidden bg-white/5 border border-white/10 group-hover:border-[#c8102e]/50 relative z-20 transition-all duration-500 hover:bg-white/10">
             <div className="relative z-50 flex flex-col items-center text-center space-y-6">
-                 <div className="w-32 h-32 relative rounded-sm bg-black/20 p-6 ring-1 ring-white/10 group-hover:ring-[#f26522]/50 transition-all duration-500 shadow-xl">
+                 <div className="w-32 h-32 relative rounded-sm bg-black/20 p-6 ring-1 ring-white/10 group-hover:ring-[#c8102e]/50 transition-all duration-500 shadow-xl">
                     <img 
                         src={item.logo} 
                         alt={item.title}
@@ -45,15 +45,15 @@ export const TeamsGrid = ({
                     />
                  </div>
                  <div className="space-y-2">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tighter group-hover:text-[#f26522] transition-colors duration-300">
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tighter group-hover:text-[#c8102e] transition-colors duration-300">
                         {item.title}
                     </h4>
-                    <div className="h-0.5 w-12 bg-[#f26522]/30 mx-auto transition-all duration-500 group-hover:w-20 group-hover:bg-[#f26522]" />
+                    <div className="h-0.5 w-12 bg-[#c8102e]/30 mx-auto transition-all duration-500 group-hover:w-20 group-hover:bg-[#c8102e]" />
                  </div>
                  <p className="text-white/60 font-light text-sm leading-relaxed">
                    {item.des}
                  </p>
-                 <div className="flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase pt-2">
+                 <div className="flex items-center text-[#c8102e] text-xs font-black tracking-widest uppercase pt-2">
                     View Squad
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2" />
                  </div>
@@ -61,8 +61,8 @@ export const TeamsGrid = ({
             
             {/* Corner Accent */}
             <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="absolute top-2 right-2 w-[1px] h-4 bg-[#f26522]" />
-              <div className="absolute top-2 right-2 h-[1px] w-4 bg-[#f26522]" />
+              <div className="absolute top-2 right-2 w-[1px] h-4 bg-[#c8102e]" />
+              <div className="absolute top-2 right-2 h-[1px] w-4 bg-[#c8102e]" />
             </div>
           </div>
         </Link>

@@ -63,7 +63,7 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
 
   if (!venue) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#122754' }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#111528' }}>
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-4">Venue Not Found</h1>
           <Link href="/npl-venue" className="text-white hover:underline">
@@ -141,7 +141,7 @@ export default async function VenueDetailPage(props: VenueDetailPageProps) {
         }}
       />
 
-      <main className="min-h-screen text-white font-inter  tracking-wider pt-20" style={{ backgroundColor: '#122754' }}>
+      <main className="min-h-screen text-white font-inter  tracking-wider pt-20" style={{ backgroundColor: '#111528' }}>
         {/* Breadcrumb */}
         <div className="w-full px-2 sm:px-4 md:px-6 pt-4 pb-4">
           <Breadcrumb

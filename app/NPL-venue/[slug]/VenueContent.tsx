@@ -30,12 +30,12 @@ function VenueContent({ venue }: { venue: any }) {
   })
 
   return (
-    <div className="bg-[#122754] min-h-screen pb-20">
+    <div className="bg-[#111528] min-h-screen pb-20">
       {/* Dynamic Header/Breadcrumb */}
       <div className="container mx-auto px-4 py-8">
         <Link 
           href="/npl-venue" 
-          className="inline-flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase hover:translate-x-[-8px] transition-transform duration-300"
+          className="inline-flex items-center text-[#c8102e] text-xs font-black tracking-widest uppercase hover:translate-x-[-8px] transition-transform duration-300"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to all venues
@@ -51,7 +51,7 @@ function VenueContent({ venue }: { venue: any }) {
               animate={{ opacity: 1, y: 0 }}
               className="space-y-4"
             >
-              <div className="flex items-center gap-3 text-[#f26522]">
+              <div className="flex items-center gap-3 text-[#c8102e]">
                 <MapPin className="w-5 h-5" />
                 <span className="text-xs font-black tracking-[0.3em] uppercase">Premium Stadium</span>
               </div>
@@ -64,14 +64,14 @@ function VenueContent({ venue }: { venue: any }) {
               </h1>
               <div className="flex flex-wrap gap-6 pt-4">
                 <div className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-sm">
-                  <Users className="w-5 h-5 text-[#f26522]" />
+                  <Users className="w-5 h-5 text-[#c8102e]" />
                   <div className="flex flex-col">
                     <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">Capacity</span>
                     <span className="text-white font-bold">{venue.capacity.toLocaleString()}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-sm">
-                  <Calendar className="w-5 h-5 text-[#f26522]" />
+                  <Calendar className="w-5 h-5 text-[#c8102e]" />
                   <div className="flex flex-col">
                     <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">Matches</span>
                     <span className="text-white font-bold">Host 2026</span>
@@ -105,7 +105,7 @@ function VenueContent({ venue }: { venue: any }) {
           <div className="lg:col-span-4 space-y-6">
             <div className="sticky top-24 space-y-6">
               {/* Location Card */}
-              <div className="bg-[#f26522] p-8 rounded-sm text-black">
+              <div className="bg-[#c8102e] p-8 rounded-sm text-black">
                 <h3 className="text-2xl font-black uppercase tracking-tighter mb-4">Location</h3>
                 <div className="space-y-4">
                   <p className="font-bold text-lg leading-tight">{venue.address.fullAddress}</p>
@@ -125,7 +125,7 @@ function VenueContent({ venue }: { venue: any }) {
               <div className="bg-white/5 border border-white/10 rounded-sm p-8 space-y-8">
                 <div className="flex justify-between items-center">
                   <h2 className="text-lg font-black text-white uppercase tracking-widest">Other Venues</h2>
-                  <Link href="/npl-venue" className="text-[#f26522] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
+                  <Link href="/npl-venue" className="text-[#c8102e] text-[10px] font-black tracking-widest uppercase hover:underline">See All</Link>
                 </div>
 
                 <div className="space-y-4">
@@ -133,13 +133,13 @@ function VenueContent({ venue }: { venue: any }) {
                     <Link
                       key={venueItem.slug}
                       href={`/npl-venue/${venueItem.slug}`}
-                      className="group flex items-center justify-between p-4 bg-white/5 border border-transparent hover:border-[#f26522]/30 hover:bg-white/10 rounded-sm transition-all duration-300"
+                      className="group flex items-center justify-between p-4 bg-white/5 border border-transparent hover:border-[#c8102e]/30 hover:bg-white/10 rounded-sm transition-all duration-300"
                     >
                       <div className="space-y-1">
-                        <p className="font-black text-white text-sm uppercase tracking-tight group-hover:text-[#f26522] transition-colors">{venueItem.name}</p>
+                        <p className="font-black text-white text-sm uppercase tracking-tight group-hover:text-[#c8102e] transition-colors">{venueItem.name}</p>
                         <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">{venueItem.address.addressLocality}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#f26522] transform group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#c8102e] transform group-hover:translate-x-1 transition-all" />
                     </Link>
                   ))}
                 </div>
@@ -151,7 +151,7 @@ function VenueContent({ venue }: { venue: any }) {
 
       <style jsx global>{`
         .stroke-text-gold {
-          -webkit-text-stroke: 1px #f26522;
+          -webkit-text-stroke: 1px #c8102e;
         }
       `}</style>
     </div>

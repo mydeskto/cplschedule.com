@@ -1,17 +1,24 @@
 import Link from 'next/link'
+import { PageHero } from '@/components/Hero/PageHero'
 
 export default function AboutUs() {
 
   return (
     <>
-    <div className="min-h-screen bg-[#122754] font-inter ">
+    <div className="min-h-screen bg-transparent font-inter">
+      <PageHero
+        title="About"
+        accent="Us"
+        eyebrow="NPL Schedule"
+        sub="Your trusted source for Nepal Premier League schedules, fixtures, results, team details, and cricket news."
+        ctas={[
+          { label: "View fixtures", href: "/", primary: true },
+          { label: "Contact", href: "/contact-us" },
+        ]}
+      />
 
-      <div className="max-w-full mx-auto pt-20">
+      <div className="max-w-full mx-auto">
         <div className=" rounded-lg  p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-left">
-            About Us
-          </h1>
-
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed">
               Welcome to NPL Schedule, your trusted source for comprehensive Nepal Premier League (NPL) information. We provide schedules, fixtures, results, team details, and cricket news in a clear, reliable format.
@@ -43,7 +50,7 @@ export default function AboutUs() {
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Advertising Transparency</h2>
             <p className="text-md text-white mb-6 leading-relaxed">
-              This website uses Google AdSense to display ads in accordance with Google's publisher and content policies. Ads support website maintenance and are shown safely for users.
+              This website uses Google AdSense to display ads in accordance with Google&apos;s publisher and content policies. Ads support website maintenance and are shown safely for users.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Contact Us</h2>
@@ -51,13 +58,12 @@ export default function AboutUs() {
               📧 contactnplschedule@gmail.com
             </p>
             <p className="text-md text-white mb-8 leading-relaxed">
-              Or reach us via our <Link href="/contact-us" className="text-[#f26522] hover:underline">Contact Page</Link>.
+              Or reach us via our <Link href="/contact-us" className="text-[#c8102e] hover:underline">Contact Page</Link>.
             </p>
 
           </div>
         </div>
       </div>
-
     </div>
     </>
   )

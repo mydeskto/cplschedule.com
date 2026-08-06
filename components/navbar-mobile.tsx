@@ -40,7 +40,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
         className={cn(
           "flex items-center justify-between py-3 px-6 w-full transition-all duration-700",
           isScrolled
-            ? "bg-black/90 backdrop-blur-2xl border-b border-white/5 py-2"
+            ? "bg-[#111528]/95 backdrop-blur-[8px] border-b border-[#2c3258] py-2"
             : "bg-transparent"
         )}
       >
@@ -48,7 +48,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
         <div className="flex items-center">
           <button
             onClick={toggleMobileMenu}
-            className="text-white hover:text-[#f26522] transition-all hover:scale-105 active:scale-95"
+            className="text-white hover:text-[#c8102e] transition-all hover:scale-105 active:scale-95"
           >
             <div
               className={`transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-90' : 'rotate-0'}`}
@@ -63,7 +63,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
         {/* Mobile Right Side - Buy Ticket Short Button */}
         <div className="flex items-center">
           <Link href="/tickets/">
-            <Button className="bg-[#f26522] hover:bg-white text-black font-black py-4 px-4 rounded-sm text-[9px] tracking-[0.1em] whitespace-nowrap shadow-xl shadow-[#f26522]/20">
+            <Button className="bg-[#c8102e] hover:bg-white text-black font-black py-4 px-4 rounded-sm text-[9px] tracking-[0.1em] whitespace-nowrap shadow-xl shadow-[#c8102e]/20">
               TICKETS
             </Button>
           </Link>
@@ -90,7 +90,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 w-[85vw] max-w-[400px] h-screen bg-[#122754] shadow-2xl flex flex-col border-r border-white/10"
+              className="fixed top-0 left-0 w-[85vw] max-w-[400px] h-screen bg-[#111528] shadow-2xl flex flex-col border-r border-white/10"
             >
               {/* Sidebar Header */}
               <div className="flex items-center justify-between p-6 border-b border-white/5">
@@ -123,13 +123,13 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
                       href={link.to}
                       className={cn(
                         "flex items-center justify-between py-4 text-[11px] font-black tracking-[0.2em] transition-all duration-300",
-                        isActive(link.to) ? "text-[#f26522]" : "text-white/70 hover:text-white"
+                        isActive(link.to) ? "text-[#c8102e]" : "text-white/70 hover:text-white"
                       )}
                       onClick={toggleMobileMenu}
                     >
                       {link.label}
                       {isActive(link.to) && (
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#f26522] shadow-lg shadow-[#f26522]/50" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#c8102e] shadow-lg shadow-[#c8102e]/50" />
                       )}
                     </Link>
                     <div className="h-[1px] w-full bg-white/5" />
@@ -141,7 +141,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
               <div className="p-8 space-y-8 bg-black/20">
                 {/* Buy Ticket CTA in Sidebar */}
                 <Link href="/tickets/" onClick={toggleMobileMenu}>
-                  <Button className="w-full bg-[#f26522] hover:bg-white text-black font-black py-7 rounded-sm text-[11px] tracking-[0.2em] group transition-all duration-500 shadow-2xl shadow-[#f26522]/10">
+                  <Button className="w-full bg-[#c8102e] hover:bg-white text-black font-black py-7 rounded-sm text-[11px] tracking-[0.2em] group transition-all duration-500 shadow-2xl shadow-[#c8102e]/10">
                     BOOK TICKETS 2026
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />
                   </Button>
@@ -162,7 +162,7 @@ export function NavbarMobile({ isScrolled, isMobileMenuOpen, toggleMobileMenu }:
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-[#f26522] hover:border-[#f26522]/50 transition-all duration-300"
+                        className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-[#c8102e] hover:border-[#c8102e]/50 transition-all duration-300"
                       >
                         <Icon className="w-4 h-4" />
                       </a>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { PageHero } from '@/components/Hero/PageHero'
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions - NPL Schedule | Nepal Premier League',
@@ -12,13 +13,15 @@ export const metadata: Metadata = {
 export default function TermsAndConditions() {
 
   return (
-    <div className="min-h-screen bg-[#122754] font-inter pt-20">
+    <div className="min-h-screen bg-transparent font-inter">
+      <PageHero
+        title="Terms &"
+        accent="Conditions"
+        eyebrow="NPL Schedule"
+        sub="Rules for using NPL Schedule — content accuracy, user conduct, and site terms of use."
+      />
       <div className="max-w-full mx-auto">
         <div className="rounded-lg p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 text-left">
-            Terms & Conditions
-          </h1>
-
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed">
               Welcome to NPL Schedule. By accessing or using this website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
@@ -90,7 +93,7 @@ export default function TermsAndConditions() {
               <li>
                 <span className="text-2xl font-bold block mb-2">Privacy</span>
                 <p className="pl-0 my-3 text-md font-normal">
-                  Your use of this website is also governed by our <Link href="/privacy-policy" className="text-[#f26522] hover:underline">Privacy Policy</Link>.
+                  Your use of this website is also governed by our <Link href="/privacy-policy" className="text-[#c8102e] hover:underline">Privacy Policy</Link>.
                 </p>
               </li>
 

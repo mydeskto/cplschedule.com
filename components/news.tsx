@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export default function NewsPageForHome() {
     return (
-        <section className="py-24 bg-[#122754] relative overflow-hidden">
+        <section className="py-24 bg-[#111528] relative overflow-hidden">
             <div className="container mx-auto px-4 lg:px-8 relative z-10">
                 {/* Latest News Heading */}
                 <div className="text-center mb-16 space-y-4">
@@ -16,14 +16,14 @@ export default function NewsPageForHome() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase"
                     >
-                        Latest <span className="text-[#f26522]">News</span>
+                        Latest <span className="text-[#c8102e]">News</span>
                     </motion.h2>
                     <motion.div 
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="h-1 w-24 bg-[#f26522] mx-auto rounded-full"
+                        className="h-1 w-24 bg-[#c8102e] mx-auto rounded-full"
                     />
                 </div>
 

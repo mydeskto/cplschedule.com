@@ -46,7 +46,7 @@ export function PointsTableCard({ data }: PointsTableProps) {
   }
 
   return (
-    <div className="w-full  px-4 md:px-8 font-inter tracking-wider" style={{ backgroundColor: "#122754" }}>
+    <div className="w-full  px-4 md:px-8 font-inter tracking-wider" style={{ backgroundColor: "#111528" }}>
       <div className="max-w-screen mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between pb-5 ">
@@ -90,13 +90,13 @@ export function PointsTableCard({ data }: PointsTableProps) {
           {data.map((team) => (
             <div
               key={team.position}
-              className="flex-shrink-0 w-70 rounded-md border-2 !border-[#122754] shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden cursor-pointer"
-              style={{ backgroundColor: "#122754", borderColor: "white" }}
+              className="flex-shrink-0 w-70 rounded-md border-2 !border-[#111528] shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden cursor-pointer"
+              style={{ backgroundColor: "#111528", borderColor: "white" }}
             >
               {/* Card Header with Rank */}
               <div className="p-6 " style={{ borderColor: "rgba(255,255,255,0.2)" }}>
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-6xl font-black text-[#f26522] leading-none">{team.position}</div>
+                  <div className="text-6xl font-black text-[#c8102e] leading-none">{team.position}</div>
                   <div className="text-right">
                     <h3 className="text-xl font-bold  text-gray-300 leading-tight">{team.team}</h3>
                   </div>
@@ -106,7 +106,7 @@ export function PointsTableCard({ data }: PointsTableProps) {
                 <div className="flex justify-center py-4">
                   <div
                     className="w-24 h-24 rounded-full border-4 flex items-center justify-center overflow-hidden"
-                    style={{ borderColor: "white", backgroundColor: "#122754" }}
+                    style={{ borderColor: "white", backgroundColor: "#111528" }}
                   >
                     <img src={team.logo || "/placeholder.svg"} alt={team.team} className="w-full h-full object-cover" />
                   </div>
@@ -157,7 +157,7 @@ export function PointsTableCard({ data }: PointsTableProps) {
 
         
 
-        <Link href='/points-table' className="relative mt-6 px-6 py-3 w-60 h-8 cursor-pointer font-bold transform -skew-x-12 bg-[#122754] hover:scale-105 justify-self-center z-90 text-white transition-all duration-300 flex items-center gap-2  active:scale-95">
+        <Link href='/points-table' className="relative mt-6 px-6 py-3 w-60 h-8 cursor-pointer font-bold transform -skew-x-12 bg-[#111528] hover:scale-105 justify-self-center z-90 text-white transition-all duration-300 flex items-center gap-2  active:scale-95">
             <span className="font-manrope">FULL POINT TABLE</span>
             <span>↗</span>
         </Link>

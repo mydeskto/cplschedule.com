@@ -4,7 +4,7 @@ import CPLTeamPic from '@/public/images/bpl-logo.avif'
 
 export default function AuthorDetails() {
   return (
-    <div className="bg-[#122754] rounded-lg shadow-sm border border-gray-200 p-4  mt-5">
+    <div className="bg-[#111528] rounded-lg shadow-sm border border-gray-200 p-4  mt-5">
       <div className="flex items-start space-x-4">
         {/* Profile Picture */}
         <div className="flex-shrink-0">

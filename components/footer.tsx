@@ -44,10 +44,10 @@ const FOOTER_LINKS = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#122754]  pb-12 overflow-hidden relative">
+    <footer className="bg-transparent pb-12 overflow-hidden relative border-t border-[#2c3258]">
       <div className="pt-12 border-t border-orange-500/80 mx-4 md:mx-8 lg:mx-12"></div>
       {/* Decorative Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#f26522]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#c8102e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
@@ -74,7 +74,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-sm text-white bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f26522] hover:text-black transition-all duration-500 group"
+                  className="w-10 h-10 rounded-sm text-white bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#c8102e] hover:text-black transition-all duration-500 group"
                 >
                   <social.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
                 </a>
@@ -85,7 +85,7 @@ export default function Footer() {
           {/* Links Columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12">
             <div className="space-y-6">
-              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">Tournament</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#c8102e]">Tournament</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.sitemap.map((link) => (
                   <li key={link.name}>
@@ -99,7 +99,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">NPL Teams Schedule</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#c8102e]">NPL Teams Schedule</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.teams.map((link) => (
                   <li key={link.name}>
@@ -113,7 +113,7 @@ export default function Footer() {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#f26522]">Legal Pages</h4>
+              <h4 className="text-[12px] font-black tracking-[0.3em] uppercase text-[#c8102e]">Legal Pages</h4>
               <ul className="space-y-4">
                 {FOOTER_LINKS.legal.map((link) => (
                   <li key={link.name}>

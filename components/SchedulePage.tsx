@@ -256,9 +256,43 @@ function findTeamByScheduleName(name: string): TeamInfo | undefined {
   return teamsData.find((t) => n.includes(t.id.replace(/-/g, " ")) || t.teamName.toLowerCase().includes(n.split(/\s+/)[0] ?? ""))
 }
 
+const TEAM_FILTERS = [
+  "All matches",
+  "Janakpur Bolts",
+  "Kathmandu Gurkhas",
+  "Chitwan Rhinos",
+  "Karnali Yaks",
+  "Biratnagar Kings",
+  "Pokhara Avengers",
+  "Lumbini Lions",
+  "Sudurpaschim Royals",
+] as const
+
 export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
- const adInitialized = useRef(false);
-  const adContainerRef = useRef<HTMLDivElement>(null);
+  const adInitialized = useRef(false)
+  const adContainerRef = useRef<HTMLDivElement>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const [teamFilter, setTeamFilter] = useState(() => {
+    if (!initialTeam) return "All matches"
+    const decoded = decodeURIComponent(initialTeam).replace(/-/g, " ")
+    const match = TEAM_FILTERS.find(
+      (t) => t.toLowerCase() === decoded.toLowerCase() || t.toLowerCase().includes(decoded.toLowerCase())
+    )
+    return match ?? "All matches"
+  })
+
+  const filteredMatches = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    return matches.filter((m) => {
+      const hay = `${m.match} ${"fixture" in m && m.fixture ? m.fixture : ""}`.toLowerCase()
+      const teamOk =
+        teamFilter === "All matches" ||
+        hay.includes(teamFilter.toLowerCase()) ||
+        (teamFilter.includes("Gurkhas") && (hay.includes("gurkhas") || hay.includes("gorkhas")))
+      const searchOk = !q || hay.includes(q)
+      return teamOk && searchOk
+    })
+  }, [searchQuery, teamFilter])
 
   // Initialize Google AdSense ad after script loads
   useEffect(() => {
@@ -309,17 +343,16 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
   }, []);
 
   return (
-    <div className="min-h-screen p-2 md:p-4 font-inter" style={{ backgroundColor: "#122754" }}>
+    <div className="p-2 md:p-4 bg-transparent">
       <div className="max-w-7xl mx-auto space-y-2">
 
        
 
         {/* Second Section: Title & Filter */}
-        <div className=" w-full items-center justify-between gap-6 py-4 border-b border-white/10">
-          <h1 className="text-1xl md:text-3xl text-center font-black text-white tracking-normal">
-            <span className="text-[#f26522]">Nepal Premier League (NPL) 2026</span> Schedule: Full Fixtures & Match Dates
-            {/* BPL 2026 Schedule – Full &nbsp; Match<span className="text-[#f26522]">  Fixtures</span> */}
-          </h1>
+        <div id="schedule" className=" w-full items-center justify-between gap-6 py-4 border-b border-white/10 scroll-mt-24">
+          <h2 className="text-1xl md:text-3xl text-center font-black text-white tracking-normal">
+            <span className="text-[#c8102e]">Nepal Premier League (NPL) 2026</span> Schedule: Full Fixtures & Match Dates
+          </h2>
 
 
         </div>
@@ -338,13 +371,13 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
 
         {/* overview section */}
         <div className="py-6 md:py-8">
-          <h2 className="text-center text-[#f26522] font-black text-lg md:text-2xl tracking-wide mb-4">
+          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-4">
             Nepal Premier League 2026 Overview
           </h2>
-          <div className="w-full md:w-[80%] mx-auto overflow-hidden rounded-sm border border-white/10 bg-white shadow-md shadow-[#122754]/8">
+          <div className="w-full md:w-[80%] mx-auto overflow-hidden rounded-sm border border-white/10 bg-white shadow-md shadow-[#111528]/8">
             <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="bg-[#122754]">
+                <tr className="bg-[#111528]">
                   <th className="px-4 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-white w-[40%] sm:w-[35%] border-r border-white/10">
                     Field
                   </th>
@@ -353,7 +386,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-[#122754]">
+              <tbody className="text-[#111528]">
                 {[
                   { field: "Tournament", details: "Siddhartha Bank Nepal Premier League (NPL)" },
                   { field: "Season", details: "Season 3 (2026)" },
@@ -369,9 +402,9 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                 ].map((row, i) => (
                   <tr
                     key={row.field}
-                    className={`border-t border-[#122754]/12 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+                    className={`border-t border-[#111528]/12 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
                   >
-                    <td className="px-4 py-3 text-xs sm:text-sm font-bold align-top border-r border-[#122754]/12 whitespace-nowrap">
+                    <td className="px-4 py-3 text-xs sm:text-sm font-bold align-top border-r border-[#111528]/12 whitespace-nowrap">
                       {row.field}
                     </td>
                     <td className="px-4 py-3 text-xs sm:text-sm font-medium leading-relaxed">
@@ -383,28 +416,54 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
             </table>
           </div>
         </div>
-        <div className="mb-8 ">
+        <div className="npl-fixtures-section mb-4">
           <div className="my-4 text-center">
-            <p className="text-orange-500 font-black text-2xl tracking-wide">NPL 2026 Schedule & Full Fixtures</p>
+            <p className="text-[#f2a93b] font-black text-2xl tracking-wide">NPL 2026 Schedule & Full Fixtures</p>
           </div>
-          <p className="text-white text-center">
+          <p className="text-white text-center mb-6">
 
-            The <a  href="/" className="hover:underline text-[#f26522]">NPL 2026 schedule</a> features 32 matches across 8 teams from November 17 to December 13, 2026, all played at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" className="hover:underline text-[#f26522]">Tribhuvan University International Cricket Ground, Kirtipur.</a> The tournament opens with Janakpur Bolts vs Kathmandu Gurkhas and closes with the Final on December 13.
+            The <a  href="/" className="hover:underline text-[#c8102e]">NPL 2026 schedule</a> features 32 matches across 8 teams from November 17 to December 13, 2026, all played at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" className="hover:underline text-[#c8102e]">Tribhuvan University International Cricket Ground, Kirtipur.</a> The tournament opens with Janakpur Bolts vs Kathmandu Gurkhas and closes with the Final on December 13.
 
           </p>
-          {/* <div>
-            <span className="text-white font-black text-md">Schedule 2025</span>
-          </div> */}
-        </div>
-        
 
-        {/* Fixtures — white cards, text in main page blue (#122754) */}
-        <div className="space-y-2">
-          {matches.map((match, index) => {
+          <div className="npl-controls w-full md:w-[80%] mx-auto">
+            <div className="npl-search-row">
+              <div className="npl-search-box">
+                <span aria-hidden>🔍</span>
+                <input
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search team name…"
+                  aria-label="Search fixtures by team name"
+                />
+              </div>
+            </div>
+            <div className="npl-filter-row" role="group" aria-label="Filter by team">
+              {TEAM_FILTERS.map((team) => (
+                <button
+                  key={team}
+                  type="button"
+                  className={`npl-chip${teamFilter === team ? " active" : ""}`}
+                  onClick={() => setTeamFilter(team)}
+                >
+                  {team}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Fixtures — white cards, text in main page blue (#111528) */}
+          <div className="space-y-2">
+            {filteredMatches.length === 0 ? (
+              <p className="npl-no-results">No fixtures match that search. Try a different team name.</p>
+            ) : null}
+            {filteredMatches.map((match, index) => {
             const pairs = parseVsTeams(match.match)
             const venueLabel = venueShortLabel(match.venue)
             const dateLabel = formatFixtureDateLabel(match.date)
-            const matchNo = ordinalMatch(index + 1)
+            const originalIndex = matches.indexOf(match)
+            const matchNo = ordinalMatch(originalIndex + 1)
             const matchLabel =
               "fixture" in match && match.fixture
                 ? match.match
@@ -412,21 +471,21 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
 
             return (
               <div
-                key={`${match.date}-${index}-${match.match}`}
-                className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#122754]/18 bg-white shadow-md shadow-[#122754]/8"
+                key={`${match.date}-${originalIndex}-${match.match}`}
+                className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#111528]/18 bg-white shadow-md shadow-[#111528]/8"
               >
-                <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#122754]/12">
-                  <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#122754]">{dateLabel}</p>
+                <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#111528]/12">
+                  <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#111528]">{dateLabel}</p>
                 </div>
 
                 <div className="flex-1 min-w-0 px-4 py-2 sm:py-5">
-                  <p className="text-[11px] sm:text-xs text-[#122754]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
-                    <span className="font-semibold text-[#122754]">Upcoming</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
+                  <p className="text-[11px] sm:text-xs text-[#111528]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
+                    <span className="font-semibold text-[#111528]">Upcoming</span>
+                    <span className="mx-1.5 text-[#111528]/40">•</span>
                     <span>{matchLabel}</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
+                    <span className="mx-1.5 text-[#111528]/40">•</span>
                     <span>{venueLabel}</span>
-                    <span className="mx-1.5 text-[#122754]/40">•</span>
+                    <span className="mx-1.5 text-[#111528]/40">•</span>
                     <span>Nepal Premier League</span>
                   </p>
 
@@ -438,17 +497,16 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                         const logo = team?.logo ?? "/placeholder.svg"
 
 
-                        const isEven = parseInt(matchNo) % 2 === 0;
-                          console.log("match number no ", isEven)
+                        const isEven = parseInt(matchNo) % 2 === 0
                           const href = isEven
                             ? (team?.profileLink || "#")
-                            : (team?.outboundLink || "#");
+                            : (team?.outboundLink || "#")
 
 
                         return (
                           <div key={side} className="flex items-center justify-between gap-3">
                             <Link href={href} className="flex items-center gap-2 min-w-0">
-                              <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#122754]/15 bg-slate-50">
+                              <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#111528]/15 bg-slate-50">
                                 <Image
                                   src={logo}
                                   alt={`${display} logo`}
@@ -457,9 +515,9 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                                   sizes="40px"
                                 />
                               </div>
-                              <span className="text-sm sm:text-base font-semibold text-[#122754] truncate">
+                              <span className="text-sm sm:text-base font-semibold text-[#111528] truncate">
                                 {display}{" "}
-                                <span className="font-normal text-[#122754]/65">(NPL)</span>
+                                <span className="font-normal text-[#111528]/65">(NPL)</span>
                               </span>
 
                             </Link>
@@ -467,26 +525,26 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                           </div>
                         )
                       })}
-                      <span className="text-sm flex items-center justify-end relative -top-4 text-[#122754]/90">
+                      <span className="text-sm flex items-center justify-end relative -top-4 text-[#111528]/90">
                       {match.time}
                       </span>
                     </div>
                   ) : (
                     <div className="space-y-2">
-                      <p className="text-sm sm:text-base font-semibold text-[#122754]">{match.match}</p>
+                      <p className="text-sm sm:text-base font-semibold text-[#111528]">{match.match}</p>
                       {"fixture" in match && match.fixture ? (
-                        <p className="text-sm text-[#122754]/85">{match.fixture}</p>
+                        <p className="text-sm text-[#111528]/85">{match.fixture}</p>
                       ) : null}
-                      <p className="text-xs text-[#122754]/80">{match.time}</p>
+                      <p className="text-xs text-[#111528]/80">{match.time}</p>
                       {match.venueLink ? (
                         <a
                           href={match.venueLink}
-                          className="text-xs text-[#122754] underline underline-offset-2"
+                          className="text-xs text-[#111528] underline underline-offset-2"
                         >
                           {match.venue}
                         </a>
                       ) : (
-                        <p className="text-xs text-[#122754]/75">{match.venue}</p>
+                        <p className="text-xs text-[#111528]/75">{match.venue}</p>
                       )}
                     </div>
                   )}
@@ -495,10 +553,10 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
                 <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
                   <div className="bg-black/20 h-full w-[1px]"></div>
                   <div className="flex md:flex-col justify-center items-center gap-2">
-                  <Link href="/teams/" className="text-sm font-semibold text-[#122754] hover:underline">
+                  <Link href="/teams/" className="text-sm font-semibold text-[#111528] hover:underline">
                     Teams &
                   </Link>
-                  <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
+                  <Link href="/points-table/" className="text-sm font-semibold text-[#111528]">
                     Points Table
                   </Link>
                   </div>
@@ -506,11 +564,12 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
               </div>
             )
           })}
+          </div>
         </div>
 
         {/* schedule statistics */}
         <section id="stats" className="scroll-mt-24 py-4">
-          <h2 className="text-center text-[#f26522] font-black text-lg md:text-2xl tracking-wide mb-6">
+          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-6">
             Schedule Statistics
           </h2>
           <div className="w-full md:w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
@@ -523,12 +582,12 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center gap-1.5 rounded-sm border border-white/10 bg-white px-3 py-5 sm:py-6 shadow-md shadow-[#122754]/8 text-center"
+                className="flex flex-col items-center justify-center gap-1.5 rounded-sm border border-white/10 bg-white px-3 py-5 sm:py-6 shadow-md shadow-[#111528]/8 text-center"
               >
-                <span className="text-3xl sm:text-4xl font-black tabular-nums leading-none text-[#f26522]">
+                <span className="text-3xl sm:text-4xl font-black tabular-nums leading-none text-[#c8102e]">
                   {stat.value}
                 </span>
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#122754]/75 leading-snug">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#111528]/75 leading-snug">
                   {stat.label}
                 </span>
               </div>
@@ -538,10 +597,10 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
 
         {/* tournament format */}
         <section id="format" className="scroll-mt-24 py-4">
-          <h2 className="text-center text-[#f26522] font-black text-lg md:text-2xl tracking-wide mb-6">
+          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-6">
             NPL 2026 Tournament Format
           </h2>
-          <div className="w-full md:w-[80%] mx-auto rounded-sm border border-white/10 bg-white shadow-md shadow-[#122754]/8 px-5 py-5 sm:px-8 sm:py-7">
+          <div className="w-full md:w-[80%] mx-auto rounded-sm border border-white/10 bg-white shadow-md shadow-[#111528]/8 px-5 py-5 sm:px-8 sm:py-7">
             <ul className="space-y-4 list-none">
               {[
                 {
@@ -571,15 +630,15 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
               ].map((item) => (
                 <li
                   key={item.title}
-                  className="flex gap-3 sm:gap-4 border-b border-[#122754]/10 last:border-b-0 pb-4 last:pb-0"
+                  className="flex gap-3 sm:gap-4 border-b border-[#111528]/10 last:border-b-0 pb-4 last:pb-0"
                 >
                   <span
-                    className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#f26522]"
+                    className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#c8102e]"
                     aria-hidden
                   />
-                  <p className="text-sm sm:text-base leading-relaxed text-[#122754]">
-                    <span className="font-bold text-[#122754]">{item.title}:</span>{" "}
-                    <span className="font-medium text-[#122754]/85">{item.text}</span>
+                  <p className="text-sm sm:text-base leading-relaxed text-[#111528]">
+                    <span className="font-bold text-[#111528]">{item.title}:</span>{" "}
+                    <span className="font-medium text-[#111528]/85">{item.text}</span>
                   </p>
                 </li>
               ))}

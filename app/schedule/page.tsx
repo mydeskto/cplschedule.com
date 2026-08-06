@@ -6,6 +6,7 @@ import { Breadcrumb } from '@/components/breadcrumb'
 import { useSearchParams } from 'next/navigation'
 import { matchesData } from '@/data/matches-data'
 import { buildScheduleSportsEventsGraph } from '@/lib/sports-event-jsonld'
+import { PageHero } from '@/components/Hero/PageHero'
 
 
 function ScheduleContent() {
@@ -102,7 +103,16 @@ function ScheduleContent() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             
-            <div className="min-h-screen bg-[#122754] pt-20 font-inter">
+            <div className="min-h-screen bg-transparent font-inter">
+                <PageHero
+                    title="NPL"
+                    accent="Schedule"
+                    sub="Full fixtures, match dates, and timings for Nepal Premier League Season 3 — every league and playoff match at Kirtipur."
+                    ctas={[
+                        { label: "View fixtures", href: "#schedule", primary: true },
+                        { label: "Buy tickets", href: "/tickets" },
+                    ]}
+                />
                 {/* Breadcrumb */}
                 <div className="px-5 md:px-10">
                     <Breadcrumb items={breadcrumbItems} />
@@ -115,7 +125,7 @@ function ScheduleContent() {
 
 export default function ScheduleHome() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-[#122754] pt-20" />}>
+        <Suspense fallback={<div className="min-h-screen bg-transparent" />}>
             <ScheduleContent />
         </Suspense>
     )

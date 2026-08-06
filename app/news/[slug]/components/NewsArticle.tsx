@@ -37,7 +37,7 @@ export default function NewsArticle({ title, date, content, image, summary, slug
 
 
   return (
-    <div className="min-h-screen bg-[#122754] font-inter tracking-wider pt-20">
+    <div className="min-h-screen bg-[#111528] font-inter tracking-wider pt-20">
 
       <div className="container mx-auto px-4 py-8 lg:px-8">
         <div className="max-w-4xl mx-auto">

@@ -43,6 +43,9 @@ export const expectedPriceRows: {
   { matchType: "Season pass (all-access)", general: "Rs 15,000 – 18,000", vip: "—" },
 ]
 
+export const expectedPriceNote =
+  "This is a projection, not a CAN announcement — built by applying the same rate of increase seen between Season 1 (2024) and Season 2 (2025) to Season 2's prices. In both prior years, CAN released official pricing only 2–3 days before the tournament opener, so a genuinely confirmed Season 3 number won't exist until mid-November 2026. Treat this table as a budgeting guide, and check the live price in the Khalti app at checkout for the actual figure once sales open."
+
 export const whereToBuySection = {
   title: "Where to Buy NPL Tickets",
   intro:
@@ -66,6 +69,8 @@ export const howToBookSection = {
     "Pay. Use Khalti wallet balance, a linked bank transfer, or another supported payment method.",
     "Get your e-ticket. A QR code lands in your Khalti app instantly — this is what gets scanned at the gate. Screenshot it as backup in case of poor stadium connectivity.",
   ],
+  closing:
+    "If a match shows as unavailable for booking, it usually means CAN hasn't opened sales for that fixture yet—league organizers have historically released tickets in batches rather than for the full season at once.",
 }
 
 export const confirmedPricingSection = {

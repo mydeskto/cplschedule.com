@@ -354,17 +354,16 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
   }, []);
 
   return (
-    <div className="min-h-screen p-2 md:p-4 font-inter" style={{ backgroundColor: "#122754" }}>
+    <div className="min-h-screen p-2 md:p-4 font-inter" style={{ backgroundColor: "#111528" }}>
       <div className="max-w-7xl mx-auto space-y-2">
 
 
 
         {/* Second Section: Title & Filter */}
         <div className=" w-full items-center justify-between gap-6 py-4 border-b border-white/10">
-          <h1 className="text-1xl md:text-3xl text-center font-black text-white tracking-normal">
-            <span className="text-[#f26522]"> NPL 2026</span> Team-Wise Schedule & Fixtures
-            {/* BPL 2026 Schedule – Full &nbsp; Match<span className="text-[#f26522]">  Fixtures</span> */}
-          </h1>
+          <h2 className="text-1xl md:text-3xl text-center font-black text-white tracking-normal">
+            <span className="text-[#c8102e]"> NPL 2026</span> Team-Wise Schedule & Fixtures
+          </h2>
 
 
         </div>
@@ -382,7 +381,7 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
         </div>
 
 
-        {/* Fixtures — white cards, text in main page blue (#122754) */}
+        {/* Fixtures — white cards, text in main page blue (#111528) */}
         <div className="space-y-2">
           {filteredMatches.length === 0 ? (
             <div className="text-center py-10">
@@ -398,20 +397,20 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
               return (
                 <div
                   key={`${match.date}-${index}-${match.match}`}
-                  className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#122754]/18 bg-white shadow-md shadow-[#122754]/8"
+                  className="flex flex-col sm:flex-row w-full md:w-[80%] rounded-sm mx-auto overflow-hidden border border-[#111528]/18 bg-white shadow-md shadow-[#111528]/8"
                 >
-                  <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#122754]/12">
-                    <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#122754]">{dateLabel}</p>
+                  <div className="shrink-0 px-4 py-2 flex items-center justify-center sm:py-5 sm:w-[160px] border-b sm:border-b-0 sm:border-r border-[#111528]/12">
+                    <p className="text-xs sm:text-sm font-medium leading-snug tracking-wide text-[#111528]">{dateLabel}</p>
                   </div>
 
                   <div className="flex-1 min-w-0 px-4 py-2 sm:py-5">
-                    <p className="text-[11px] sm:text-xs text-[#122754]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
-                      <span className="font-semibold text-[#122754]">Upcoming</span>
-                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                    <p className="text-[11px] sm:text-xs text-[#111528]/75 mb-3 uppercase tracking-[0.06em] leading-relaxed">
+                      <span className="font-semibold text-[#111528]">Upcoming</span>
+                      <span className="mx-1.5 text-[#111528]/40">•</span>
                       <span>{matchNo} Match</span>
-                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                      <span className="mx-1.5 text-[#111528]/40">•</span>
                       <span>{venueLabel}</span>
-                      <span className="mx-1.5 text-[#122754]/40">•</span>
+                      <span className="mx-1.5 text-[#111528]/40">•</span>
                       <span>Nepal Premier League</span>
                     </p>
 
@@ -432,7 +431,7 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
                           return (
                             <div key={side} className="flex items-center justify-between gap-3">
                               <Link href={href} className="flex items-center gap-2 min-w-0">
-                                <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#122754]/15 bg-slate-50">
+                                <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden ring-1 ring-[#111528]/15 bg-slate-50">
                                   <Image
                                     src={logo}
                                     alt={`${display} logo`}
@@ -441,9 +440,9 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
                                     sizes="40px"
                                   />
                                 </div>
-                                <span className="text-sm sm:text-base font-semibold text-[#122754] truncate">
+                                <span className="text-sm sm:text-base font-semibold text-[#111528] truncate">
                                   {display}{" "}
-                                  <span className="font-normal text-[#122754]/65">(NPL)</span>
+                                  <span className="font-normal text-[#111528]/65">(NPL)</span>
                                 </span>
 
                               </Link>
@@ -451,23 +450,23 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
                             </div>
                           )
                         })}
-                        <span className="text-sm flex items-center justify-end relative -top-4 text-[#122754]/90">
+                        <span className="text-sm flex items-center justify-end relative -top-4 text-[#111528]/90">
                           {match.time}
                         </span>
                       </div>
                     ) : (
                       <div className="space-y-2">
-                        <p className="text-sm sm:text-base font-semibold text-[#122754]">{match.match}</p>
-                        <p className="text-xs text-[#122754]/80">{match.time}</p>
+                        <p className="text-sm sm:text-base font-semibold text-[#111528]">{match.match}</p>
+                        <p className="text-xs text-[#111528]/80">{match.time}</p>
                         {match.venueLink ? (
                           <a
                             href={match.venueLink}
-                            className="text-xs text-[#122754] underline underline-offset-2"
+                            className="text-xs text-[#111528] underline underline-offset-2"
                           >
                             {match.venue}
                           </a>
                         ) : (
-                          <p className="text-xs text-[#122754]/75">{match.venue}</p>
+                          <p className="text-xs text-[#111528]/75">{match.venue}</p>
                         )}
                       </div>
                     )}
@@ -476,10 +475,10 @@ function ScheduleContent({ initialTeam }: { initialTeam?: string }) {
                   <div className="flex justify-center items-center gap-4 sm:gap-2 shrink-0 px-2 w-full md:w-[160px] py-4 sm:py-5 ">
                     <div className="bg-black/20 h-full w-[1px]"></div>
                     <div className="flex md:flex-col justify-center items-center gap-2">
-                      <Link href="/teams/" className="text-sm font-semibold text-[#122754] hover:underline">
+                      <Link href="/teams/" className="text-sm font-semibold text-[#111528] hover:underline">
                         teams &
                       </Link>
-                      <Link href="/points-table/" className="text-sm font-semibold text-[#122754]">
+                      <Link href="/points-table/" className="text-sm font-semibold text-[#111528]">
                         Points Table
                       </Link>
                     </div>

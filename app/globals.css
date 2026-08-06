@@ -81,7 +81,7 @@
 }
 
 .dark {
-    --background: #122754;
+    --background: #111528;
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
@@ -142,7 +142,9 @@ button[class*="bg-white"] {
 
     body {
         @apply bg-background text-foreground;
-        font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at 50% 0%, #1b2145 0%, #111528 45%);
+        color: #f2ede1;
+        font-family: var(--font-work-sans), var(--font-inter), system-ui, -apple-system, sans-serif;
     }
 
     h1,
@@ -293,7 +295,7 @@ button[class*="bg-white"] {
     }
 
     .nav-color {
-        background: linear-gradient(to bottom, #122754, rgba(18, 39, 84, 0.7), rgba(18, 39, 84, 0.01));
+        background: linear-gradient(to bottom, #111528, rgba(18, 39, 84, 0.7), rgba(18, 39, 84, 0.01));
     }
 }
 
@@ -408,7 +410,7 @@ button[class*="bg-white"] {
 
 .modern-scrollbar {
     scrollbar-width: initial;
-    scrollbar-color: #3d5a80 #122754;
+    scrollbar-color: #3d5a80 #111528;
     /* thumb color, track color */
 }
 
@@ -418,12 +420,12 @@ button[class*="bg-white"] {
 }
 
 .modern-scrollbar::-webkit-scrollbar-track {
-    background: #122754;
+    background: #111528;
     border-radius: 9999px;
 }
 
 .modern-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #122754;
+    background-color: #111528;
     border-radius: 9999px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

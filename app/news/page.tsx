@@ -2,6 +2,7 @@ import { NewsCard } from "@/components/news-card"
 import { newsArticles } from "@/data/news-data"
 import { Metadata } from "next"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { PageHero } from "@/components/Hero/PageHero"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -56,7 +57,7 @@ export default function NewsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#122754] pt-20">
+    <div className="min-h-screen bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -79,24 +80,26 @@ export default function NewsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageJsonLd) }}
       />
 
+      <PageHero
+        title="NPL"
+        accent="News"
+        sub="Latest Nepal Premier League 2026 news — match reports, squad updates, injuries, standings changes, and official announcements."
+        ctas={[
+          { label: "Latest stories", href: "#news-grid", primary: true },
+          { label: "Fixtures", href: "/" },
+        ]}
+      />
 
       <div className="container mx-auto px-4 py-8 lg:px-8">
         {/* Breadcrumb */}
         <Breadcrumb items={breadcrumbItems} />
 
-        {/* Latest News Heading */}
-        {/* <div className="mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2 uppercase tracking-tighter">Latest News</h2>
-          <div className="w-20 h-1 bg-[#f26522] rounded"></div>
-        </div> */}
-
-        <div className="mt-8">
-          <h1 className="text-2xl font-bold text-white mb-4">Nepal Premier League 2026 News & Updates</h1>
+        <div className="mt-6">
           <p className="text-gray-400 text-sm">Stay updated with the latest Nepal Premier League 2026 news including match previews, results, squad announcements, injuries, transfers, and official tournament developments.</p>
           <p className="text-gray-400 text-sm">We regularly publish updates to keep fans informed throughout the NPL 2026 season.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div id="news-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {[...newsArticles]
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .map((article) => (

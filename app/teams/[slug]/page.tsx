@@ -216,7 +216,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
                                              {/* RIGHT PANEL - Team Details Section */}
                                              <div className="p-8 flex flex-col justify-center reveal-animation reveal-delay-3">
                                                   {/* Team Details Grid */}
-                                                  <div className="p-4 w-[80%] h-fit rounded-md bg-[#122754] reveal-animation reveal-delay-4">
+                                                  <div className="p-4 w-[80%] h-fit rounded-md bg-[#111528] reveal-animation reveal-delay-4">
                                                        {/* Captain */}
                                                        <div className="pb-4 flex gap-5 reveal-animation reveal-delay-4">
                                                             <p className="text-white font-normal tracking-widest text-[14px] leading-[21px]">

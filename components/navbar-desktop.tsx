@@ -39,7 +39,7 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
       className={cn(
         "flex items-center justify-between py-1 px-12 w-full transition-all duration-700",
         isScrolled
-          ? "bg-black/90 backdrop-blur-2xl border-b border-white/5 py-1"
+          ? "bg-[#111528]/95 backdrop-blur-[8px] border-b border-[#2c3258] py-1"
           : "bg-transparent"
       )}
     >
@@ -68,13 +68,13 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
               href={link.href}
               className={cn(
                 "text-[11px] font-black tracking-[0.2em] transition-all duration-300 relative group py-2",
-                isActive(link.href) ? "text-[#f26522]" : "text-white/70 hover:text-white"
+                isActive(link.href) ? "text-[#c8102e]" : "text-white/70 hover:text-white"
               )}
             >
               {link.label}
               <span
                 className={cn(
-                  "absolute bottom-0 left-0 h-0.5 bg-[#f26522] transition-all duration-500",
+                  "absolute bottom-0 left-0 h-0.5 bg-[#c8102e] transition-all duration-500",
                   isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                 )}
               />
@@ -94,10 +94,10 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center justify-between px-4 py-3 text-[10px] font-black tracking-[0.1em] text-white/60 hover:text-[#f26522] hover:bg-white/5 transition-all rounded-sm group/item"
+                    className="flex items-center justify-between px-4 py-3 text-[10px] font-black tracking-[0.1em] text-white/60 hover:text-[#c8102e] hover:bg-white/5 transition-all rounded-sm group/item"
                   >
                     {link.label}
-                    <div className="w-4 h-[1px] bg-[#f26522] scale-x-0 group-hover/item:scale-x-100 transition-transform origin-right" />
+                    <div className="w-4 h-[1px] bg-[#c8102e] scale-x-0 group-hover/item:scale-x-100 transition-transform origin-right" />
                   </Link>
                 ))}
               </div>
@@ -108,7 +108,7 @@ export function NavbarDesktop({ isScrolled }: { isScrolled: boolean }) {
 
       <div className="flex items-center gap-6">
         <Link href="/tickets">
-          <Button className="bg-[#f26522] hover:bg-white text-black font-black px-8 py-4 rounded-sm text-[11px] tracking-[0.2em] transition-all duration-500 shadow-2xl shadow-[#f26522]/20 hover:scale-105 active:scale-95">
+          <Button className="bg-[#c8102e] hover:bg-white text-black font-black px-8 py-4 rounded-sm text-[11px] tracking-[0.2em] transition-all duration-500 shadow-2xl shadow-[#c8102e]/20 hover:scale-105 active:scale-95">
             NPL TICKETS 2026
           </Button>
         </Link>

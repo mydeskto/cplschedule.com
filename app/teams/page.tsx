@@ -3,6 +3,7 @@ import { pointsData } from "@/data/points-data"
 import { Metadata } from "next"
 import { Breadcrumb } from "@/components/breadcrumb"
 import Link from "next/link"
+import { PageHero } from "@/components/Hero/PageHero"
 
 
 
@@ -66,8 +67,16 @@ export default function TeamsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-[#122754] relative overflow-hidden pt-20">
-
+      <div className="min-h-screen bg-transparent relative overflow-hidden">
+        <PageHero
+          title="NPL"
+          accent="Teams"
+          sub="All eight Nepal Premier League 2026 franchises — full squads, captains, overseas signings, and player lists for Season 3."
+          ctas={[
+            { label: "View squads", href: "#teams-grid", primary: true },
+            { label: "Points table", href: "/points-table" },
+          ]}
+        />
 
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 pt-4 relative z-10">
@@ -79,17 +88,10 @@ export default function TeamsPage() {
           />
         </div>
 
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)] animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(16,185,129,0.05)_50%,transparent_75%)] animate-shimmer"></div>
-      </div> */}
-
         <div className="container mx-auto px-4 py-8 relative z-10">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">NPL 2026 Squads & Full Players List of All Teams </h1>
-          <p className="text-gray-400 text-sm">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.          </p>
-          <p className="text-gray-400 text-sm">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the full NPL 2026 team squads, player details, captain updates, and <Link href="/" className="text-[#f26522] hover:underline">match line-ups</Link> throughout the season. Stay up to date with key players, squad lists, and <Link href="/news" className="text-[#f26522] hover:underline">tournament news</Link> to never miss a moment of NPL 2026 action.</p>
-          <p className="text-gray-400 text-sm"></p>
-          <div className="max-w-7xl mx-auto">
+          <p className="text-gray-400 text-sm mb-2">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.</p>
+          <p className="text-gray-400 text-sm mb-6">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the full NPL 2026 team squads, player details, captain updates, and <Link href="/" className="text-[#c8102e] hover:underline">match line-ups</Link> throughout the season. Stay up to date with key players, squad lists, and <Link href="/news" className="text-[#c8102e] hover:underline">tournament news</Link> to never miss a moment of NPL 2026 action.</p>
+          <div id="teams-grid" className="max-w-7xl mx-auto">
             <TeamsGrid items={hoverItems} />
           </div>
         </div>

@@ -133,10 +133,10 @@ export function HeroCarousel() {
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 className="flex items-center gap-3"
                               >
-                                <span className="bg-[#f26522] text-black text-[10px] font-black tracking-[0.2em] px-3 py-1 uppercase rounded-sm shadow-[0_0_15px_rgba(242,101,34,0.3)]">
+                                <span className="bg-[#c8102e] text-black text-[10px] font-black tracking-[0.2em] px-3 py-1 uppercase rounded-sm shadow-[0_0_15px_rgba(242,101,34,0.3)]">
                                   {slide.tag}
                                 </span>
-                                <div className="h-[1px] w-12 bg-[#f26522]/50" />
+                                <div className="h-[1px] w-12 bg-[#c8102e]/50" />
                               </motion.div>
 
                               <div className="space-y-4">
@@ -157,7 +157,7 @@ export function HeroCarousel() {
                                   initial={{ opacity: 0, y: 20 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ duration: 0.6, delay: 0.5 }}
-                                  className="text-lg sm:text-xl md:text-2xl font-light text-[#f26522] italic"
+                                  className="text-lg sm:text-xl md:text-2xl font-light text-[#c8102e] italic"
                                 >
                                   {slide.subtitle}
                                 </motion.p>
@@ -182,7 +182,7 @@ export function HeroCarousel() {
                               >
                                 <Link 
                                   href={slide.link || "#"}
-                                  className="group relative px-8 py-4 bg-[#f26522] overflow-hidden rounded-sm transition-all duration-300 active:scale-95 shadow-lg shadow-[#f26522]/20"
+                                  className="group relative px-8 py-4 bg-[#c8102e] overflow-hidden rounded-sm transition-all duration-300 active:scale-95 shadow-lg shadow-[#c8102e]/20"
                                 >
                                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                                   <span className="relative z-10 text-black font-black text-sm uppercase tracking-wider group-hover:text-black">
@@ -192,9 +192,9 @@ export function HeroCarousel() {
                                 
                                 <Link 
                                   href="/teams"
-                                  className="group px-8 py-4 border border-white/20 hover:border-[#f26522] rounded-sm transition-all duration-300 active:scale-95"
+                                  className="group px-8 py-4 border border-white/20 hover:border-[#c8102e] rounded-sm transition-all duration-300 active:scale-95"
                                 >
-                                  <span className="text-white font-black text-sm uppercase tracking-wider group-hover:text-[#f26522]">
+                                  <span className="text-white font-black text-sm uppercase tracking-wider group-hover:text-[#c8102e]">
                                     Discover Teams
                                   </span>
                                 </Link>
@@ -213,7 +213,7 @@ export function HeroCarousel() {
           {/* Luxury Navigation Controls */}
           <div className="absolute bottom-12 right-4 sm:right-12 flex items-center gap-6 z-40">
             <div className="flex items-center gap-4 px-6 py-3 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
-              <span className="text-[10px] font-black text-[#f26522] tracking-[0.2em]">
+              <span className="text-[10px] font-black text-[#c8102e] tracking-[0.2em]">
                 {String(current + 1).padStart(2, '0')}
               </span>
               <div className="w-12 h-[1px] bg-white/20 relative overflow-hidden">
@@ -222,7 +222,7 @@ export function HeroCarousel() {
                   animate={{ x: "0%" }}
                   key={current}
                   transition={{ duration: 8, ease: "linear" }}
-                  className="absolute inset-0 bg-[#f26522]"
+                  className="absolute inset-0 bg-[#c8102e]"
                 />
               </div>
               <span className="text-[10px] font-black text-white/40 tracking-[0.2em]">
@@ -231,8 +231,8 @@ export function HeroCarousel() {
             </div>
             
             <div className="flex gap-2">
-              <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md hover:bg-[#f26522] hover:text-black transition-all duration-500 shadow-xl" />
-              <CarouselNext className="static translate-y-0 h-12 w-12 rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md hover:bg-[#f26522] hover:text-black transition-all duration-500 shadow-xl" />
+              <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md hover:bg-[#c8102e] hover:text-black transition-all duration-500 shadow-xl" />
+              <CarouselNext className="static translate-y-0 h-12 w-12 rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md hover:bg-[#c8102e] hover:text-black transition-all duration-500 shadow-xl" />
             </div>
           </div>
         </Carousel>

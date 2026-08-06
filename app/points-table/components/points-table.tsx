@@ -23,9 +23,9 @@ const getShortName = (teamName: string) => {
 
 export default function PointsTable() {
   return (
-    <div className="w-full py-10 px-4 font-inter tracking-wider bg-[#122754] relative overflow-hidden">
+    <div className="w-full py-10 px-4 font-inter tracking-wider bg-[#111528] relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#f26522]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#c8102e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
@@ -35,9 +35,9 @@ export default function PointsTable() {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter">
-          NPL 2026 <span className="text-[#f26522]">Points Table</span>
+          NPL 2026 <span className="text-[#c8102e]">Points Table</span>
           </h2>
-          <div className="h-1 w-24 bg-[#f26522] rounded-full" />
+          <div className="h-1 w-24 bg-[#c8102e] rounded-full" />
         </motion.div>
 
         <Card className="bg-white/5 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden">
@@ -45,7 +45,7 @@ export default function PointsTable() {
             <Table>
               <TableHeader className="bg-white/5">
                 <TableRow className="hover:bg-transparent border-b border-white/10">
-                  <TableHead className="text-[#f26522] font-black uppercase tracking-widest py-4 px-4 text-[10px] w-12">
+                  <TableHead className="text-[#c8102e] font-black uppercase tracking-widest py-4 px-4 text-[10px] w-12">
                     Pos
                   </TableHead>
                   <TableHead className="text-white font-black uppercase tracking-widest py-4 px-2 text-[10px]">
@@ -66,7 +66,7 @@ export default function PointsTable() {
                   <TableHead className="text-white font-black uppercase tracking-widest py-4 px-1 text-[10px] text-center w-16">
                     NRR
                   </TableHead>
-                  <TableHead className="text-[#f26522] font-black uppercase tracking-widest py-4 px-4 text-[10px] text-center w-12">
+                  <TableHead className="text-[#c8102e] font-black uppercase tracking-widest py-4 px-4 text-[10px] text-center w-12">
                     Pts
                   </TableHead>
                 </TableRow>
@@ -77,12 +77,12 @@ export default function PointsTable() {
                     key={team.position}
                     className="border-b border-white/5 hover:bg-white/5 transition-all duration-300 group"
                   >
-                    <TableCell className="py-3 px-4 font-black text-white/40 text-[10px] group-hover:text-[#f26522] transition-colors">
+                    <TableCell className="py-3 px-4 font-black text-white/40 text-[10px] group-hover:text-[#c8102e] transition-colors">
                       {team.position.toString().padStart(2, '0')}
                     </TableCell>
                     <TableCell className="py-3 px-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 relative flex-shrink-0 bg-black/20 p-1 rounded-sm border border-white/5 group-hover:border-[#f26522]/30 transition-all">
+                        <div className="w-8 h-8 relative flex-shrink-0 bg-black/20 p-1 rounded-sm border border-white/5 group-hover:border-[#c8102e]/30 transition-all">
                           <Image
                             src={team.logo || "/placeholder.svg"}
                             alt={`${team.team} logo`}
@@ -92,7 +92,7 @@ export default function PointsTable() {
                         </div>
                         <Link 
                           href={team.link || "#"} 
-                          className="text-white font-bold text-xs md:text-sm uppercase tracking-tight group-hover:text-[#f26522] transition-colors whitespace-nowrap"
+                          className="text-white font-bold text-xs md:text-sm uppercase tracking-tight group-hover:text-[#c8102e] transition-colors whitespace-nowrap"
                         >
                           <span className="md:hidden">{getShortName(team.team)}</span>
                           <span className="hidden md:inline">{team.team}</span>
@@ -118,7 +118,7 @@ export default function PointsTable() {
                     >
                       {team.netRunRate}
                     </TableCell>
-                    <TableCell className="text-[#f26522] font-black text-center py-3 px-4 text-sm  transition-transform">
+                    <TableCell className="text-[#c8102e] font-black text-center py-3 px-4 text-sm  transition-transform">
                       {team.points}
                     </TableCell>
                   </TableRow>
@@ -135,7 +135,7 @@ export default function PointsTable() {
                 <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">Top 4 Qualify for Playoffs</span>
             </div>
             <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#f26522]" />
+                <div className="w-2 h-2 rounded-full bg-[#c8102e]" />
                 <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">Updated Live 2026</span>
             </div>
         </div>

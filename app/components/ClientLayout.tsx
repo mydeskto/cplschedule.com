@@ -20,16 +20,16 @@ interface ClientLayoutProps {
 
 export const ClientLayout = ({ children }: ClientLayoutProps) => {
   return (
-    <>
+    <div className="npl-page">
       <Suspense fallback={null}>
         <ProgressBar />
       </Suspense>
       <Navbar />
       {children}
-      <Suspense fallback={<div className="h-20 bg-[#122754]" />}>
+      <Suspense fallback={<div className="h-20 bg-[#111528]" />}>
         <Footer />
       </Suspense>
-    </>
+    </div>
   )
 }
 

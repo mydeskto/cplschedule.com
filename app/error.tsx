@@ -22,7 +22,7 @@ export default function Error({
   }, [router])
  
   return (
-    <div className="min-h-screen bg-[#122754] flex items-center justify-center">
+    <div className="min-h-screen bg-[#111528] flex items-center justify-center">
       <div className="text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p className="text-white mb-2">We apologize for the inconvenience.</p>

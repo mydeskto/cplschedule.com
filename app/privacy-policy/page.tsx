@@ -1,15 +1,19 @@
 "use client"
 
+import { PageHero } from "@/components/Hero/PageHero"
+
 export default function PrivacyPolicy() {
 
   return (
-    <div className="min-h-screen bg-[#122754] pt-20 font-font-inter tracking-wider">
+    <div className="min-h-screen bg-transparent font-font-inter tracking-wider">
+      <PageHero
+        title="Privacy"
+        accent="Policy"
+        eyebrow="NPL Schedule"
+        sub="How we collect, use, and protect your information in line with global privacy standards and Google AdSense requirements."
+      />
       <div className="max-w-full mx-auto ">
         <div className=" rounded-lg  p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 text-left">
-            Privacy Policy
-          </h1>
-
           <div className="prose prose-lg max-w-none">
             <p className="text-md text-white mb-6 leading-relaxed">
               At NPL Schedule, we respect your privacy. This Privacy Policy explains how we collect, use, and protect your information in compliance with global privacy standards and Google AdSense requirements.

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Inter } from "next/font/google";
+import { Manrope, Inter, Teko, Work_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import "./npl-theme.css";
 import Script from "next/script";
 import { ClientLayout } from "./components/ClientLayout";
 
@@ -9,7 +10,7 @@ const manrope = Manrope({
   subsets: ["latin"],
   display: 'swap',
   preload: true,
-  weight: ['400', '500', '600', '700', '800'], // Weight variants for headings
+  weight: ['400', '500', '600', '700', '800'],
   adjustFontFallback: true,
   fallback: ['system-ui', 'arial'],
 });
@@ -19,9 +20,30 @@ const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
   preload: true,
-  weight: ['400', '500', '600', '700'], // Weight variants for body text
+  weight: ['400', '500', '600', '700'],
   adjustFontFallback: true,
   fallback: ['system-ui', 'arial'],
+});
+
+const teko = Teko({
+  variable: "--font-teko",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500"],
 });
 
 export const viewport: Viewport = {
@@ -294,7 +316,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning={true}
-        className={`${manrope.variable} ${inter.variable} antialiased`}
+        className={`${manrope.variable} ${inter.variable} ${teko.variable} ${workSans.variable} ${ibmPlexMono.variable} antialiased`}
       >
         <ClientLayout>
           {children}

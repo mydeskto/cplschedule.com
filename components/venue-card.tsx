@@ -14,7 +14,7 @@ interface VenueCardProps {
 export function VenueCard({ name, slug, capacity, image }: VenueCardProps) {
   return (
     <Link href={`/npl-venue/${slug}`} className="group block">
-      <div className="relative h-[450px] rounded-sm overflow-hidden border border-white/10 group-hover:border-[#f26522]/50 transition-all duration-500 shadow-2xl">
+      <div className="relative h-[450px] rounded-sm overflow-hidden border border-white/10 group-hover:border-[#c8102e]/50 transition-all duration-500 shadow-2xl">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -33,7 +33,7 @@ export function VenueCard({ name, slug, capacity, image }: VenueCardProps) {
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-8 space-y-4">
           <div className="space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <div className="flex items-center gap-2 text-[#f26522]">
+            <div className="flex items-center gap-2 text-[#c8102e]">
               <MapPin className="w-4 h-4" />
               <span className="text-[10px] font-black tracking-[0.3em] uppercase">Stadium Guide</span>
             </div>
@@ -42,14 +42,14 @@ export function VenueCard({ name, slug, capacity, image }: VenueCardProps) {
             </h3>
             <div className="flex items-center gap-3 pt-2">
               <div className="flex items-center gap-1.5 text-white/70 text-sm">
-                <Users className="w-4 h-4 text-[#f26522]" />
+                <Users className="w-4 h-4 text-[#c8102e]" />
                 <span className="font-light tracking-wide">{capacity.toLocaleString()} Capacity</span>
               </div>
             </div>
           </div>
           
           <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 pt-4 border-t border-white/10">
-            <div className="flex items-center text-[#f26522] text-xs font-black tracking-widest uppercase">
+            <div className="flex items-center text-[#c8102e] text-xs font-black tracking-widest uppercase">
                 Explore Venue
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2" />
             </div>
