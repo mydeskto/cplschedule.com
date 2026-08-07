@@ -56,7 +56,7 @@ export const venuesData: { venues: Venue[] } = {
       slug: "tribhuvan-university-cricket-ground-kirtipur",
       alternateName: "Kirtipur Cricket Ground",
       location: "Kirtipur, Kathmandu, Nepal",
-      capacity: 15000,
+      capacity: 20000,
       established: 1998,
       owner: "Tribhuvan University",
       operator: "Cricket Association of Nepal (CAN)",

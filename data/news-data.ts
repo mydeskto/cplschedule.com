@@ -29,7 +29,11 @@ import news1 from '@/public/images/news/news1.jpeg';
 
 import news20 from "@/public/images/news/news20.jpeg"
 import news21 from "@/public/images/news/news21.jpeg"
+import { ticketsPricingNews, schedulePreviewNews } from "@/data/news-articles-from-docx"
+
 export const newsArticles: NewsArticle[] = [
+  ticketsPricingNews,
+  schedulePreviewNews,
   {
     id: "14",
     slug: "npl-t20-2026-can-confirms-third-season-eight-teams",

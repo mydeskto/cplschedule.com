@@ -39,21 +39,24 @@ interface Player {
      name: string
      image: string
      role: string
+     country?: string
+     matches?: string
+     profileLink?: string
 }
 
 function getPlayersForTeam(teamSlug: string): Player[] {
      // Normalize the slug to match the format in playersData
      const normalizedSlug = teamSlug.toLowerCase().replace(/\s+/g, "-")
      const teamData = playersData[normalizedSlug as keyof typeof playersData]
-     console.log('Team Slug:', normalizedSlug, 'Team Data:', teamData) // Debug log
      if (!teamData) return []
 
-     return teamData.players.map((player: any) => ({
+     return teamData.players.map((player) => ({
           name: player.name,
           image: typeof player.image === "string" ? player.image : player.image?.src ?? "/placeholder.svg",
           role: player.role,
           country: player.country,
-
+          matches: player.matches,
+          profileLink: player.profileLink,
      }))
 }
 

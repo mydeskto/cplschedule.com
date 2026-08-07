@@ -90,9 +90,7 @@ export function SiteHero() {
           NPL <em>2026</em>
         </h1>
         <p className="npl-hero-sub">
-          Every fixture of the Nepal Premier League&apos;s third season, played
-          at Tribhuvan University Cricket Ground, Kirtipur — day and night, one
-          venue, eight teams chasing the final.
+         <b>Follow the complete NPL 2026 | Nepal Premier League Season 3 Schedule,</b>  where every fixture will be played at Tribhuvan University Cricket Ground, Kirtipur, featuring day and night matches as all eight teams compete for a place in the final.
         </p>
 
         <div className="npl-hero-cta">
@@ -159,36 +157,7 @@ export function SiteHero() {
         </div>
       </section>
 
-      <section className="npl-glance" aria-label="Season at a glance">
-        <div className="npl-wrap">
-          <div className="npl-stats-strip">
-            <div className="npl-stat-box">
-              <div className="v">28</div>
-              <div className="l">League matches</div>
-            </div>
-            <div className="npl-stat-box">
-              <div className="v">8</div>
-              <div className="l">Teams</div>
-            </div>
-            <div className="npl-stat-box">
-              <div className="v">1</div>
-              <div className="l">Venue</div>
-            </div>
-            <div className="npl-stat-box">
-              <div className="v">56</div>
-              <div className="l">Innings</div>
-            </div>
-            <div className="npl-stat-box">
-              <div className="v">1,120</div>
-              <div className="l">Overs bowled</div>
-            </div>
-            <div className="npl-stat-box">
-              <div className="v">27</div>
-              <div className="l">Days</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   )
 }

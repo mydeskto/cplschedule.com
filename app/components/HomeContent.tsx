@@ -53,6 +53,35 @@ const TEAM_SCHEDULE_LINKS = [
   { name: "Sudurpaschim Royals", href: "/npl_team_vise_schedule?team=sudurpaschim-royals" },
 ]
 
+const PLAYOFF_ROADMAP = [
+  {
+    step: "1",
+    label: "League Stage",
+    meta: "17 Nov – 7 Dec",
+  },
+  {
+    step: "2",
+    label: "Qualifier 1",
+    meta: "9 Dec · 1st vs 2nd",
+  },
+  {
+    step: "3",
+    label: "Eliminator",
+    meta: "10 Dec · 3rd vs 4th",
+  },
+  {
+    step: "4",
+    label: "Qualifier 2",
+    meta: "11 Dec · Loser Q1 vs Winner Eliminator",
+  },
+  {
+    step: "5",
+    label: "Final",
+    meta: "13 Dec · NPL 2026 Title",
+    final: true,
+  },
+]
+
 export const HomeContent = () => {
   const featuredVenue = venuesData.venues[0]
 
@@ -63,6 +92,40 @@ export const HomeContent = () => {
       <div id="schedule">
         <NPLSchedule />
       </div>
+
+      <section className="npl-roadmap" id="playoffs" aria-label="NPL 2026 playoff roadmap">
+        <div className="npl-roadmap-head">
+          <div>
+            <div className="npl-roadmap-kicker">Road to the title</div>
+            <h2>
+              NPL 2026 Playoff Schedule and <em>Final</em>
+            </h2>
+            <p>
+              After 28 league matches, the top four sides advance. Qualifier 1,
+              the Eliminator, Qualifier 2, and the Final decide the Season 3
+              champion at TU Cricket Ground, Kirtipur.
+            </p>
+          </div>
+          <a href="/teams" className="npl-roadmap-link">
+            View Teams →
+          </a>
+        </div>
+
+        <div className="npl-roadmap-track">
+          {PLAYOFF_ROADMAP.map((item) => (
+            <div
+              key={item.step}
+              className={`npl-roadmap-step${item.final ? " is-final" : ""}`}
+            >
+              <div className="npl-roadmap-node">{item.step}</div>
+              <div>
+                <div className="npl-roadmap-label">{item.label}</div>
+                <div className="npl-roadmap-meta">{item.meta}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="npl-section">
         <div className="npl-section-head">

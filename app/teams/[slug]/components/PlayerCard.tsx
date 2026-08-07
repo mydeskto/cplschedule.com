@@ -1,52 +1,74 @@
 "use client"
 
-import { motion } from 'framer-motion';
-
 interface PlayerCardProps {
-    player: {
-        name: string;
-        image?: string;
-        role?: string;
-        country?: string;
-    };
+  player: {
+    name: string
+    image?: string
+    role?: string
+    country?: string
+    matches?: string
+    profileLink?: string
+  }
 }
 
 export default function PlayerCard({ player }: PlayerCardProps) {
-    return (
-        <div className="group relative bg-white/5 backdrop-blur-sm rounded-sm border border-white/10 p-5 transition-all duration-500 hover:border-[#c8102e]/50 hover:bg-white/10">
-            <div className="relative w-full aspect-[4/5] mb-6 rounded-sm overflow-hidden bg-black/20">
-                <img
-                    src={player.image || "/placeholder.svg"}
-                    alt={player.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-                
-                {/* Role Badge */}
-                <div className="absolute bottom-4 left-4">
-                    <span className="bg-[#c8102e] text-black text-[10px] font-black tracking-widest px-2 py-0.5 uppercase rounded-sm">
-                        {player.role || "Player"}
-                    </span>
-                </div>
-            </div>
-            
-            <div className="space-y-1">
-                <h3 className="text-lg font-black text-white uppercase tracking-tight group-hover:text-[#c8102e] transition-colors duration-300">
-                    {player.name}
-                </h3>
-                <div className="flex items-center gap-2">
-                    <div className="w-4 h-[1px] bg-[#c8102e]/50" />
-                    <p className="text-white/40 text-[10px] font-black uppercase tracking-[0.2em]">
-                        {player.country || "International"}
-                    </p>
-                </div>
-            </div>
+  const card = (
+    <div className="group relative bg-white/5 backdrop-blur-sm rounded-sm border border-white/10 p-5 transition-all duration-500 hover:border-[#c8102e]/50 hover:bg-white/10 h-full">
+      <div className="relative w-full aspect-[4/5] mb-6 rounded-sm overflow-hidden bg-black/20">
+        <img
+          src={player.image || "/placeholder.svg"}
+          alt={player.name}
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
 
-            {/* Hover Accent */}
-            <div className="absolute top-0 right-0 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="absolute top-2 right-2 w-[1px] h-3 bg-[#c8102e]" />
-              <div className="absolute top-2 right-2 h-[1px] w-3 bg-[#c8102e]" />
-            </div>
+        <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+          <span className="bg-[#c8102e] text-black text-[10px] font-black tracking-widest px-2 py-0.5 uppercase rounded-sm">
+            {player.role || "Player"}
+          </span>
+          {player.matches ? (
+            <span className="bg-white/15 text-white text-[10px] font-black tracking-widest px-2 py-0.5 uppercase rounded-sm border border-white/20">
+              {player.matches} Matches
+            </span>
+          ) : null}
         </div>
-    );
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="text-lg font-black text-white uppercase tracking-tight group-hover:text-[#c8102e] transition-colors duration-300">
+          {player.name}
+        </h3>
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-[1px] bg-[#c8102e]/50" />
+          <p className="text-white/40 text-[10px] font-black uppercase tracking-[0.2em]">
+            {player.country || "International"}
+          </p>
+        </div>
+        {player.profileLink ? (
+          <p className="text-[10px] text-[#c8102e]/80 font-bold uppercase tracking-widest pt-2 group-hover:text-[#c8102e]">
+            View profile →
+          </p>
+        ) : null}
+      </div>
+
+      <div className="absolute top-0 right-0 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute top-2 right-2 w-[1px] h-3 bg-[#c8102e]" />
+        <div className="absolute top-2 right-2 h-[1px] w-3 bg-[#c8102e]" />
+      </div>
+    </div>
+  )
+
+  if (!player.profileLink) return card
+
+  return (
+    <a
+      href={player.profileLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c8102e] rounded-sm"
+      aria-label={`${player.name} profile on NPL T20 League`}
+    >
+      {card}
+    </a>
+  )
 }

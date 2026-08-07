@@ -369,53 +369,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
         </div>
 
 
-        {/* overview section */}
-        <div className="py-6 md:py-8">
-          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-4">
-            Nepal Premier League 2026 Overview
-          </h2>
-          <div className="w-full md:w-[80%] mx-auto overflow-hidden rounded-sm border border-white/10 bg-white shadow-md shadow-[#111528]/8">
-            <table className="w-full border-collapse text-left">
-              <thead>
-                <tr className="bg-[#111528]">
-                  <th className="px-4 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-white w-[40%] sm:w-[35%] border-r border-white/10">
-                    Field
-                  </th>
-                  <th className="px-4 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-white">
-                    Details
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-[#111528]">
-                {[
-                  { field: "Tournament", details: "Siddhartha Bank Nepal Premier League (NPL)" },
-                  { field: "Season", details: "Season 3 (2026)" },
-                  { field: "Organizer", details: "Cricket Association of Nepal (CAN)" },
-                  { field: "Teams", details: "8" },
-                  { field: "Matches", details: "32 (28 league + 4 playoff)" },
-                  { field: "Venue", details: "Tribhuvan University International Cricket Ground, Kirtipur" },
-                  { field: "Defending Champion", details: "Lumbini Lions (2025)" },
-                  { field: "Format", details: "Single round-robin + 4-team playoffs" },
-                  { field: "Start Date", details: "November 17, 2026" },
-                  { field: "Final Date", details: "December 13, 2026" },
-                  { field: "Official Status", details: "Fixture-level dates pending final CAN confirmation" },
-                ].map((row, i) => (
-                  <tr
-                    key={row.field}
-                    className={`border-t border-[#111528]/12 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
-                  >
-                    <td className="px-4 py-3 text-xs sm:text-sm font-bold align-top border-r border-[#111528]/12 whitespace-nowrap">
-                      {row.field}
-                    </td>
-                    <td className="px-4 py-3 text-xs sm:text-sm font-medium leading-relaxed">
-                      {row.details}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+      
         <div className="npl-fixtures-section mb-4">
           <div className="my-4 text-center">
             <p className="text-[#f2a93b] font-black text-2xl tracking-wide">NPL 2026 Schedule & Full Fixtures</p>
@@ -567,84 +521,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
           </div>
         </div>
 
-        {/* schedule statistics */}
-        <section id="stats" className="scroll-mt-24 py-4">
-          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-6">
-            Schedule Statistics
-          </h2>
-          <div className="w-full md:w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
-            {[
-              { value: "32", label: "Matches" },
-              { value: "8", label: "Teams" },
-              { value: "1", label: "Venue" },
-              { value: "28", label: "League Matches" },
-              { value: "4", label: "Playoff Matches" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center justify-center gap-1.5 rounded-sm border border-white/10 bg-white px-3 py-5 sm:py-6 shadow-md shadow-[#111528]/8 text-center"
-              >
-                <span className="text-3xl sm:text-4xl font-black tabular-nums leading-none text-[#c8102e]">
-                  {stat.value}
-                </span>
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#111528]/75 leading-snug">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* tournament format */}
-        <section id="format" className="scroll-mt-24 py-4">
-          <h2 className="text-center text-[#c8102e] font-black text-lg md:text-2xl tracking-wide mb-6">
-            NPL 2026 Tournament Format
-          </h2>
-          <div className="w-full md:w-[80%] mx-auto rounded-sm border border-white/10 bg-white shadow-md shadow-[#111528]/8 px-5 py-5 sm:px-8 sm:py-7">
-            <ul className="space-y-4 list-none">
-              {[
-                {
-                  title: "League Stage",
-                  text: "All 8 teams play each other once — 28 matches total. Points: 2 for a win, 0 for a loss, 1 each for no result. Net Run Rate (NRR) breaks ties.",
-                },
-                {
-                  title: "Top 4",
-                  text: "The top four teams by points (NRR as tiebreaker) advance to the playoffs.",
-                },
-                {
-                  title: "Qualifier 1",
-                  text: "1st-placed team vs 2nd-placed team. Winner goes straight to the Final.",
-                },
-                {
-                  title: "Eliminator",
-                  text: "3rd-placed team vs 4th-placed team. Loser is knocked out.",
-                },
-                {
-                  title: "Qualifier 2",
-                  text: "Loser of Qualifier 1 vs winner of the Eliminator. Winner advances to the Final.",
-                },
-                {
-                  title: "Final",
-                  text: "Winner of Qualifier 1 vs winner of Qualifier 2 — for the NPL 2026 title.",
-                },
-              ].map((item) => (
-                <li
-                  key={item.title}
-                  className="flex gap-3 sm:gap-4 border-b border-[#111528]/10 last:border-b-0 pb-4 last:pb-0"
-                >
-                  <span
-                    className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#c8102e]"
-                    aria-hidden
-                  />
-                  <p className="text-sm sm:text-base leading-relaxed text-[#111528]">
-                    <span className="font-bold text-[#111528]">{item.title}:</span>{" "}
-                    <span className="font-medium text-[#111528]/85">{item.text}</span>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+       
       </div>
     </div>
   )
