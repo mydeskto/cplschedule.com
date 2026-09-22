@@ -1,214 +1,12 @@
 
 import { useState, useEffect, useMemo, useRef } from "react"
-import { matchesData } from "@/data/matches-data"
 import Image from "next/image"
-import { MapPin, ChevronDown, X } from "lucide-react"
-import whiteLogo from "@/public/images/newlogo.png"
 import Link from "next/link"
 import { teamsData } from "@/data/teamData"
+import { matches } from "@/data/matches"
 
 
 
-const matches = [
-  {
-    date: "November 17",
-    match: "Janakpur Bolts vs Kathmandu Gurkhas",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-    venueLink: "/npl-venue/tribhuvan-university-cricket-ground-kirtipur/",
-  },
-  {
-    date: "November 18",
-    match: "Chitwan Rhinos vs Karnali Yaks",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 18",
-    match: "Biratnagar Kings vs Pokhara Avengers",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 19",
-    match: "Kathmandu Gurkhas vs Sudurpaschim Royals",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 20",
-    match: "Lumbini Lions vs Chitwan Rhinos",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 21",
-    match: "Pokhara Avengers vs Sudurpaschim Royals",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 22",
-    match: "Karnali Yaks vs Lumbini Lions",
-    time: "11:15 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 22",
-    match: "Kathmandu Gurkhas vs Biratnagar Kings",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 24",
-    match: "Janakpur Bolts vs Biratnagar Kings",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 24",
-    match: "Sudurpaschim Royals vs Karnali Yaks",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 25",
-    match: "Kathmandu Gurkhas vs Lumbini Lions",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 26",
-    match: "Biratnagar Kings vs Chitwan Rhinos",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-    venueLink: "/npl-venue/tribhuvan-university-cricket-ground-kirtipur/",
-  },
-  {
-    date: "November 27",
-    match: "Lumbini Lions vs Sudurpaschim Royals",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 27",
-    match: "Janakpur Bolts vs Pokhara Avengers",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 28",
-    match: "Chitwan Rhinos vs Kathmandu Gurkhas",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 28",
-    match: "Karnali Yaks vs Biratnagar Kings",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 29",
-    match: "Pokhara Avengers vs Lumbini Lions",
-    time: "11:15 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 29",
-    match: "Sudurpaschim Royals vs Janakpur Bolts",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "November 30",
-    match: "Karnali Yaks vs Kathmandu Gurkhas",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 2",
-    match: "Janakpur Bolts vs Chitwan Rhinos",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 2",
-    match: "Pokhara Avengers vs Karnali Yaks",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 3",
-    match: "Biratnagar Kings vs Lumbini Lions",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 4",
-    match: "Pokhara Avengers vs Kathmandu Gurkhas",
-    time: "11:45 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 4",
-    match: "Sudurpaschim Royals vs Chitwan Rhinos",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 5",
-    match: "Lumbini Lions vs Janakpur Bolts",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 6",
-    match: "Sudurpaschim Royals vs Biratnagar Kings",
-    time: "11:15 AM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 6",
-    match: "Chitwan Rhinos vs Pokhara Avengers",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 7",
-    match: "Karnali Yaks vs Janakpur Bolts",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 9",
-    match: "Qualifier 1",
-    fixture: "1st vs 2nd (League Table)",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 10",
-    match: "Eliminator",
-    fixture: "3rd vs 4th (League Table)",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 11",
-    match: "Qualifier 2",
-    fixture: "Loser Q1 vs Winner Eliminator",
-    time: "4:00 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-  {
-    date: "December 13",
-    match: "Final",
-    fixture: "TBD vs TBD",
-    time: "3:30 PM",
-    venue: "Tribhuvan University Cricket Ground, Kirtipur",
-  },
-]
 
 type TeamInfo = (typeof teamsData)[number]
 
@@ -357,12 +155,9 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
 
         </div>
         <div>
-          <p className="text-white text-center mb-4">
-
-          The NPL 2026 Schedule is the complete timetable for Nepal Premier League Season 3 — every match date, fixture, team, venue, and start time in one place. Track today's match, the next five fixtures, the full 32-match schedule, and the live points table as the season unfolds.
-          </p>
+          
           <p className="text-white text-center">
-          NPL 2026 runs November 17 – December 13, 2026, with all 32 matches (28 league + 4 playoff) played at Tribhuvan University International Cricket Ground, Kirtipur. Eight teams compete, with Lumbini Lions defending their 2025 title.
+          NPL 2026 runs October 26 – November 21, 2026, with all 32 matches (28 league + 4 playoff) played at Tribhuvan University International Cricket Ground, Kirtipur. Eight teams compete, with Lumbini Lions defending their 2025 title.
 
           </p>
 
@@ -376,7 +171,7 @@ export default function NPLSchedule({ initialTeam }: { initialTeam?: string }) {
           </div>
           <p className="text-white text-center mb-6">
 
-            The <a  href="/" className="hover:underline text-[#c8102e]">NPL 2026 schedule</a> features 32 matches across 8 teams from November 17 to December 13, 2026, all played at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" className="hover:underline text-[#c8102e]">Tribhuvan University International Cricket Ground, Kirtipur.</a> The tournament opens with Janakpur Bolts vs Kathmandu Gurkhas and closes with the Final on December 13.
+            The <a  href="/" className="hover:underline text-[#c8102e]">NPL 2026 schedule</a> features 32 matches across 8 teams from October 26 to November 21, 2026, all played at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" className="hover:underline text-[#c8102e]">Tribhuvan University International Cricket Ground, Kirtipur.</a> The tournament opens with Lumbini Lions vs Sudurpaschim Royals and closes with the Final on November 21.
 
           </p>
 

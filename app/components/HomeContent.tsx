@@ -57,27 +57,27 @@ const PLAYOFF_ROADMAP = [
   {
     step: "1",
     label: "League Stage",
-    meta: "17 Nov – 7 Dec",
+    meta: "October 26 – November 21",
   },
   {
     step: "2",
     label: "Qualifier 1",
-    meta: "9 Dec · 1st vs 2nd",
+    meta: "November 17 · 1st vs 2nd",
   },
   {
     step: "3",
     label: "Eliminator",
-    meta: "10 Dec · 3rd vs 4th",
+    meta: "November 18 · 3rd vs 4th",
   },
   {
     step: "4",
     label: "Qualifier 2",
-    meta: "11 Dec · Loser Q1 vs Winner Eliminator",
+    meta: "November 19 · Loser Q1 vs Winner Eliminator",
   },
   {
     step: "5",
     label: "Final",
-    meta: "13 Dec · NPL 2026 Title",
+    meta: "November 21 · NPL 2026 Title",
     final: true,
   },
 ]

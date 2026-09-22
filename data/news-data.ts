@@ -29,9 +29,11 @@ import news1 from '@/public/images/news/news1.jpeg';
 
 import news20 from "@/public/images/news/news20.jpeg"
 import news21 from "@/public/images/news/news21.jpeg"
-import { ticketsPricingNews, schedulePreviewNews } from "@/data/news-articles-from-docx"
+import { ticketsPricingNews, schedulePreviewNews, nplDatesConfirmedNews, nplScheduleDatesNews } from "@/data/news-articles-from-docx"
 
 export const newsArticles: NewsArticle[] = [
+  nplScheduleDatesNews,
+  nplDatesConfirmedNews,
   ticketsPricingNews,
   schedulePreviewNews,
   {
@@ -39,10 +41,10 @@ export const newsArticles: NewsArticle[] = [
     slug: "npl-t20-2026-can-confirms-third-season-eight-teams",
     title: " Nepal Premier League T20 2026: CAN Confirms Third Season with Eight Teams",
     date: "February 20, 2026",
-    summary: "The Cricket Association of Nepal confirms NPL T20 2026 for October-November, featuring eight teams and 32 matches. Lumbini Lions defend their title as fans await full fixtures and venues.",
+    summary: "The Cricket Association of Nepal confirms NPL T20 2026 for October-November 2026, featuring eight teams and 32 matches. Lumbini Lions defend their title as fans await full fixtures and venues.",
     imageTitle: " Nepal Premier League T20 2026: CAN Confirms Third Season with Eight Teams",
     imageAlt: "Nepal Premier League T20 2026 confirmed by Cricket Association of Nepal with eight teams",
-    imageCaption: "CAN confirms NPL T20 2026 for October-November with eight teams and 32 matches.",
+    imageCaption: "CAN confirms NPL T20 2026 for October-November 2026 with eight teams and 32 matches.",
     image: news1.src,
     keywords: [
       "NPL T20 2026",
@@ -58,7 +60,7 @@ export const newsArticles: NewsArticle[] = [
 
 <h2>Key Announcements</h2>
 
-<p>CAN has finalized the <a href="/" class="text-[#f26522] underline transition-colors">NPL 2026 schedule</a> for late October to November, shifting slightly earlier than previous seasons to avoid colder weather. The tournament will feature eight teams competing in a double round-robin format followed by playoffs, culminating in the final at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" class="text-white hover:text-[#c49563] underline transition-colors">TU Cricket Ground, Kirtipur</a>. The league aims to nurture emerging talent while providing high-quality competitive cricket for fans.</p>
+<p>CAN has finalized the <a href="/" class="text-[#f26522] underline transition-colors">NPL 2026 schedule</a> for late October to November 2026, shifting slightly earlier than previous seasons to avoid colder weather. The tournament will feature eight teams competing in a double round-robin format followed by playoffs, culminating in the final at <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" class="text-white hover:text-[#c49563] underline transition-colors">TU Cricket Ground, Kirtipur</a>. The league aims to nurture emerging talent while providing high-quality competitive cricket for fans.</p>
 
 <p>The Lumbini Lions enter as defending champions after their 2025 triumph.</p>
 
@@ -125,7 +127,7 @@ export const newsArticles: NewsArticle[] = [
         {
           question: "When does the Nepal Premier League 2026 begin?",
           answer:
-            "The tournament is scheduled to run from October to November 2026.",
+            "The tournament is scheduled to run from October 26 to November 21, 2026.",
         },
       ],
       content: `
@@ -175,7 +177,7 @@ export const newsArticles: NewsArticle[] = [
 <p class="text-lg mb-4">Sudurpaschim Royals added experience through Dipendra Singh Airee and Chris Lynn, giving them proven match-winners for pressure situations.</p>
 <p class="text-lg mb-4">👉 Full squads: <a href="https://nplt20league.com/teams/" target="_blank" class="text-emerald-400 hover:text-emerald-300">NPL 2026 Team Squad</a></p>
 <h2 class="text-xl font-bold mt-6 mb-4">Latest NPL 2026 Updates</h2>
-<ul class="list-disc pl-6 my-4 space-y-2 text-slate-200"><li>Sumit Maharjan replaced injured Bibek Yadav for Lumbini Lions</li><li>Tournament window remains October–November 2026</li><li>All matches will be played in Kirtipur</li></ul>
+<ul class="list-disc pl-6 my-4 space-y-2 text-slate-200"><li>Sumit Maharjan replaced injured Bibek Yadav for Lumbini Lions</li><li>Tournament window remains October 26 to November 21, 2026</li><li>All matches will be played in Kirtipur</li></ul>
 <p class="text-lg mb-4">👉 Venue details: <a href="/npl-venue/tribhuvan-university-cricket-ground-kirtipur/" target="_blank" class="text-emerald-400 hover:text-emerald-300">Tribhuvan University International Cricket Ground</a></p>
 <h2 class="text-xl font-bold mt-6 mb-4">What to Expect This Season</h2>
 <p class="text-lg mb-4">The NPL 2026 season looks more balanced than previous editions, which could lead to tighter playoff races and more close finishes.</p>

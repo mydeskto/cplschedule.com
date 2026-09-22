@@ -89,7 +89,7 @@ export default function TeamsPage() {
         </div>
 
         <div className="container mx-auto px-4 py-8 relative z-10">
-          <p className="text-gray-400 text-sm mb-2">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from November to December 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.</p>
+          <p className="text-gray-400 text-sm mb-2">The Nepal Premier League 2026 (NPL 2026) features eight franchise teams, continuing the format from previous seasons. The tournament runs from October to November 2026, bringing together Nepal’s top domestic cricketers and selected international players for thrilling T20 action.</p>
           <p className="text-gray-400 text-sm mb-6">Each team has a balanced squad of specialist batters, all-rounders, bowlers, and experienced captains. Fans can follow the full NPL 2026 team squads, player details, captain updates, and <Link href="/" className="text-[#c8102e] hover:underline">match line-ups</Link> throughout the season. Stay up to date with key players, squad lists, and <Link href="/news" className="text-[#c8102e] hover:underline">tournament news</Link> to never miss a moment of NPL 2026 action.</p>
           <div id="teams-grid" className="max-w-7xl mx-auto">
             <TeamsGrid items={hoverItems} />

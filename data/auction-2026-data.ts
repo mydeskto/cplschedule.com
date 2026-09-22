@@ -8,7 +8,7 @@ export const auctionSeo = {
 } as const
 
 export const auctionIntro =
-  'The Nepal Premier League Season 3 auction was held on July 6, 2026, in Kathmandu. Eight franchises had already retained 52 players in June, then bid on a 155-player shortlist split into Category A, B and C. Wicketkeeper-batsman Aasif Sheikh, released beforehand by Janakpur Bolts, became the auction\'s top buy at NPR 20 lakh when Lumbini Lions won him in a lucky draw. In total, 37 of the 155 players were sold before the eight squads moved into the post-auction "wish list" phase to fill out their 16-man rosters ahead of the November 17 season opener.'
+  'The Nepal Premier League Season 3 auction was held on July 6, 2026, in Kathmandu. Eight franchises had already retained 52 players in June, then bid on a 155-player shortlist split into Category A, B and C. Wicketkeeper-batsman Aasif Sheikh, released beforehand by Janakpur Bolts, became the auction\'s top buy at NPR 20 lakh when Lumbini Lions won him in a lucky draw. In total, 37 of the 155 players were sold before the eight squads moved into the post-auction "wish list" phase to fill out their 16-man rosters ahead of the October 26 season opener.'
 
 export const keyFactsRows: { detail: string; information: string }[] = [
   { detail: "Auction date", information: "July 6, 2026" },
@@ -25,7 +25,7 @@ export const keyFactsRows: { detail: string; information: string }[] = [
     information: "Raised from 12 to 14 players per team for Season 3",
   },
   { detail: "Top buy", information: "Aasif Sheikh — NPR 20 lakh (Lumbini Lions)" },
-  { detail: "Season window", information: "November 17 – December 13, 2026" },
+  { detail: "Season window", information: "October 26 – November 21, 2026" },
   { detail: "Main venue", information: "TU International Cricket Ground, Kirtipur" },
 ]
 
@@ -216,7 +216,7 @@ export const unsoldSection = {
     "Requested 1 player: Janakpur Bolts, Chitwan Rhinos, Lumbini Lions",
   ],
   closing: [
-    "Each squad's 14th domestic spot is reserved for a player sourced through the team's own talent-hunt programme, separate from both the retention and auction processes. Unsold Category C players also remain eligible for late replacement signings if a team needs injury or availability cover before November 17.",
+    "Each squad's 14th domestic spot is reserved for a player sourced through the team's own talent-hunt programme, separate from both the retention and auction processes. Unsold Category C players also remain eligible for late replacement signings if a team needs injury or availability cover before November 21.",
   ],
 }
 
@@ -395,7 +395,7 @@ export const auctionFaqs: { question: string; answer: string }[] = [
   {
     question: "When does the NPL 2026 season start?",
     answer:
-      "The season is scheduled to run from November 17 to December 13, 2026, with matches at the TU International Cricket Ground in Kirtipur.",
+      "The season is scheduled to run from October 26 to November 21, 2026, with matches at the TU International Cricket Ground in Kirtipur.",
   },
   {
     question: "Did any team fail to sign a Category A or B player?",
@@ -475,7 +475,7 @@ export const auctionFaqSchema = {
       name: "When does the NPL 2026 season start?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The season is scheduled to run from November 17 to December 13, 2026, with matches at the TU International Cricket Ground in Kirtipur.",
+        text: "The season is scheduled to run from October 26 to November 21, 2026, with matches at the TU International Cricket Ground in Kirtipur.",
       },
     },
     {

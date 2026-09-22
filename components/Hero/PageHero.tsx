@@ -56,7 +56,7 @@ function StadiumSvg() {
 }
 
 export function PageHero({
-  eyebrow = "Season 3 · Nov 17 – Dec 13, 2026",
+  eyebrow = "NPL Season 3 · October 26 – November 21, 2026",
   title,
   accent,
   sub,

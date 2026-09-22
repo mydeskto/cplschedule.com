@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 
-const OPENER = new Date("2026-11-17T16:00:00+05:45").getTime()
+const OPENER = new Date("2026-10-26T16:00:00+05:45").getTime()
 
 function Countdown() {
   const [left, setLeft] = useState({ days: 0, hours: 0, mins: 0 })
@@ -31,6 +31,8 @@ function Countdown() {
   return (
     <div className="npl-countdown">
       <div className="npl-countdown-label">Opening match in</div>
+      <span className="npl-countdown-label">October 26 → November 21</span>
+
       <div className="npl-countdown-units">
         <div className="npl-cd-unit">
           <div className="v">{pad(left.days)}</div>
@@ -85,7 +87,7 @@ export function SiteHero() {
           />
         </svg>
 
-        <div className="npl-eyebrow">Season 3 · Nov 17 – Dec 13, 2026</div>
+        <div className="npl-eyebrow">Season 3 · October 26 – November 21, 2026</div>
         <h1>
           NPL <em>2026</em>
         </h1>
@@ -123,38 +125,7 @@ export function SiteHero() {
 
         <Countdown />
 
-        <div className="npl-ridge">
-          <span className="npl-ridge-label">Nov 17 → Dec 13</span>
-          <svg
-            viewBox="0 0 1200 160"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden
-          >
-            <polygon
-              points="0,160 0,110 90,60 170,95 260,40 340,90 430,20 520,80 610,45 700,95 790,55 880,100 970,35 1060,90 1150,60 1200,110 1200,160"
-              fill="#171c37"
-              stroke="#2c3258"
-              strokeWidth="1.5"
-            />
-            <polygon
-              points="0,160 0,125 120,90 230,120 340,75 450,115 560,60 670,110 780,80 900,120 1020,70 1120,110 1200,95 1200,160"
-              fill="#111528"
-              stroke="none"
-              opacity="0.9"
-            />
-            <circle cx="430" cy="20" r="5" fill="#f2a93b" />
-            <line
-              x1="430"
-              y1="20"
-              x2="430"
-              y2="0"
-              stroke="#f2a93b"
-              strokeWidth="1.5"
-              strokeDasharray="2 3"
-            />
-          </svg>
-        </div>
+        
       </section>
 
       

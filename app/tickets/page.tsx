@@ -170,7 +170,7 @@ export default function TicketsPage() {
           />
         </svg>
 
-        <div className="eyebrow">Season 3 · Nov 17 – Dec 13, 2026</div>
+        <div className="eyebrow">NPL Season 3 · October 26 – November 21, 2026</div>
         <h1>
           NPL <em>Tickets</em>
         </h1>

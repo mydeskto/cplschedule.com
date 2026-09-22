@@ -13,12 +13,12 @@ const faqData: FAQItem[] = [
   {
     question: "When will NPL 2026 start?",
     answer:
-      "Nepal Premier League Season 3 is scheduled to begin on November 17, 2026, with Janakpur Bolts vs Kathmandu Gurkhas.",
+      "Nepal Premier League Season 3 is scheduled to begin on October 26, 2026, with Lumbini Lions vs Sudurpaschim Royals.",
   },
   {
     question: "When is the NPL 2026 final?",
     answer:
-      "The final is scheduled for December 13, 2026, at Tribhuvan University International Cricket Ground.",
+      "The final is scheduled for November 21, 2026, at Tribhuvan University International Cricket Ground.",
   },
   {
     question: "Where can I check the NPL 2026 schedule?",

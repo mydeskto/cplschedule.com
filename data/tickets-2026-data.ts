@@ -8,13 +8,13 @@ export const ticketsSeo = {
 } as const
 
 export const ticketsIntro = [
-  'Nepal Premier League Season 3 throws open its gates at Tribhuvan University (TU) International Cricket Ground, Kirtipur, on November 17, 2026—and if you\'ve searched "NPL ticket" hoping for a straight answer on where to buy, what it costs, and how the booking flow actually works, this guide covers all three, plus the details most ticket pages skip: what CAN has and hasn\'t confirmed yet for this season, how pricing has moved across NPL\'s first two editions, and what to expect at the gate.',
+  'Nepal Premier League Season 3 throws open its gates at Tribhuvan University (TU) International Cricket Ground, Kirtipur, on October 26, 2026—and if you\'ve searched "NPL ticket" hoping for a straight answer on where to buy, what it costs, and how the booking flow actually works, this guide covers all three, plus the details most ticket pages skip: what CAN has and hasn\'t confirmed yet for this season, how pricing has moved across NPL\'s first two editions, and what to expect at the gate.',
   "NPL Season 3 tickets are sold exclusively through the Khalti app (or khalti.com), CAN's official ticketing partner. Book via Entertainment → Events, choose your match and general or VIP stand, and pay in-app for an instant QR-code e-ticket. Limited walk-up tickets are also available at TU Ground, Kirtipur, on match day, subject to availability.",
 ]
 
 export const quickFactsRows: { detail: string; information: string }[] = [
   { detail: "Tournament", information: "Nepal Premier League (NPL) 2026 — Season 3" },
-  { detail: "Dates", information: "November 17 – December 13, 2026" },
+  { detail: "Dates", information: "October 26 – November 21, 2026" },
   {
     detail: "Teams",
     information:
@@ -155,7 +155,7 @@ export const stadiumSection = {
     "Venue: TU International Cricket Ground, Kirtipur — accessible by public transport, taxi, or ride-share; on-site parking is limited, so factor in extra travel time on match days.",
     "Gates: Open roughly 2 hours before the scheduled start.",
     "Match timing: Day matches have historically started around 12:00 PM local time; some fixtures are evening starts — always confirm the time on your specific ticket rather than assuming a standard slot.",
-    "Weather: Late November and December in Kathmandu Valley are cool and dry — bring a light jacket for evening fixtures.",
+    "Weather: Late October and November in Kathmandu Valley are cool and dry — bring a light jacket for evening fixtures.",
     "Prohibited items: Outside food and drink, alcohol, weapons, and oversized bags are generally not permitted — stick to a small bag if you're bringing one.",
     "What to bring: Sunscreen and a hat for day matches, a reusable water bottle, and a charged phone for your QR code entry.",
   ],
@@ -190,7 +190,7 @@ export const ticketsFaqs: { question: string; answer: string }[] = [
   {
     question: "How many teams and matches are in NPL Season 3?",
     answer:
-      "Eight teams play 32 matches across the league stage, qualifiers, eliminator, and final, running November 17 to December 13, 2026.",
+      "Eight teams play 32 matches across the league stage, qualifiers, eliminator, and final, running October 26 to November 21, 2026.",
   },
   {
     question: "Do I need a Nepali phone number to book on Khalti?",
@@ -241,7 +241,7 @@ export const ticketsFaqSchema = {
       name: "How many teams and matches are in NPL Season 3?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Eight teams play 32 matches across the league stage, qualifiers, eliminator, and final, running November 17 to December 13, 2026.",
+        text: "Eight teams play 32 matches across the league stage, qualifiers, eliminator, and final, running October 26 to November 21, 2026.",
       },
     },
   ],
